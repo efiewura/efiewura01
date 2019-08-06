@@ -12,7 +12,7 @@
                       &#9679 <span class="negotiation-status">Non-Negotiable</span>
                        <?php
                     } ?></div>
-                    <a class="workspace-link" href="<?php echo $dir ?>/space/<?php echo $val->getID(); ?>">View Efie</a>
+                    <a class="workspace-link" href="./?pg=view&space=<?php echo $val->getID(); ?>">View Efie</a>
 
                 </div>
 </div>

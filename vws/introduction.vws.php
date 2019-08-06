@@ -18,7 +18,7 @@
             </p>
         </div>
         <div class="col-sm-12 col-md-6 col-lg-3 animated fadeIn delay-1s">
-            <img id="ghana-map" src="<?php echo $dir ?>assets/img/gh-green.svg" class="img-fluid" alt="Ghana map">
+            <img id="ghana-map" src="assets/img/gh-green.svg" class="img-fluid" alt="Ghana map">
         </div>
     </div>
 </section>

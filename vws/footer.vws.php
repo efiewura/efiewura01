@@ -4,7 +4,7 @@
                 Copyright &copy; 2019 Efiewura
             </div>
             <div class="col-md-4" style="margin-top: 20px;">
-                <a href="<?php echo $dir ?>/terms" class="text-decoration-none">Terms & Conditions</a>
+                <a href="./?pg=terms" class="text-decoration-none">Terms & Conditions</a>
             </div>
             <div class="col-md-4" style="margin-top: 20px;">
                 <div id="footer-social" class="wow fadeInUp" data-wow-delay="0.9s">
@@ -16,8 +16,8 @@
         </div>
             <hr style="margin-top: 40px; margin-bottom: 40px;">
             <div class="row">
-               <!-- <div class="col-md-6 offset-md-3">
+                <div class="col-md-6 offset-md-3">
                     Accepted payment methods : <img id="momo" class="img-fluid" src="assets/img/mo.jpg" alt="mtn-mobile-money">
-                </div>-->
+                </div>
             </div>
     </div>

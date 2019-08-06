@@ -1,7 +1,7 @@
 <main class="container">
     <div class="row">
         <div class="col-sm-12 offset-sm-0 col-md-8 offset-md-2">
-            <form class="animated fadeIn delay-1s" id="custom-form" action="<?php echo $dir ?>/" method="GET" >
+            <form class="animated fadeIn delay-1s" id="custom-form" action="./" method="GET" >
                 <h2>Find a home in your preferred location</h2>
 
                 <div style="margin: 50px 0;" class="form-group bmd-form-group">

@@ -331,7 +331,6 @@ public function getspacesbySearchArr($arr)
 				}
 				$sql = $sql.")
 				AND `availability` = 1";
-			echo $sql;
 				$result = $con->query($sql);
 			while($row = $result->fetch_assoc()){
 			$space = new space($row['id']);
@@ -356,7 +355,6 @@ public function getspacesbySearchArr($arr)
 					WHERE MATCH(name,address) AGAINST ('$str' IN NATURAL LANGUAGE MODE)
 					AND `space`.`holder` = `efiewura`.`id`
 					AND `space`.`availability` = 1";
-			echo $sql;
 				$result = $con->query($sql);
 			while($row = $result->fetch_assoc()){
 			$space = new space($row['id']);
@@ -393,6 +391,7 @@ public function getspacesbySearchArr($arr)
 				AND `space`.`id` = `image`.`space_id`
 				AND `space`.`id` = $this->getID()";
 				$sql = $sql.$str;
+			$sql;
 		$result = $con->query($sql);
 		
 			while($row = $result->fetch_assoc()){

@@ -3,7 +3,7 @@
     
     <div class="row">
         <div class="col-sm-12 offset-sm-0 col-md-8 offset-md-2 animated fadeIn delay-1s">
-            <form id="custom-form" class="form-horizontal" method="POST" action="<?php echo $dir ?>/done">
+            <form id="custom-form" class="form-horizontal" method="POST" action="./?pg=done">
                 <h2>Provide The Details For Your Listing</h2>
                 <h4>Fill the form below with the details of the particular property you want to host. To make
                     transactions

@@ -5,6 +5,6 @@
             <div class="card-body">
 	                <p><?php echo  regionName($card['region'])." Region &#9679 ".$card['city'];?></p>
 	                <p>Ghc <?php echo  $card['price'];?> per year</p>
-                <a href="<?php echo $dir ?>/space/<?php echo $card['id']; ?>" class="btn btn-primary">View Listing</a>
+                <a href="./?pg=view&space=<?php echo $card['id']; ?>" class="btn btn-primary">View Listing</a>
             </div>
         </div>

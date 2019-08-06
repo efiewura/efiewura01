@@ -1,5 +1,4 @@
 <?php
-$dir = "http://localhost/efiewura";
 if(isset($_GET['q'])){
 	$pg = 'q';
 }
@@ -12,6 +11,12 @@ switch ($pg) {
 	case 'soon':
 $temp = './inc/soon.inc.php';
 $page = './inc/empty.inc.php';
+$title = ' ';
+$noHeader = true;
+	break;
+	case 'home':
+$temp = './inc/page.inc.php';
+$page = './inc/index.inc.php';
 $title = ' ';
 $noHeader = true;
 	break;
@@ -57,7 +62,6 @@ $page = './inc/terms.inc.php';
 $title = 'Terms & Conditions';
 $noHeader = true;
 	case 'view':
-	case 'space':
 $space_id = (isset($_GET['space']))? $_GET['space']:0;
 if(isset($_GET['space'])){
 $space = new space($space_id); 
@@ -80,11 +84,9 @@ $noHeader = false;
 header('location: ./?pg=host');
 }
 		break;
-	case 'home':
 	default:
-	$pg='home';
 $temp = './inc/page.inc.php';
-$page = './inc/index.inc.php';
+$page = './inc/empty.inc.php';
 $title = ' ';
 $noHeader = true;
 		break;

@@ -8,16 +8,16 @@
     <link rel="stylesheet" href="">
     <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons"/>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css">
-    <link rel="stylesheet" href="<?php echo $dir ?>/assets/css/bootstrap/material-kit.min.css">
+    <link rel="stylesheet" href="assets/css/bootstrap/material-kit.min.css">
     <?php if ($pg == 'home'||$pg=='soon') {
         ?>
-    <link rel="stylesheet" href="<?php echo $dir ?>/assets/css/main/owl.carousel.min.css">
-    <link rel="stylesheet" href="<?php echo $dir ?>/assets/css/main/owl.theme.default.css">
+    <link rel="stylesheet" href="assets/css/main/owl.carousel.min.css">
+    <link rel="stylesheet" href="assets/css/main/owl.theme.default.css">
         <?php
     } ?>
-    <link rel="stylesheet" href="<?php echo $dir ?>/assets/css/main/animate.css">
-    <link rel="stylesheet" href="<?php echo $dir ?>/assets/css/main/style.css">
+    <link rel="stylesheet" href="assets/css/main/animate.css">
+    <link rel="stylesheet" href="assets/css/main/style.css">
     <?php if ($pg=='done'): ?>
-    <link rel="stylesheet" href="<?php echo $dir ?>/assets/css/main/done.animate.css">
+    <link rel="stylesheet" href="assets/css/main/done.animate.css">
     <?php endif ?>
 </head>
