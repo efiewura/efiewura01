@@ -1,6 +1,6 @@
 <div class="slide-item">
-  <?php $images = image::getImagesbySpace($val->getID());
-  $img = (count($images)==0)? 0:$images[0]; ?>
+  <?php $img = image::getImagebySpace($val->getID());
+  //$img = (count($images)==0)? 0:$images[0]; ?>
                 <div class="item-image">
                     <img class="img-fluid" src="<?php echo (!is_object($img)&&$img==0)? '...':$img->getlocation(); ?>" alt="house">
     </div>
@@ -12,7 +12,7 @@
                       &#9679 <span class="negotiation-status">Non-Negotiable</span>
                        <?php
                     } ?></div>
-                    <a class="workspace-link" href="./?pg=view&space=<?php echo $val->getID(); ?>">View Efie</a>
+                    <a class="workspace-link" href="<?php echo $dir ?>/space/<?php echo $val->getID(); ?>">View Efie</a>
 
                 </div>
 </div>

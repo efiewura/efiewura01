@@ -1,4 +1,5 @@
 <?php
+$dir = "https://wwwefiewura.000webhostapp.com";
 if(isset($_GET['q'])){
 	$pg = 'q';
 }
@@ -11,12 +12,6 @@ switch ($pg) {
 	case 'soon':
 $temp = './inc/soon.inc.php';
 $page = './inc/empty.inc.php';
-$title = ' ';
-$noHeader = true;
-	break;
-	case 'home':
-$temp = './inc/page.inc.php';
-$page = './inc/index.inc.php';
 $title = ' ';
 $noHeader = true;
 	break;
@@ -62,15 +57,23 @@ $page = './inc/terms.inc.php';
 $title = 'Terms & Conditions';
 $noHeader = true;
 	case 'view':
+	case 'space':
 $space_id = (isset($_GET['space']))? $_GET['space']:0;
-if(isset($_GET['space'])){
-$space = new space($space_id); 
+
+if(isset($_GET['space'])&&is_numeric($_GET['space'])&&$space_id!=0){
+$space = new space($space_id,0); 
+if($space->getexits()==1){
 $temp = './inc/page.inc.php';
 $page = './inc/view_space.inc.php';
 $title = $space->getshort_desc();
+}else{
+$temp = './inc/page.inc.php';
+$page = './inc/empty.inc.php';
+$title = "";
+}
 $noHeader = false;
 }else{
-header('location: ./?q');
+header("location: https://wwwefiewura.000webhostapp.com/?q");
 }
 		break;
 	case 'done':
@@ -84,9 +87,11 @@ $noHeader = false;
 header('location: ./?pg=host');
 }
 		break;
+	case 'home':
 	default:
+	$pg='home';
 $temp = './inc/page.inc.php';
-$page = './inc/empty.inc.php';
+$page = './inc/index.inc.php';
 $title = ' ';
 $noHeader = true;
 		break;

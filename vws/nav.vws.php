@@ -1,6 +1,6 @@
       <div class="container">
           <div class="navbar-translate">
-              <a class="navbar-brand " href="index.php">
+              <a class="navbar-brand " href="<?php echo $dir ?>">
                   Efiewura
               </a>
               <button class="navbar-toggler" type="button" data-toggle="collapse" aria-expanded="false"
@@ -14,32 +14,32 @@
           <div class="collapse navbar-collapse">
               <ul class="navbar-nav ml-auto">
                   <li class="nav-item">
-                      <a class="nav-link" title="" href="./">
+                      <a class="nav-link" title="" href="<?php echo $dir ?>">
                           Home
                       </a>
                   </li>
                   <li class="nav-item">
-                      <a class="nav-link" title="" href="?pg=about">
+                      <a class="nav-link" title="" href="<?php echo $dir ?>/about">
                           About
                       </a>
                   </li>
                   <li class="nav-item">
-                      <a class="nav-link" title="" href="?pg=contact">
+                      <a class="nav-link" title="" href="<?php echo $dir ?>/contact">
                           Contact
                       </a>
                   </li>
                   <li class="nav-item">
-                      <a class="nav-link" title="" href="?pg=host">
+                      <a class="nav-link" title="" href="<?php echo $dir ?>/host">
                           Provide space
                       </a>
                   </li>
                   <?php if ($pg!='soon'): ?>
                   <li class="nav-item">
-                      <a class="nav-link" title="" href="?pg=find">
+                      <a class="nav-link" title="" href="<?php echo $dir ?>/find">
                           Find Space
                       </a>
                   </li>
-                  <form class="form-inline ml-auto" method="GET" accept="./">
+                  <form class="form-inline ml-auto" method="GET" action="<?php echo $dir ?>">
                       <div class="form-group no-border">
                           <input type="text" class="form-control" placeholder="Search" name="q">
                       </div>

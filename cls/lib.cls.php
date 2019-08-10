@@ -10,6 +10,7 @@ include("./cls/functions.cls.php");
  *
  */
 include("./cls/lib.cls/model.lib.cls.php");
+include("./cls/lib.cls/model2.lib.cls.php");
 
 include("./cls/lib.cls/space.lib.cls.php");
 
