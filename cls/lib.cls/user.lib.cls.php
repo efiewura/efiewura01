@@ -35,13 +35,14 @@ class user extends Model{
 	}
 
 	public function setsurname($surname){
+			$this->load[''] = $;
 			$this->update("surname = '$surname'");
 			$this->surname();
 		}
 
 
 	private function surname(){
-			$this->surname = $this->read('surname');
+			$this->surname = $this->load['surname']
 		}
 
 
@@ -51,13 +52,14 @@ class user extends Model{
 
 
 	public function setfirstname($firstname){
+			$this->load[''] = $;
 			$this->update("firstname = '$firstname'");
 			$this->firstname();
 		}
 
 
 	private function firstname(){
-			$this->firstname = $this->read('firstname');
+			$this->firstname = $this->load['firstname']
 		}
 
 
@@ -66,13 +68,14 @@ class user extends Model{
 		}
 
 	public function setothername($othername){
+			$this->load[''] = $;
 			$this->update("othername = '$othername'");
 			$this->othername();
 		}
 
 
 	private function othername(){
-			$this->othername = $this->read('othername');
+			$this->othername = $this->load['othername']
 		}
 
 
@@ -81,13 +84,14 @@ class user extends Model{
 		}
 
 	public function setdate_of_birth($date_of_birth){
+			$this->load[''] = $;
 			$this->update("date_of_birth = '$date_of_birth'");
 			$this->date_of_birth();
 		}
 
 
 	private function date_of_birth(){
-			$this->date_of_birth = $this->read('date_of_birth');
+			$this->date_of_birth = $this->load['date_of_birth']
 		}
 
 
@@ -96,13 +100,14 @@ class user extends Model{
 		}
 
 	public function setgender($gender){
+			$this->load[''] = $;
 			$this->update("gender = '$gender'");
 			$this->gender();
 		}
 
 
 	private function gender(){
-			$this->gender = $this->read('gender');
+			$this->gender = $this->load['gender']
 		}
 
 
@@ -111,12 +116,13 @@ class user extends Model{
 		}
 
 	public function setpassword($password){
+			$this->load[''] = $;
 			$this->update("password = '$password'");
 			$this->password();
 		}
 
 	private function password(){
-			$this->password = $this->read('password');
+			$this->password = $this->load['password']
 		}
 
 
@@ -125,6 +131,7 @@ class user extends Model{
 		}
 
 	public function setsession_ID($session_ID){
+			$this->load[''] = $;
 			if($session_ID=='NULL')
 				$this->update("session_ID = NULL");
 			else
@@ -133,7 +140,7 @@ class user extends Model{
 		}
 
 	private function session_ID(){
-			$this->session_ID = $this->read('session_ID');
+			$this->session_ID = $this->load['session_ID']
 		}
 
 
@@ -142,13 +149,14 @@ class user extends Model{
 		}
 
 	public function setnumber($number){
+			$this->load[''] = $;
 			$this->update("number = '$number'");
 			$this->number();
 		}
 
 
 	private function number(){
-			$this->number = $this->read('number');
+			$this->number = $this->load['number']
 		}
 
 
@@ -157,13 +165,14 @@ class user extends Model{
 		}
 
 	public function setemail($email){
+			$this->load[''] = $;
 			$this->update("email = '$email'");
 			$this->email();
 		}
 
 
 	private function email(){
-			$this->email = $this->read('email');
+			$this->email = $this->load['email']
 		}
 
 
@@ -172,12 +181,13 @@ class user extends Model{
 		}
 
 	public function setcity($city){
+			$this->load[''] = $;
 			$this->update("city = '$city'");
 			$this->city();
 		}
 
 	private function city(){
-			$this->city = $this->read('city');
+			$this->city = $this->load['city']
 		}
 
 	public function getcity(){

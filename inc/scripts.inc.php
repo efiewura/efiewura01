@@ -1,30 +1,23 @@
-<script src="assets/js/bootstrap/core/jquery.min.js"></script>
+<script src="<?php echo $dir ?>/assets/js/bootstrap/core/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-<script src="assets/js/bootstrap/core/popper.min.js"></script>
-<script src="assets/js/bootstrap/core/bootstrap-material-design.min.js"></script>
-<script src="assets/js/bootstrap/plugins/moment.min.js"></script>
-<script src="assets/js/bootstrap/plugins/bootstrap-datetimepicker.js"></script>
-<script src="assets/js/bootstrap/plugins/nouislider.min.js"></script>
-<script src="assets/js/bootstrap/material-kit.min.js"></script>
+<script src="<?php echo $dir ?>/assets/js/bootstrap/core/popper.min.js"></script>
+<script src="<?php echo $dir ?>/assets/js/bootstrap/core/bootstrap-material-design.min.js"></script>
+<script src="<?php echo $dir ?>/assets/js/bootstrap/plugins/moment.min.js"></script>
+<script src="<?php echo $dir ?>/assets/js/bootstrap/plugins/bootstrap-datetimepicker.js"></script>
+<script src="<?php echo $dir ?>/assets/js/bootstrap/plugins/nouislider.min.js"></script>
+<script src="<?php echo $dir ?>/assets/js/bootstrap/material-kit.min.js"></script>
   <script src="//cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.6.3/js/bootstrap-select.min.js"></script>
   <script type="text/javascript">
    
-  <?php if(!isset($_GET['q'])){ ?> 
-    var str = window.location.href.replace(window.location.origin+"/efiewura/","");
-  console.log(str);
-   if(!(/^[a-zA-Z0-9_\/\=\?\-%\+()]*$/.test(str))){
-  window.location.href = window.location.origin+'/efiewura/';
-}else{
-}
-<?php } ?>
+  
   </script>
-}
+
 <?php if ($title==' ') {
   ?>
-<script src="assets/js/main/owl.carousel.min.js"></script>
+<script src="<?php echo $dir ?>/assets/js/main/owl.carousel.min.js"></script>
   <?php
 } ?>
-<script src="assets/js/main/main.js"></script>
+<script src="<?php echo $dir ?>/assets/js/main/main.js"></script>
 <?php if ($pg=='host'||$pg=='done') {
  ?>
 <script src="https://widget.cloudinary.com/v2.0/global/all.js" type="text/javascript"></script>

@@ -1,6 +1,6 @@
       <div class="container">
           <div class="navbar-translate">
-              <a class="navbar-brand " href="<?php echo $dir ?>/">
+              <a class="navbar-brand " href="<?php echo $dir ?>">
                   Efiewura
               </a>
               <button class="navbar-toggler" type="button" data-toggle="collapse" aria-expanded="false"
@@ -14,7 +14,7 @@
           <div class="collapse navbar-collapse">
               <ul class="navbar-nav ml-auto">
                   <li class="nav-item">
-                      <a class="nav-link" title="" href="<?php echo $dir ?>/">
+                      <a class="nav-link" title="" href="<?php echo $dir ?>">
                           Home
                       </a>
                   </li>
@@ -39,7 +39,7 @@
                           Find Space
                       </a>
                   </li>
-                  <form class="form-inline ml-auto" method="GET" action="<?php echo $dir ?>/">
+                  <form class="form-inline ml-auto" method="GET" action="<?php echo $dir ?>">
                       <div class="form-group no-border">
                           <input type="text" class="form-control" placeholder="Search" name="q">
                       </div>

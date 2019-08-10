@@ -1,5 +1,5 @@
 <?php 
-class image extends Model{
+class image extends Model2{
 
 
 	private $user_id;
@@ -8,12 +8,20 @@ class image extends Model{
 	private $name;
 	private $etag;
 	private $thumbnail;
+	private $load = array(	"user_id"=>"",
+							"space_id"=>"",
+							"location"=>"",
+							"name"=>"",
+							"etag"=>"",
+							"thumbnail"=>""
+							);
 	public $table = "image";
 
 
-	public function __construct($id){
-		Model::__construct($id);
-		if($id != 0){
+	public function __construct($id,$load){
+		Model2::__construct($id,$load);
+		$this->load = $this->setter($load);
+			if(is_array($load)){
 			$this->user_id();
 			$this->space_id();
 			$this->location();
@@ -24,13 +32,14 @@ class image extends Model{
 	}
 
 	public function setuser_id($user_id){
+			$this->load['user_id'] = $user_id;
 			$this->update("`user_id` = '$user_id'");
 			$this->user_id();
 		}
 
 
 	private function user_id(){
-			$this->user_id = $this->read('user_id');
+			$this->user_id = $this->load['user_id'];
 		}
 
 
@@ -39,13 +48,14 @@ class image extends Model{
 		}
 
 	public function setspace_id($space_id){
+			$this->load['space_id'] = $space_id;
 			$this->update("`space_id` = '$space_id'");
 			$this->space_id();
 		}
 
 
 	private function space_id(){
-			$this->space_id = $this->read('space_id');
+			$this->space_id = $this->load['space_id'];
 		}
 
 
@@ -54,13 +64,14 @@ class image extends Model{
 		}
 
 	public function setlocation($location){
+			$this->load['location'] = $location;
 			$this->update("`location` = '$location'");
 			$this->location();
 		}
 
 
 	private function location(){
-			$this->location = $this->read('location');
+			$this->location = $this->load['location'];
 		}
 
 
@@ -69,13 +80,14 @@ class image extends Model{
 		}
 
 	public function setname($name){
+			$this->load['name'] = $name;
 			$this->update("`name` = '$name'");
 			$this->name();
 		}
 
 
 	private function name(){
-			$this->name = $this->read('name');
+			$this->name = $this->load['name'];
 		}
 
 
@@ -84,13 +96,14 @@ class image extends Model{
 		}
 
 	public function setetag($etag){
+			$this->load['etag'] = $etag;
 			$this->update("`etag` = '$etag'");
 			$this->etag();
 		}
 
 
 	private function etag(){
-			$this->etag = $this->read('etag');
+			$this->etag = $this->load['etag'];
 		}
 
 
@@ -99,12 +112,13 @@ class image extends Model{
 		}
 
 	public function setthumbnail($thumbnail){
+			$this->load['thumbnail'] = $thumbnail;
 			$this->update("`thumbnail` = '$thumbnail'");
 			$this->thumbnail();
 		}
 
 	private function thumbnail(){
-			$this->thumbnail = $this->read('thumbnail');
+			$this->thumbnail = $this->load['thumbnail'];
 		}
 
 	public function getthumbnail(){
@@ -115,31 +129,49 @@ class image extends Model{
 	{
 		$imagearr = array();
 		include("./gen/connector.gen.php");
-		$sql = "SELECT `id` 
+		$sql = "SELECT * 
 				FROM `$this.table` 
 				WHERE `availability` = 1";
 		$result = $con->query($sql);
 		
 			while($row = $result->fetch_assoc()){
-			$image = new image($row['id']);
+			$image = new image(-1,$row);
 			array_push($imagearr , $image);
 		   }
 		   return $imagearr;
 	}
 
 
-	public function getImagesbySpace($space_id)
+public function getImagebySpace($space_id)
 	{
 		$imagearr = array();
 		include("./gen/connector.gen.php");
-		$sql = "SELECT `image`.`id` as `id` 
+		$sql = "SELECT `image`.*
 				FROM `image` , `space`
 				WHERE `image`.`availability` = 1
 				AND `space`.`id`='$space_id'
 				AND `image`.`space_id` = `space`.`id`";
 		$result = $con->query($sql);
 			while($row = $result->fetch_assoc()){
-			$image = new image($row['id']);
+			$image = new image(-1,$row);
+			array_push($imagearr , $image);
+		   return $image;
+		   }
+		   return 0;
+	}
+
+	public function getImagesbySpace($space_id)
+	{
+		$imagearr = array();
+		include("./gen/connector.gen.php");
+		$sql = "SELECT `image`.* 
+				FROM `image` , `space`
+				WHERE `image`.`availability` = 1
+				AND `space`.`id`='$space_id'
+				AND `image`.`space_id` = `space`.`id`";
+		$result = $con->query($sql);
+			while($row = $result->fetch_assoc()){
+			$image = new image(-1,$row);
 			array_push($imagearr , $image);
 		   }
 		   return $imagearr;
@@ -148,14 +180,14 @@ class image extends Model{
 	{
 		//$imagearr = array();
 		include("./gen/connector.gen.php");
-		$sql = "SELECT `image`.`id` as `id` 
+		$sql = "SELECT `image`.*
 				FROM `image` , `efiewura`
 				WHERE `image`.`availability` = 1
 				AND `efiewura`.`id`='$user_id'
 				AND `image`.`user_id` = `efiewura`.`id`";
 		$result = $con->query($sql);
 			while($row = $result->fetch_assoc()){
-			$image = new image($row['id']);
+			$image = new image(-1,$row);
 			return $image;
 			//array_push($imagearr , $image);
 		   }

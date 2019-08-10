@@ -487,7 +487,10 @@ label {
     background-color: var(--teal);
 }
 /*HOST END*/
+.list-group-item:first-child {
+    border-top-left-radius: .25rem !important;border-top-right-radius: .25rem !important;
 
+}
 
 /*VIEW LISTING*/
 #view-listing-head {
