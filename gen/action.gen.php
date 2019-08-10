@@ -26,13 +26,13 @@ if ($_POST["next"]=='complete'){
 	$efiewura->avail();
 	$userImg = explode('#', $userImg);
 
-	$image = new image(0);
+	$image = new image(0,0);
 	$image->setlocation($imgMainLoc.$userImg[0]);
 	$image->setetag($userImg[1]);
 	$image->setuser_id($efiewura->getID());
 		$image->avail();
 
-	$space = new space(0);
+	$space = new space(0,0);
 	$space->setregion($region);
 	$space->setdistrict($district);
 	$space->setcity($city);
@@ -45,7 +45,7 @@ if ($_POST["next"]=='complete'){
 	$space_id = $space->getID();
 	foreach ($images as $val) {
 		$val = explode('#', $val);
-		$image = new image(0);
+		$image = new image(0,0);
 		$image->setlocation($imgMainLoc.$val[0]);
 		$image->setetag($val[1]);
 		$image->setspace_id($space_id);
@@ -54,7 +54,7 @@ if ($_POST["next"]=='complete'){
 	setcookie('userSpace', $efiewura->getID().'#'.$space->getID(), time() + (86400 * 30), "/");
 }else{
 	$efiewura = new efiewura(explode('#',$_COOKIE['userSpace'])[0]);
-	$space = new space(explode('#',$_COOKIE['userSpace'])[1]);
+	$space = new space(explode('#',$_COOKIE['userSpace'])[1],0);
 }
 }
 if($_POST["next"]=='efiewura'){
@@ -83,7 +83,7 @@ $lat = $_POST["lat"];
 $lng = $_POST["lng"];
 $holder = $_POST["Uid"];
 
-$space = new space(0);
+$space = new space(0,0);
 $space->setregion($region);
 $space->setdistrict($district);
 $space->setcity($city);
@@ -109,7 +109,7 @@ else if($_POST["next"]=="img"){
 	$location = $imgMainLoc.$path;
 	$user_id = $_POST['Uid'];
 	$space_id = $_POST['Sid'];
-		$image = new image(0);
+		$image = new image(0,0);
 		$image->setlocation($location);
 		$image->setetag($etag);
 		$image->setname($name);
@@ -125,7 +125,7 @@ else if($_POST["next"]=="img"){
 }else if ($_POST["next"]=="done") {
 	$user_id = $_POST['Uid'];
 	$space_id = $_POST['Sid'];
-	$space = new space($space_id);
+	$space = new space($space_id,0);
 	$space->avail();
 	$efiewura = new efiewura($user_id);
 	$efiewura->avail();

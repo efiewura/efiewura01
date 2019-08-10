@@ -1,4 +1,4 @@
-<form method="GET" action="./?pg=find">
+<form method="GET" action="<?php echo $dir ?>/find">
 <div class="row" style="">
 <div class="col-md-2 form-group">
   <select id="region"  class="custom-select rounded-0 input-md" style="width: 100%;padding-bottom: 0px;margin-top: 5px;height: 60px;" name="rg">

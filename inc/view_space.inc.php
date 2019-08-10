@@ -47,7 +47,9 @@
 </div>
 
 <!--MODALS END-->
-<?php $efiewura = efiewura::getEfiewuraSpace($space_id);?>
+<?php $efiewura = efiewura::getEfiewuraSpace($space_id);
+$url = (image::getUserImage($efiewura->getID()));
+$url = (is_object($url))? $url->getlocation():'...';?>
 <section class="container" id="owners-details">
     <div class="row">
         <div style="margin-top: 80px; margin-bottom: 60px;" class="col-md-8 offset-md-2">
@@ -55,7 +57,7 @@
                 <h3 id="owner-head">Contact the host to book your room</h3>
                 <?php if(!is_int($efiewura)){ ?>
                 <div id="owners-details-card" class="card-body">
-                    <img style="width: 120px; height: 120px;" src="assets/img/avatar.jpg" alt=""
+                    <img style="width: 120px; height: 120px;" src="<?php  echo $url; ?>" alt=""
                          class="img-raised rounded-circle img-fluid">
                     <div id="owners-details-card-text">
                         <p><?php echo $efiewura->getname(); ?></p>

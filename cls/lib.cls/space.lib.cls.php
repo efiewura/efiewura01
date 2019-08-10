@@ -1,7 +1,7 @@
 <?php 
 
 
-class space extends Model {
+class space extends Model2 {
 
 
 	private $region;
@@ -17,36 +17,50 @@ class space extends Model {
 	private $description;
 	private $negotiable;
 	private $neg_flag;
+	private $load = 	array(	'region'=>'',
+								'district'=>'',
+								'lng'=>'',
+								'lat'=>'',
+								'imgNum'=>'',
+								'price'=>'',
+								'holder'=>'',
+								'email'=>'',
+								'city'=>'',
+								'short_desc'=>'',
+								'description'=>'',
+								'neg_flag'=>''
+							);
 	public $table = "space";
 
 
-	public function __construct($id){
-		Model::__construct($id);
-		if($id != 0){
-			$this->region();
-			$this->district();
-			$this->lng();
-			$this->lat();
-			$this->imgNum();
-			$this->price();
-			$this->holder();
-			$this->city();
-			$this->short_desc();
-			$this->description();
-			$this->neg_flag();
-			$this->negotiable();
-
-		}
+	public function __construct($id,$load){
+		Model2::__construct($id,$load);
+		$this->load = $this->setter($load);
+			if(is_array($load)&&$load!=0){
+				$this->region();
+				$this->district();
+				$this->lng();
+				$this->lat();
+				$this->imgNum();
+				$this->price();
+				$this->holder();
+				$this->city();
+				$this->short_desc();
+				$this->description();
+				$this->neg_flag();
+				$this->negotiable();
+			}
 	}
 
 	public function setregion($region){
+			$this->load['region']= $region;
 			$this->update("`region` = '$region'");
 			$this->region();
 		}
 
 
 	private function region(){
-			$this->region = $this->read('region');
+			$this->region = $this->load['region'];
 		}
 
 
@@ -55,12 +69,13 @@ class space extends Model {
 		}
 
 	public function setdescription($description){
+			$this->load['description'] = $description;
 			$this->update("`description` = '$description'");
 			$this->description();
 		}
 
 	private function description(){
-			$this->description = $this->read('description');
+			$this->description = $this->load['description'];
 		}
 
 
@@ -69,13 +84,14 @@ class space extends Model {
 		}
 
 	public function setdistrict($district){
+			$this->load['district'] = $district;
 			$this->update("`district` = '$district'");
 			$this->district();
 		}
 
 
 	private function district(){
-			$this->district = $this->read('district');
+			$this->district = $this->load['district'];
 		}
 
 
@@ -84,13 +100,14 @@ class space extends Model {
 		}
 
 	public function setlng($lng){
+			$this->load['lng'] = $lng;
 			$this->update("`lng` = '$lng'");
 			$this->lng();
 		}
 
 
 	private function lng(){
-			$this->lng = $this->read('lng');
+			$this->lng = $this->load['lng'];
 		}
 
 
@@ -99,13 +116,14 @@ class space extends Model {
 		}
 
 	public function setlat($lat){
+			$this->load['lat'] = $lat;
 			$this->update("`lat` = '$lat'");
 			$this->lat();
 		}
 
 
 	private function lat(){
-			$this->lat = $this->read('lat');
+			$this->lat = $this->load['lat'];
 		}
 
 
@@ -114,13 +132,14 @@ class space extends Model {
 		}
 
 	public function setimgNum($imgNum){
+			$this->load['imgNum'] = $imgNum;
 			$this->update("`imgNum` = '$imgNum'");
 			$this->imgNum();
 		}
 
 
 	private function imgNum(){
-			$this->imgNum = $this->read('imgNum');
+			$this->imgNum = $this->load['imgNum'];
 		}
 
 
@@ -129,13 +148,14 @@ class space extends Model {
 		}
 
 	public function setprice($price){
+			$this->load['price'] = $price;
 			$this->update("`price` = '$price'");
 			$this->price();
 		}
 
 
 	private function price(){
-			$this->price = $this->read('price');
+			$this->price = $this->load['price'];
 		}
 
 
@@ -144,13 +164,14 @@ class space extends Model {
 		}
 
 	public function setholder($holder){
+			$this->load['holder'] = $holder;
 			$this->update("`holder` = '$holder'");
 			$this->holder();
 		}
 
 
 	private function holder(){
-			$this->holder = $this->read('holder');
+			$this->holder = $this->load['holder'];
 		}
 
 
@@ -159,13 +180,14 @@ class space extends Model {
 		}
 
 	public function setemail($email){
+			$this->load['email'] = $email;
 			$this->update("`email` = '$email'");
 			$this->email();
 		}
 
 
 	private function email(){
-			$this->email = $this->read('email');
+			$this->email = $this->load['email'];
 		}
 
 
@@ -174,12 +196,13 @@ class space extends Model {
 		}
 
 	public function setcity($city){
+			$this->load['city'] = $city;
 			$this->update("`city` = '$city'");
 			$this->city();
 		}
 
 	private function city(){
-			$this->city = $this->read('city');
+			$this->city = $this->load['city'];
 		}
 
 	public function getcity(){
@@ -187,12 +210,13 @@ class space extends Model {
 		}
 
 	public function setshort_desc($short_desc){
+			$this->load['short_desc'] = $short_desc;
 			$this->update("`short_desc` = '$short_desc'");
 			$this->short_desc();
 		}
 
 	private function short_desc(){
-			$this->short_desc = $this->read('short_desc');
+			$this->short_desc = $this->load['short_desc'];
 		}
 
 	public function getshort_desc(){
@@ -211,12 +235,13 @@ class space extends Model {
 		}
 
 	public function setneg_flag($neg_flag){
+			$this->load['neg_flag'] = $neg_flag;
 			$this->update("`neg_flag` = '$neg_flag'");
 			$this->neg_flag();
 		}
 
 	private function neg_flag(){
-			$this->neg_flag = $this->read('neg_flag');
+			$this->neg_flag = $this->load['neg_flag'];
 		}
 
 	public function getneg_flag(){
@@ -226,13 +251,13 @@ class space extends Model {
 	{
 		$spacearr = array();
 		include("./gen/connector.gen.php");
-		$sql = "SELECT `id` 
+		$sql = "SELECT * 
 				FROM `space` 
 				WHERE `availability` = 1";
 		$result = $con->query($sql);
 		
 			while($row = $result->fetch_assoc()){
-			$space = new space($row['id']);
+			$space = new space(-1,$row);
 			array_push($spacearr , $space);
 		   }
 		   return $spacearr;
@@ -242,7 +267,7 @@ class space extends Model {
 	{
 		$spacearr = array();
 		include("./gen/connector.gen.php");
-		$sql = "SELECT `id` 
+		$sql = "SELECT * 
 				FROM `space` 
 				WHERE `availability` = 1
 				AND `region` = '$region'
@@ -250,11 +275,12 @@ class space extends Model {
 					AND `city` LIKE '%$city%'";
 				
 		//$sql = $sql.(($Uid==0)?"":"AND `holder` = '$Uid'");
+
 		$result = $con->query($sql);
 
 		
 			while($row = $result->fetch_assoc()){
-			$space = new space($row['id']);
+			$space = new space(-1,$row);//add a flag to indicate a update or a class creation
 			array_push($spacearr , $space);
 		   }	
 		   return $spacearr;
@@ -264,7 +290,7 @@ class space extends Model {
 	{
 		$spacearr = array();
 		include("./gen/connector.gen.php");
-		$sql = "SELECT `id` 
+		$sql = "SELECT *
 				FROM `space` 
 				WHERE `availability` = 1";
 				$i = 0;
@@ -290,7 +316,7 @@ class space extends Model {
 				$result = $con->query($sql);
 		
 			while($row = $result->fetch_assoc()){
-			$space = new space($row['id']);
+			$space = new space(-1,$row);
 			array_push($spacearr , $space);
 		   }
 		   return $spacearr;
@@ -299,7 +325,7 @@ public function getspacesbySearchArr($arr)
 	{
 		$spacearr = array();
 		include("./gen/connector.gen.php");
-		$sql = "SELECT `id` 
+		$sql = "SELECT * 
 				FROM `space` 
 				WHERE `id`
 				IN (SELECT `id` 
@@ -333,7 +359,7 @@ public function getspacesbySearchArr($arr)
 				AND `availability` = 1";
 				$result = $con->query($sql);
 			while($row = $result->fetch_assoc()){
-			$space = new space($row['id']);
+			$space = new space(-1,$row);
 			array_push($spacearr , $space);
 		   }
 		   return $spacearr;
@@ -345,19 +371,19 @@ public function getspacesbySearchArr($arr)
 		//print_r($arr);
 		$spacearr = array();
 		include("./gen/connector.gen.php");
-		$sql = "SELECT `space`.`id`
+		$sql = "SELECT *
 					FROM 	`space`
 					WHERE MATCH(short_desc, district ,city,description) AGAINST ('$str' IN NATURAL LANGUAGE MODE)
 					AND `space`.`availability` = 1
 					UNION
-					SELECT `space`.`id`
+					SELECT `space`.*
 					FROM 	`space` , `efiewura`
 					WHERE MATCH(name,address) AGAINST ('$str' IN NATURAL LANGUAGE MODE)
 					AND `space`.`holder` = `efiewura`.`id`
 					AND `space`.`availability` = 1";
 				$result = $con->query($sql);
 			while($row = $result->fetch_assoc()){
-			$space = new space($row['id']);
+			$space = new space(-1,$row);
 			array_push($spacearr , $space);
 		   }
 		   return $spacearr;
@@ -391,7 +417,6 @@ public function getspacesbySearchArr($arr)
 				AND `space`.`id` = `image`.`space_id`
 				AND `space`.`id` = $this->getID()";
 				$sql = $sql.$str;
-			$sql;
 		$result = $con->query($sql);
 		
 			while($row = $result->fetch_assoc()){
