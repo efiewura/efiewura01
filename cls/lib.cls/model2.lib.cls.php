@@ -148,7 +148,6 @@ class Model2 {
 		} else {
    				$msg = 111;
 		}
-echo $msg;
 	return $msg;
 	}
 
