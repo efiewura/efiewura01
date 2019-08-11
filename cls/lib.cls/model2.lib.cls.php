@@ -56,7 +56,7 @@ class Model2 {
 	}
 
 	protected function get_turple(){
-		return $this->read('*');
+		return $this->read('*',1);
 	}
 
 
@@ -73,7 +73,7 @@ class Model2 {
 	}
 
 	private function settime_created(){
-		$this->time_created = $this->read('time_created');
+		$this->time_created = $this->read('time_created',0);
 	}
 
 
@@ -135,6 +135,7 @@ class Model2 {
 			}
 		$sql = $sqlIntro.$sqlKeys.$sqlMid.$sqlVals.")";
 		}else{
+		    
 		$sql = "INSERT INTO $this->table ( availability ) 
 				VALUES ( 2 )";
 }
@@ -143,11 +144,10 @@ class Model2 {
    				$this->setID($con->insert_id);
 				$this->setavailability(2);
 
-   				$msg = "record created";
+   				$msg = "record ".$con->insert_id." created for ".$this->table;
 		} else {
    				$msg = 111;
 		}
-
 	return $msg;
 	}
 
@@ -156,12 +156,15 @@ class Model2 {
 
 
 /*READ FUNCTION*/
-	protected function read($attr){
+	protected function read($attr, $avail){
 		$id = $this->getID();
 			include("./gen/connector.gen.php");
 		$sql = "SELECT $attr 
 				FROM $this->table
-				WHERE id = $id";
+				WHERE id = $id
+				";
+		$sql = $sql.(($avail==1)? " AND `availability` = 1":"");
+		//echo $sql;
 		$result = $con->query($sql);
 		$row = $result->fetch_assoc();
 			if ($row) {
