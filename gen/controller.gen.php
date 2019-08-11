@@ -56,6 +56,7 @@ $temp = './inc/page.inc.php';
 $page = './inc/terms.inc.php';
 $title = 'Terms & Conditions';
 $noHeader = true;
+break;
 	case 'view':
 	case 'space':
 $space_id = (isset($_GET['space']))? $_GET['space']:0;
@@ -67,6 +68,7 @@ $temp = './inc/page.inc.php';
 $page = './inc/view_space.inc.php';
 $title = $space->getshort_desc();
 }else{
+    echo "Here";
 $temp = './inc/page.inc.php';
 $page = './inc/empty.inc.php';
 $title = "";
