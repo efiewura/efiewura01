@@ -361,8 +361,8 @@ function sleep(ms) {
                }  
             }  
             if (result && result.event === "queues-end") {
-              if($("input[name='userImg'").length!=0){
-                $("input[name='userImg'").remove();
+              if($("input[name='userImg']").length!=0){
+                $("input[name='userImg']").remove();
               }
               }
             if (result && result.event === "success") {
@@ -448,7 +448,7 @@ function sleep(ms) {
             if (result && result.event === "success") {
               num = getCookie('num');
               slide = getSlide(num);
-              $('div.carousel-inner').append('<div class="carousel-item '+((num==0)?'active':'')+'"><img class="d-block w-100" src="'+result.info.url+'" alt="'+slide+' slide"></div>');
+              $('div.carousel-inner').append('<div class="carousel-item '+((num==0)?'active':'')+'"><img class="d-block w-100" src="'+"https://res.cloudinary.com/dmvymb8nn/image/upload/c_scale,w_600,h_500,f_webp/"+result.info.path+'" alt="'+slide+' slide"></div>');
               $('ol.carousel-indicators').append('<li data-target="#carouselExampleIndicators" data-slide-to="'+num+'" '+((num==0)?'class="active"':'')+'></li>');
               setCookie('num', ++num,1);
               }
@@ -468,8 +468,8 @@ function finish() {
   function checkPaymentStatus(orderID) {
     var i = 0;
     var jsondata = JSON.parse('{"payment":{"status":0}}');
-    console.log(window.location.origin+"/efiewura/test.php?id="+orderID);
-  $.get(window.location.origin+"/efiewura/test.php?id="+orderID, function(data, status){
+    console.log(window.location.origin+"/test.php?id="+orderID);
+  $.get(window.location.origin+"/test.php?id="+orderID, function(data, status){
    if (status=='success') {
     jsondata = JSON.parse(data);
     if(jsondata.order.status==0){

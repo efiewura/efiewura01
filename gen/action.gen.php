@@ -1,8 +1,7 @@
 <?php
 if (isset($_POST["next"])){
-
 if ($_POST["next"]=='complete'){
-	if(!isset($_COOKIE['userSpace'])){
+//	if(!isset($_COOKIE['userSpace'])){
 	$name = $_POST["name"]; 
 	$email = $_POST["email"];
 	$number = $_POST["number"];
@@ -17,7 +16,7 @@ if ($_POST["next"]=='complete'){
 	$agree = $_POST["agree"];
 	$userImg = $_POST["userImg"] ;
 	$images = $_POST["image"];
-	$imgMainLoc = 'https://res.cloudinary.com/dmvymb8nn/';
+	$imgMainLoc = 'https://res.cloudinary.com/dmvymb8nn/image/upload/c_scale,w_600,h_500,f_webp/';
 	$efiewura = new efiewura(0);
 	$efiewura->setname($name);
 	$efiewura->setnumber($number);
@@ -27,7 +26,7 @@ if ($_POST["next"]=='complete'){
 	$userImg = explode('#', $userImg);
 
 	$image = new image(0,0);
-	$image->setlocation($imgMainLoc.$userImg[0]);
+	$image->setlocation($imgMainLoc.ltrim($userImg[0], "image/upload/"));
 	$image->setetag($userImg[1]);
 	$image->setuser_id($efiewura->getID());
 		$image->avail();
@@ -46,16 +45,16 @@ if ($_POST["next"]=='complete'){
 	foreach ($images as $val) {
 		$val = explode('#', $val);
 		$image = new image(0,0);
-		$image->setlocation($imgMainLoc.$val[0]);
+		$image->setlocation($imgMainLoc.ltrim($val[0], "image/upload/"));
 		$image->setetag($val[1]);
 		$image->setspace_id($space_id);
 		$image->avail();
 	}
-	setcookie('userSpace', $efiewura->getID().'#'.$space->getID(), time() + (86400 * 30), "/");
-}else{
-	$efiewura = new efiewura(explode('#',$_COOKIE['userSpace'])[0]);
-	$space = new space(explode('#',$_COOKIE['userSpace'])[1],0);
-}
+//	setcookie('userSpace', $efiewura->getID().'#'.$space->getID(), time() + (86400 * 30), "/");
+//}else{
+//	$efiewura = new efiewura(explode('#',$_COOKIE['userSpace'])[0]);
+//	$space = new space(explode('#',$_COOKIE['userSpace'])[1],0);
+//}
 }
 if($_POST["next"]=='efiewura'){
 
