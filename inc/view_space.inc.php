@@ -22,7 +22,7 @@
 <div style="padding:0 20% 0 20%" class="card-column animated fadeIn delay-1s" id="other-pics">
     <?php foreach ($images as $val) {?>
     <div class="card">
-        <img class="img-raised rounded img-fluid" src="<?php echo $val->getthumbnail(); ?>" alt="" data-toggle="modal"
+        <img class="img-raised rounded img-fluid" src="<?php echo $val->getlocation(); ?>" alt="" data-toggle="modal"
              data-target=".other-pic" data-url="<?php echo $val->getlocation(); ?>" onmouseover="document.getElementById('mainPrev').src = this.dataset.url" onclick="document.getElementById('prevModal').src = this.dataset.url">
     </div>
    <?php } ?>
