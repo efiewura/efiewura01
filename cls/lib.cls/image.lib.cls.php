@@ -20,7 +20,7 @@ class image extends Model2{
 
 	public function __construct($id,$load){
 		Model2::__construct($id,$load);
-		$this->load = $this->setter($load);
+		$this->load = (is_array($load))? $this->setter($load):$this->load;
 			if(is_array($load)){
 			$this->user_id();
 			$this->space_id();
