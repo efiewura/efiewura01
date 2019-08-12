@@ -1,7 +1,8 @@
       <div class="container">
           <div class="navbar-translate">
               <a class="navbar-brand " href="<?php echo $dir ?>">
-                  Efiewura
+                <img src="<?php echo $dir ?>/assets/img/efiewura.png" alt="" class="img-fluid logo">
+                <span style="color: #004D40; font-size: 0.9em;"> EFIEWURA</span>
               </a>
               <button class="navbar-toggler" type="button" data-toggle="collapse" aria-expanded="false"
                       aria-label="Toggle navigation">

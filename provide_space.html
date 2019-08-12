@@ -1,0 +1,1031 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Efiewura - Provide Space</title>
+    <meta name="description" content="">
+    <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no'
+          name='viewport'/>
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./favicon-16x16.png">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="stylesheet" type="text/css"
+          href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/css/bootstrap/material-kit.min.css">
+    <link rel="stylesheet" href="assets/css/main/owl.carousel.min.css">
+    <link rel="stylesheet" href="assets/css/main/owl.theme.default.css">
+    <link rel="stylesheet" href="assets/css/main/animate.css">
+    <link rel="stylesheet" href="assets/css/main/style.css">
+    <meta name="RATING" content="RTA-5042-1996-1400-1577-RTA"/>
+</head>
+<body>
+<!-- Nav -->
+<nav class="navbar navbar-transpaNegotiable fixed-top navbar-expand-lg" color-on-scroll="100"
+     id="sectionsNav">
+    <div class="container">
+        <div class="navbar-translate">
+            <a class="navbar-brand" href="./index.html">
+                <img src="assets/img/efiewura.png" alt="" class="img-fluid logo">
+                <span style="color: #004D40; font-size: 0.9em;"> EFIEWURA</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="navbar-toggler-icon"></span>
+                <span class="navbar-toggler-icon"></span>
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        </div>
+        <div class="collapse navbar-collapse">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" title="" href="index.html">
+                        Home
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" title="" href="about.html">
+                        About
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" title="" href="contact.html">
+                        Contact
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" title="" href="provide_space.html">
+                        Provide space
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" title="" href="find_space.html">
+                        Find Space
+                    </a>
+                </li>
+                <form class="form-inline ml-auto">
+                    <div class="form-group no-border">
+                        <input type="text" class="form-control" placeholder="Search">
+                    </div>
+                    <button type="submit" class="btn btn-white btn-just-icon btn-round">
+                        <i class="material-icons">search</i>
+                    </button>
+                </form>
+            </ul>
+        </div>
+    </div>
+</nav>
+<!-- Nav End -->
+<!-- HERO -->
+<!-- HERO -->
+<!--HOSTING FORM-->
+<main class="container">
+
+    <div class="row">
+        <div class="col-sm-12 offset-sm-0 col-md-8 offset-md-2 animated fadeIn delay-1s">
+            <form id="custom-form" class="form-horizontal" method="POST"
+                  action="https://wwwefiewura.000webhostapp.com/done">
+                <h2>Provide The Details For Your Listing</h2>
+                <h4>Fill the form below with the details of the particular property you want to host. To make
+                    transactions
+                    easy make sure you input accurate information about the property
+                </h4>
+                <h5 class="custom-form-subhead">1. Please enter your details</h5>
+
+                <div class="form-group bmd-form-group">
+                    <label class="bmd-label-floating" for="host-name">Name</label>
+                    <input type="text" class="form-control" id="host-name" name="name" required
+                           onkeypress="$('#nameAlert').hide();">
+                    <div id="nameAlert" class="alert alert-warning" style="display: none">
+                        <button type="button" class="close" data-dismiss="alert">&times;</button>
+                        <strong>Required!</strong> Name required to move on
+                    </div>
+                </div>
+
+                <div class="form-group bmd-form-group">
+                    <label class="bmd-label-floating" for="host-email">Email</label>
+                    <input type="email" class="form-control" id="host-email" name="email">
+                </div>
+
+                <div class="form-group bmd-form-group">
+                    <label class="bmd-label-floating" for="host-contact">Contact Number</label>
+                    <input type="tel" class="form-control" id="host-contact" name="number" required
+                           onkeypress="$('#numberAlert').hide();$('#numberError').hide();">
+                    <div id="numberAlert" class="alert alert-warning" style="display: none">
+                        <button type="button" class="close" data-dismiss="alert">&times;</button>
+                        <strong>Required!</strong> Number required to move on
+                    </div>
+                    <div id="numberError" class="alert alert-danger" style="display: none">
+                        <button type="button" class="close" data-dismiss="alert">&times;</button>
+                        <strong>Wrong Format!</strong> Number format error
+                    </div>
+                </div>
+
+                <div class="form-group bmd-form-group">
+                    <label class="bmd-label-floating" for="host-address">Address</label>
+                    <input type="text" class="form-control" id="host-address" name="Address">
+                </div>
+
+                <div class="form-group form-file-upload form-file-multiple">
+                    <input type="file" multiple="" class="inputFileHidden">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="input-group">
+                                <input type="text" class="form-control inputFileVisible" placeholder="Profile Photo">
+                                <span class="input-group-btn">
+                                    <button id="profileUpBtn" type="button" class="btn btn-fab btn-round btn-primary"
+                                            onclick="$('#profileAlert').hide();">
+                                        <i class="material-icons">attach_file</i>
+                                    </button>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="profileAlert" class="alert alert-warning" style="display: none">
+                        <button type="button" class="close" data-dismiss="alert">&times;</button>
+                        <strong>Required!</strong> Profile required to move on
+                    </div>
+                </div>
+
+                <h5 class="custom-form-subhead">2. Please provide the details of your listing</h5>
+                <div class="form-group bmd-form-group">
+                    <label class="bmd-label-floating" for="listing-type">Listing type. eg. 4 bed room house</label>
+                    <input type="text" class="form-control" id="listing-type" name="short_desc">
+                </div>
+
+                <div class="form-group bmd-form-group">
+                    <label class="bmd-label-floating" for="description">Description</label>
+                    <textarea class="form-control" id="description" rows="3" name="description"></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label style="color: rgba(0,0,0,0.5);" for="region">Region</label>
+                    <select class="form-control" data-style="btn btn-link" id="region" name="region" required>
+                        <option value>Select an option</option>
+                        <option value="AS">Ashanti</option>
+                        <option value="BA">Brong-Ahafo</option>
+                        <option value="CE">Central</option>
+                        <option value="EA">Eastern</option>
+                        <option value="GA">Greater Accra</option>
+                        <option value="NO">Northern</option>
+                        <option value="UE">Upper East</option>
+                        <option value="UW">Upper West</option>
+                        <option value="VO">Volta</option>
+                        <option value="WE">Western</option>
+                    </select>
+                    <div id="regionAlert" class="alert alert-warning" style="display: none">
+                        <button type="button" class="close" data-dismiss="alert">&times;</button>
+                        <strong>Required!</strong> Region must be selected
+                    </div>
+                </div>
+
+                <div class="form-group bmd-form-group">
+                    <label class="bmd-label-floating" for="host-address">District</label>
+                    <input list="district" class="form-control" name="District" autocomplete="off">
+                    <datalist id="district">
+                        <option value="Adansi North District">
+                        <option value="Bekwai Municipal District">
+                        <option value="Tema Metropolitan District">
+                        <option value="Shai Osudoku">
+                        <option value="La Nkwantanang Madina Municipal District">
+                        <option value="Ga West Municipal District">
+                        <option value="Tolon District">
+                    </datalist>
+                </div>
+
+
+                <div class="form-group bmd-form-group">
+                    <label class="bmd-label-floating" for="town">Town</label>
+                    <input type="text" class="form-control" id="town" name="city" required
+                           onkeypress="$('#cityAlert').hide();">
+                    <div id="cityAlert" class="alert alert-warning" style="display: none">
+                        <button type="button" class="close" data-dismiss="alert">&times;</button>
+                        <strong>Required!</strong> Town required to move on
+                    </div>
+                </div>
+
+                <div class="form-group form-file-upload form-file-multiple">
+                    <input type="file" multiple="" class="inputFileHidden">
+                    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                        <ol class="carousel-indicators">
+                        </ol>
+                        <div class="carousel-inner">
+                        </div>
+                        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button"
+                           data-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Previous</span>
+                        </a>
+                        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button"
+                           data-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Next</span>
+                        </a>
+                    </div>
+                    <div class="input-group">
+                        <input type="text" class="form-control inputFileVisible" placeholder="Upload pictures" multiple>
+                        <span class="input-group-btn">
+                            <button id="multUpBtn" type="button" class="btn btn-fab btn-round btn-primary">
+                                <i class="material-icons">layers</i>
+                            </button>
+                        </span>
+                    </div>
+                    <div id="multAlert" class="alert alert-warning" style="display: none">
+                        <button type="button" class="close" data-dismiss="alert">&times;</button>
+                        <strong>Required!</strong> Pictures required to move on
+                    </div>
+                </div>
+
+                <h5 class="custom-form-subhead">3. Price of listing</h5>
+                <div class="form-group bmd-form-group">
+                    <label class="bmd-label-floating" for="price">Price in Ghana Cedis</label>
+                    <input type="number" class="form-control" id="price" name="price" required
+                           onkeypress="$('#priceAlert').hide();">
+                    <div id="priceAlert" class="alert alert-warning" style="display: none">
+                        <button type="button" class="close" data-dismiss="alert">&times;</button>
+                        <strong>Required!</strong> Price required to move on
+                    </div>
+                </div>
+
+
+                <h5 class="custom-form-subhead">4. Negotiation status</h5>
+                <div class="form-check form-check-radio">
+                    <label class="form-check-label">
+                        <input class="form-check-input" type="radio" name="negotiation" id="negotiable"
+                               value="negotiable" checked>
+                        Negotiable
+                        <span class="circle">
+                            <span class="check"></span>
+                        </span>
+                    </label>
+                </div>
+                <div class="form-check form-check-radio">
+                    <label class="form-check-label">
+                        <input class="form-check-input" type="radio" name="negotiation" id="non-negotiable"
+                               value="non-negotiable">
+                        Non-negotiable
+                        <span class="circle">
+                            <span class="check"></span>
+                        </span>
+                    </label>
+                </div>
+                <div style="margin-top: 30px; margin-bottom: 30px;" class="form-check">
+                    <label class="form-check-label">
+                        <input id='formCheckbox' class="form-check-input" type="checkbox" value="" name="agree" required
+                               onclick="validate()" checked='unchecked' role="button" data-toggle="popover"
+                               data-placement="left" data-trigger="focus" title="Dismissible popover"
+                               data-content="Please fill the form fields">
+                        By checking this, you hereby agree with all the terms and conditions associated with using the
+                        Efiewura Platform
+                        <span class="form-check-sign">
+                            <span class="check"></span>
+                        </span>
+                    </label>
+                </div>
+                <div id="custom-form-buttons">
+                    <button id="pay" type="button" class="btn btn-primary" data-toggle="modal" data-target="#loginModal"
+                            style="display:none">Host
+                    </button>
+                    <button id="submit" type="submit" class="btn btn-primary">Done</button>
+                    <button type="reset" class="btn btn-primary">Reset</button>
+                    <input type="hidden" name="next" value="complete">
+                </div>
+            </form>
+        </div>
+    </div>
+</main>
+<!--HOSTING FORM END-->
+
+<!-- Payment -->
+<div class="modal fade" id="loginModal" tabindex="-1" role="">
+    <div class="modal-dialog modal-login" role="document">
+        <div class="modal-content">
+            <div class="card card-signup card-plain">
+                <div class="modal-header">
+                    <div class="card-header card-header-primary text-center">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                            <i class="material-icons">clear</i>
+                        </button>
+                        <h5 style="text-align: left;" class="card-title">Payment Form</h5>
+                    </div>
+                </div>
+                <div class="modal-body">
+                    <form id="payModalForm" class="form" action="" style="">
+                        <div class="card-body">
+                            <p class="description text-center">Uploading a listing attracts a fee of 10 Ghana Cedis</p>
+                            <p class="description text-center">The listing will be online for 3 months</p>
+                            <div class="form-group bmd-form-group">
+                                <div class="input-group">
+                                    <div class="input-group-prepend">
+                                        <div class="input-group-text"><i class="material-icons">face</i></div>
+                                    </div>
+                                    <input type="text" class="form-control" placeholder="Name">
+                                </div>
+                            </div>
+
+                            <div class="form-group bmd-form-group">
+                                <div class="input-group">
+                                    <div class="input-group-prepend">
+                                        <div class="input-group-text"><i class="material-icons">call</i></div>
+                                    </div>
+                                    <input id="payNum" type="tel" class="form-control" placeholder="Number: 0245555555"
+                                           onkeyup="if(/^(([0]){1}[2,3,5]{1}(?:\d[ ]*){8}){1}$/.test(this.value)){document.getElementById('makePay').disabled=false;}else{document.getElementById('makePay').disabled=true;}document.getElementById('payNumError').style.display='none';"
+                                           style="display: block;margin-bottom: 10px" style="display: block">
+                                    <div id="payNumError" class="alert alert-danger" style="display: none">
+                                        <button type="button" class="close" data-dismiss="alert">&times;</button>
+                                        <strong>Wrong Format!</strong> Number format error
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                    <div id="pendSt" style="display: none">
+                        <div class="spinner-grow" style="width: 3rem; height: 3rem;" role="status"></div>
+                        <span class="text-uppercase text-monospace">Pending...</span>
+
+                    </div>
+                    <div id="doneSt" style="display: none">
+                        <span class="text-uppercase text-monospace text-success">Done</span>
+                    </div>
+                    <div class="modal-footer justify-content-center">
+                        <button id="makePay" type="submit" class="btn btn-primary btn-link btn-wd btn-lg" disabled
+                                onfocus="if(/^(([0]){1}[2,3,5]{1}(?:\d[ ]*){8}){1}$/.test(this.value)){document.getElementById('payNumError').style.display='none'}else{document.getElementById('payNumError').style.display='inline'}">
+                            Make Payment
+                        </button>
+                        <button type="button" class="btn btn-primary btn-link btn-wd btn-lg" data-dismiss="modal">Cancel
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Payment End -->
+<!--FOOTER-->
+<footer style="bottom: 0px;width: 100%;z-index: 99">
+    <div class="container">
+        <div class="row" style="text-align: center;">
+            <div class="col-md-4" style="margin-top: 20px;">
+                Copyright &copy; 2019 Efiewura
+            </div>
+            <div class="col-md-4" style="margin-top: 20px;">
+                <a href="https://wwwefiewura.000webhostapp.com/terms" class="text-decoration-none">Terms &
+                    Conditions</a>
+            </div>
+            <div class="col-md-4" style="margin-top: 20px;">
+                <div id="footer-social" class="wow fadeInUp" data-wow-delay="0.9s">
+                    <a href="#" rel="tooltip" data-placement="bottom" href="https://twitter.com/Efiewura"
+                       target="_blank" data-original-title="Follow us on Twitter"><i class="fa fa-twitter"></i></a>
+                    <a href="#" rel="tooltip" data-placement="bottom" href="https://www.facebook.com/Efiewura"
+                       target="_blank" data-original-title="Like us on Facebook"><i
+                            class="fa fa-facebook-square"></i></a>
+                    <a href="#" rel="tooltip" data-placement="bottom" href="https://www.instagram.com/Efiewura"
+                       target="_blank" data-original-title="Follow us on Instagram"><i class="fa fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+        <hr style="margin-top: 40px; margin-bottom: 40px;">
+        <div class="row">
+            <div class="col-md-6 offset-md-3">
+                Accepted payment methods : <img id="momo" class="img-fluid" src="assets/img/mo.jpg"
+                                                alt="mtn-mobile-money">
+            </div>
+        </div>
+    </div>
+</footer>
+<!--FOOTER END-->
+<script src="assets/js/bootstrap/core/jquery.min.js"></script>
+<script src="assets/js/bootstrap/core/popper.min.js"></script>
+<script src="assets/js/bootstrap/core/bootstrap-material-design.min.js"></script>
+<script src="assets/js/bootstrap/plugins/moment.min.js"></script>
+<script src="assets/js/bootstrap/plugins/bootstrap-datetimepicker.js"></script>
+<script src="assets/js/bootstrap/plugins/nouislider.min.js"></script>
+<script src="assets/js/bootstrap/material-kit.min.js"></script>
+<script src="assets/js/main/owl.carousel.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.6.3/js/bootstrap-select.min.js"></script>
+<script src="assets/js/main/main.js"></script>
+
+<script src="https://widget.cloudinary.com/v2.0/global/all.js" type="text/javascript"></script>
+<script src="https://maps.googleapis.com/maps/api/js?callback=createMap&center=5.3018,-1.9930&libraries=places&key=AIzaSyASg-tMY2JWW0ErNFD6qH3BTpLFjq8S-Ss"
+        async defer>
+</script>
+
+<script type="text/javascript">
+    var regionsJSON = JSON.parse('{"AS":{"Name":"Ashanti","districts":["Adansi North","Adansi South","Afigya-Kwabre","Ahafo Ano North","Ahafo Ano South","Amansie Central","Amansie West","Asante Akim Central","Asante Akim North","Asante Akim South","Asokore Mampong","Atwima Kwanwoma","Atwima Mponua","Atwima Nwabiagya","Bekwai","Bosome Freho","Botsomtwe","Ejisu-Juaben","Ejura - Sekyedumase","Kumasi","Kwabre East","Mampong","Obuasi","Offinso North","Offinso South","Sekyere Afram Plains","Sekyere Central","Sekyere East","Sekyere Kumawu","Sekyere South"]},"BA":{"Name":"Brong-Ahafo","districts":["Asunafo North","Asunafo South","Asutifi North","Asutifi South","Atebubu-Amantin","Banda","Berekum East","Berekum","Dormaa East","Dormaa","Dormaa West","Jaman North","Jaman South","Kintampo North","Kintampo South","Nkoranza North","Nkoranza South","Pru","Sene East","Sene West","Sunyani","Sunyani West","Tain","Tano North","Tano South","Techiman","Techiman North","Wenchi"]},"CE":{"Name":"Central","districts":["Abura\/Asebu\/Kwamankese","Agona East","Agona West Municipal","Ajumako\/Enyan\/Essiam","Asikuma\/Odoben\/Brakwa","Assin North Municipal","Assin South","Awutu Senya East Municipal","Awutu Senya West","Cape Coast Metropolitan","Effutu Municipal","Ekumfi","Gomoa East","Gomoa West","Komenda\/Edina\/Eguafo\/Abirem Municipal","Mfantsiman Municipal","Twifo-Ati Morkwa","Twifo\/Heman\/Lower Denkyira","Upper Denkyira East Municipal","Upper Denkyira West"]},"EA":{"Name":"Eastern","districts":["Akuapim South","Akuapim North","Akyemansa","Asuogyaman","Ayensuano","Atiwa East","Atiwa West","Birim Central Municipal","Birim North","Birim South","Denkyembour","East Akim Municipal","Fanteakwa","Kwaebibirem","Kwahu Afram Plains North","Kwahu Afram Plains South","Kwahu East","Kwahu South","Kwahu West Municipal","Lower Manya Krobo","New-Juaben Municipal","Nsawam Adoagyire Municipal","Suhum","Upper Manya Krobo","Upper West Akim","West Akim Municipal","Yilo Krobo"]},"GA":{"Name":"Greater Accra","districts":["Ablekuma North Municipal","Ablekuma West Municipal","Accra Metropolitan","Ada East","Ada West","Adenta Municipal","Ashaiman Municipal","Ayawaso East Municipal","Ayawaso North Municipal","Ayawaso West Municipal","Ga Central","Ga East Municipal","Ga North Municipal","Ga South Municipal","Ga West Municipal","Kpone Katamanso Municipal","Krowor Municipal","La Dade Kotopon Municipal","La Nkwantanang Madina Municipal","Ledzokuku Municipal","Ningo Prampram","Okaikwei Municipal","Shai Osudoku","Tema Metropolitan","Tema West Municipal","Weija Municipal"]},"NO":{"Name":"Northern","districts":["Bole","Bunkpurugu-Nyankpanduri","Central Gonja","Chereponi","East Gonja Municipal","East Mamprusi Municipal","Gushegu Municipal","Karaga","Kpandai","Kumbungu","Mamprugo Moaduri","Mion","Nanton","Nanumba North Municipal","Nanumba South","North Gonja","Saboba","Sagnarigu Municipal","Savelugu Municipal","Sawla-Tuna-Kalba","Tamale Metropolitan","Tatale Sangule","Tolon","West Gonja","West Mamprusi Municipal","Yendi Municipal","Yunyoo-Nasuan","Zabzugu"]},"UE":{"Name":"Upper East","districts":["Bawku Municipal","Bawku West","Binduri","Bolgatanga Municipal","Bongo","Builsa","Builsa South","Garu-Tempane","Kassena Nankana East","Kassena Nankana West","Nabdam","Pusiga","Talensi"]},"UW":{"Name":"Upper West","districts":["Daffiama Bussie Issa","Jirapa","Lambussie Karni","Lawra","Nadowli","Nandom","Sissala East","Sissala West","Wa East","Wa Municipal","Wa West"]},"VO":{"Name":"Volta","districts":["Adaklu","Afadjato South","Agotime Ziope","Akatsi North","Akatsi South","Biakoye","Central Tongu","Ho Municipal","Ho West","Hohoe Municipal","Jasikan","Kadjebi","Keta Municipal","Ketu North","Ketu South Municipal","Kpando Municipal","Krachi East","Krachi Nchumuru","Krachi West","Nkwanta North","Nkwanta South","North Dayi","North Tongu","South Dayi","South Tongu"]},"WE":{"Name":"Western","districts":["Ahanta West","Aowin\/Suaman","Bia West","Bia East","Bibiani\/Anhwiaso\/Bekwai","Bodi","Ellembele","Jomoro","Juaboso","Mpohor","Mpohor\/Wassa East","Nzema East Municipal","Prestea-Huni Valley","Sefwi Akontombra","Sefwi Wiawso Municipal","Sekondi Takoradi Metropolitan","Shama","Suaman","Tarkwa-Nsuaem Municipal","Wasa Amenfi East","Wasa Amenfi West","Wassa Amenfi Central"]},"status":"Success"}');
+
+    var url = window.location.origin + "/?pg=action"
+
+    function setRegion(arg) {
+        var name = arg
+        if (/([\w\s]*)*(R|r)egion/.test(arg)) {
+            var reg = arg.split(" Reg");
+            name = reg[0];
+            console.log(name);
+        }
+        var init = "GA";
+        switch (name) {
+            case 'Ashanti':
+                init = "AS";
+                break;
+            case 'Brong-Ahafo':
+                init = "BA";
+                break;
+            case 'Central':
+                init = "CE";
+                break;
+            case 'Eastern':
+                init = "EA";
+                break;
+            case 'Greater Accra':
+                init = "GA";
+                break;
+            case 'Northern':
+                init = "NO";
+                break;
+            case 'Upper East':
+                init = "UE";
+                break;
+            case 'Upper West':
+                init = "UW";
+                break;
+            case 'Volta':
+                init = "VO";
+                break;
+            case 'Western':
+                init = "WE";
+                break;
+            default:
+                break;
+        }
+        return init;
+    }
+
+    $('select#region').change(function () {
+
+        var dis = regionsJSON[$('select#region option:selected').val()].districts;
+
+        for (var i = dis.length - 1; i >= 0; i--) {
+            $('select#district').append('<option value="' + dis[i] + '">' + dis[i] + '</option>');
+        }
+    });
+
+    function validateName(name) {
+        if (name == "" || name == null || !(typeof name === 'string' || name instanceof String)) {
+            $('#nameAlert').show();
+            return 111;
+        } else {
+            $('#nameAlert').hide();
+            return 222;
+        }
+        //If 111 - unavailable
+        //If 121 - wrong format
+        //If 222 - valid
+        return 111;
+    }
+
+    function validateRegion(name) {
+        if (name == "") {
+            $('#regionAlert').show();
+            return 111;
+        } else {
+            $('#regionAlert').hide();
+            return 222;
+        }
+        //If 111 - unavailable
+        //If 121 - wrong format
+        //If 222 - valid
+        return 111;
+    }
+
+    function validateCity(name) {
+        if (name == "" || name == null || !(typeof name === 'string' || name instanceof String)) {
+            $('#cityAlert').show();
+            return 111;
+        } else {
+            $('#cityAlert').hide();
+            return 222;
+        }
+        //If 111 - unavailable
+        //If 121 - wrong format
+        //If 222 - valid
+        return 111;
+    }
+
+    function validatePrice(price) {
+        if (price == "" || price == null) {
+            $('#priceAlert').show();
+            return 111;
+        } else {
+            $('#priceAlert').hide();
+            return 222;
+        }
+        //If 111 - unavailable
+        //If 121 - wrong format
+        //If 222 - valid
+        return 111;
+    }
+
+    function validateNumber(number) {
+        if (number == "" || number == null) {
+            $('#numberAlert').show();
+            return 111;
+        } else if (/^(([0]|\+233){1}[2,3,5]{1}(?:\d[ ]*){8}){1}/.test(number)) {
+            $('#numberAlert').hide();
+            $('#numberError').hide();
+            return 222;
+        } else {
+            $('#numberError').show();
+            return 121;
+        }
+        //If 111 - unavailable
+        //If 121 - wrong format
+        //If 222 - valid
+        return 111;
+    }
+
+    $('input#formCheckbox').prop("checked", false);
+
+    function validate(val) {
+        // console.log($('input.form-check-input'));
+        var checkbox = $('input#formCheckbox');
+        var done = true;
+        if (validateName($('#host-name').val()) == 222) {
+            checkbox.prop("checked", true);
+            $('button#pay').show();
+        } else {
+            checkbox.prop("checked", false);
+            $('button#pay').hide();
+            done = false;
+            checkbox.attr('data-toggle', 'popover');
+        }
+        if (validateRegion($('#region').val()) == 222) {
+            checkbox.prop("checked", true);
+            $('button#pay').show();
+        } else {
+            checkbox.prop("checked", false);
+            $('button#pay').hide();
+            done = false;
+            checkbox.attr('data-toggle', 'popover');
+        }
+        if (validateCity($('#town').val()) == 222) {
+            checkbox.attr("checked", true);
+            $('button#pay').show();
+        } else {
+            checkbox.prop("checked", false);
+            $('button#pay').hide();
+            checkbox.attr('data-toggle', 'popover');
+            done = false;
+        }
+        if (validatePrice($('#price').val()) == 222) {
+            checkbox.prop("checked", true);
+            $('button#pay').show();
+        } else {
+            $(val).prop("checked", false);
+            $('button#pay').hide();
+            checkbox.attr('data-toggle', 'popover');
+            done = false;
+        }
+        if (validateNumber($('#host-contact').val()) == 222) {
+            checkbox.prop("checked", true);
+            $('button#pay').show();
+        } else {
+            checkbox.prop("checked", false);
+            $('button#pay').hide();
+            done = false;
+            checkbox.attr('data-toggle', 'popover');
+        }
+        if ($('img#profile').length == 0) {
+            $('#profileAlert').show();
+            checkbox.prop("checked", false);
+            $('button#pay').hide();
+            done = false;
+            checkbox.attr('data-toggle', 'popover');
+        }
+        if ($("input[name='image[]']").length == 0) {
+            $('#multAlert').show();
+            checkbox.prop("checked", false);
+            $('button#pay').hide();
+            done = false;
+            checkbox.attr('data-toggle', 'popover');
+        }
+        //$(window).scrollTop('500px');
+        if (done) {
+            checkbox.removeAttr('data-toggle');
+            //console.log('done:',checkbox.attr('data-toggle', false));
+        } else {
+            checkbox.attr('data-toggle', 'popover');
+            //console.log('not done:',checkbox.attr('data-toggle', 'popover'));
+        }
+    }
+
+    $('.popover-dismiss').popover({
+        trigger: 'focus'
+    })
+</script>
+<script>
+    var submitted = false;
+
+    function setCookie(cname, cvalue, exdays) {
+        var d = new Date();
+        d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
+        var expires = "expires=" + d.toUTCString();
+        document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+    }
+
+    function getCookie(cname) {
+        var name = cname + "=";
+        var decodedCookie = decodeURIComponent(document.cookie);
+        var ca = decodedCookie.split(';');
+        for (var i = 0; i < ca.length; i++) {
+            var c = ca[i];
+            while (c.charAt(0) == ' ') {
+                c = c.substring(1);
+            }
+            if (c.indexOf(name) == 0) {
+                return c.substring(name.length, c.length);
+            }
+        }
+        return "";
+    }
+
+    $("form#custom-form").submit(function () {
+        submitted = true;
+    });
+
+    if ('host' != "done") {
+        document.cookie = "userSpace=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+        $(window).on('unload', function (e) {
+            document.cookie = "userSpace=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+        });
+    }
+    if ('host' == "host" && !submitted) {
+        $(window).bind('beforeunload', function () {
+            return 'Are you sure you want to leave? Stored Data will be deleted.';
+        });
+    }
+
+    function getSlide(num) {
+        switch (num) {
+            case 0:
+                return 'First';
+                break;
+            case 1:
+                return 'Second';
+                break;
+            case 2:
+                return 'Third';
+                break;
+            case 3:
+                return 'Fourth';
+                break;
+            case 4:
+                return 'Fifth';
+                break;
+            default:
+                return 'Sixth';
+                break;
+        }
+    }
+
+    function sleep(ms) {
+        return new Promise(resolve => setTimeout(resolve, ms));
+    }
+
+    $(document).ready(function () {
+        setCookie('num', 0, 1);
+        // FileInput
+
+        $('#profileUpBtn').on('focus', function () {
+            $('#profileAlert').hide();
+            if (validateName($('#host-name').val()) == 222 && validateNumber($('#host-contact').val()) == 222) {
+                var holder = $(this);
+                holder.parent().siblings().trigger('focus');
+                holder.parent().parent().parent().parent().parent().addClass('is-focused');
+                holder.parent().parent().parent().find('input').attr('disabled', true);
+                holder.attr('disabled', true);
+                var widget = cloudinary.openUploadWidget({
+                        cloudName: "dmvymb8nn",
+                        uploadPreset: "qrzvjxti",
+                        sources: [
+                            "local",
+                            "url",
+                            "camera",
+                            //"facebook",
+                            //"dropbox",
+                            //"instagram",
+                            "image_search"
+                        ],
+                        form: '#custom-form',
+                        fieldName: 'userImg',
+                        cropping: true,
+                        multiple: false,
+                        defaultSource: "local",
+                        styles: {
+                            palette: {
+                                window: "#FFFFFF",
+                                windowBorder: "#90A0B3",
+                                tabIcon: "#0078FF",
+                                menuIcons: "#5A616A",
+                                textDark: "#000000",
+                                textLight: "#FFFFFF",
+                                link: "#0078FF",
+                                action: "#FF620C",
+                                inactiveTabIcon: "#103B73",
+                                error: "#F44235",
+                                inProgress: "#0078FF",
+                                complete: "#20B832",
+                                sourceBg: "#E4EBF1"
+                            },
+                            fonts: {
+                                default: null,
+                                "'Kalam', cursive": {
+                                    url: "https://fonts.googleapis.com/css?family=Kalam",
+                                    active: true
+                                }
+                            }
+                        }
+                    },
+                    (err, result) => {
+                        if (!err) {
+                            console.log("Upload Widget event - ", result);
+                            if (widget.isShowing() && (holder.attr('disabled') == 'disabled')) {
+                                holder.parent().parent().find('input').attr('disabled', false);
+                                holder.attr('disabled', false);
+                                holder.parent().parent().parent().parent().parent().removeClass('is-focused');
+                            }
+                        }
+                        if (result && result.event === "queues-end") {
+                            if ($("input[name='userImg']").length != 0) {
+                                $("input[name='userImg']").remove();
+                            }
+                        }
+                        if (result && result.event === "success") {
+                            console.log((holder.parent().parent().find('img')));
+                            if (holder.parent().parent().find('img').length == 0) {
+                                holder.parent().parent().prepend('<img id="profile" src="' + result.info.thumbnail_url + '"  alt="..." class="img-thumbnail">');
+                                holder.parent().parent().parent().addClass('col-md-4 offset-md-4');
+                                holder.parent().parent().parent().removeClass('col-md-12');
+                                holder.parent().parent().find('input').hide();
+                                holder.attr('disabled', false);
+                                ///setCookie(((getCookie('Uname')==imageId)?imageId:getCookie('Uname'))+'_img', i , 1);
+                            } else {
+                                holder.parent().parent().find('img').attr('src', result.info.thumbnail_url);
+                            }
+                        }
+                    });
+            }
+        });
+
+        $('#multUpBtn').on('focus', function () {
+            $('#multAlert').hide();
+            if (validateRegion($('#region').val()) == 222 && validateCity($('#town').val()) == 222) {
+                setCookie('num', ((getCookie('num') != "") ? getCookie('num') : 0), 1);
+                var num = 0;
+                var slide = 'First';
+                var holder = $(this);
+                holder.parent().siblings().trigger('focus');
+                holder.parent().parent().parent().parent().parent().addClass('is-focused');
+                holder.parent().parent().parent().find('input').attr('disabled', true);
+                holder.attr('disabled', true);
+                var widget = cloudinary.openUploadWidget({
+                        cloudName: "dmvymb8nn",
+                        uploadPreset: "qrzvjxti",
+                        sources: [
+                            "local",
+                            "url",
+                            "camera",
+                            //"facebook",
+                            //"dropbox",
+                            //"instagram",
+                            "image_search"
+                        ],
+                        form: '#custom-form',
+                        fieldName: 'image[]',
+                        cropping: false,
+                        multiple: true,
+                        defaultSource: "local",
+                        styles: {
+                            palette: {
+                                window: "#FFFFFF",
+                                windowBorder: "#90A0B3",
+                                tabIcon: "#0078FF",
+                                menuIcons: "#5A616A",
+                                textDark: "#000000",
+                                textLight: "#FFFFFF",
+                                link: "#0078FF",
+                                action: "#FF620C",
+                                inactiveTabIcon: "#103B73",
+                                error: "#F44235",
+                                inProgress: "#0078FF",
+                                complete: "#20B832",
+                                sourceBg: "#E4EBF1"
+                            },
+                            fonts: {
+                                default: null,
+                                "'Kalam', cursive": {
+                                    url: "https://fonts.googleapis.com/css?family=Kalam",
+                                    active: true
+                                }
+                            }
+                        }
+                    },
+                    (err, result) => {
+                        if (!err) {
+                            console.log("Upload Widget event - ", result);
+                            if (widget.isShowing() && (holder.attr('disabled') == 'disabled')) {
+                                holder.parent().parent().find('input').attr('disabled', false);
+                                holder.attr('disabled', false);
+                                holder.parent().parent().parent().parent().parent().removeClass('is-focused');
+                            } else {
+                            }
+                        }
+                        if (result && result.event === "success") {
+                            num = getCookie('num');
+                            slide = getSlide(num);
+                            $('div.carousel-inner').append('<div class="carousel-item ' + ((num == 0) ? 'active' : '') + '"><img class="d-block w-100" src="' + result.info.url + '" alt="' + slide + ' slide"></div>');
+                            $('ol.carousel-indicators').append('<li data-target="#carouselExampleIndicators" data-slide-to="' + num + '" ' + ((num == 0) ? 'class="active"' : '') + '></li>');
+                            setCookie('num', ++num, 1);
+                        }
+
+                    });
+            }
+        });
+        $('#profileUpBtn').on('focusout', function () {
+            $(this).parent().siblings().trigger('focusout');
+        });
+    });
+
+    function finish() {
+        $('#loginModal').modal('hide');
+        $('#submit').show();
+        $('#pay').hide();
+    }
+
+    function checkPaymentStatus(orderID) {
+        var i = 0;
+        var jsondata = JSON.parse('{"payment":{"status":0}}');
+        console.log(window.location.origin + "/efiewura/test.php?id=" + orderID);
+        $.get(window.location.origin + "/efiewura/test.php?id=" + orderID, function (data, status) {
+            if (status == 'success') {
+                jsondata = JSON.parse(data);
+                if (jsondata.order.status == 0) {
+                    console.log('Invalid orderID');
+                    return;
+                }
+                if (jsondata.payment.status != 'Successful') {
+                    $('#payModalForm').hide();
+                    $('#pendSt').show();
+                    if (i == 50)
+                        return;
+                    ++i;
+                    window.setTimeout(checkPaymentStatus(orderID), 2000);
+                } else {
+                    $('#payModalForm').hide();
+                    $('#pendSt').hide();
+                    $('#doneSt').show();
+                    window.setTimeout(finish, 3000)
+                }
+            }
+        });
+        return jsondata.payment.status
+    }
+
+    document.getElementById('makePay').addEventListener('click', function (e) {
+        var number = document.getElementById('payNum').value;
+        var d = new Date();
+        var orderID = number + ("0" + d.getSeconds()).slice(-2) + ("0" + d.getMinutes()).slice(-2) + ("0" + d.getHours()).slice(-2) + ("0" + d.getDate()).slice(-2) + ("0" + d.getMonth()).slice(-2) + ("" + d.getFullYear()).slice(-2);
+        requestPayload = '{"price": 1,"network": "mtn","recipient_number": "0540757034","sender": "' + number + '","option": "rmtm","apikey": "401ac4c34c87f76b39dfa2438d2581096a4a0056","orderID": "' + orderID + '"}';
+
+        var xhr = new XMLHttpRequest();
+        xhr.open("POST", 'https://client.teamcyst.com/api_call.php', true);
+
+        //Send the proper header information along with the request
+        xhr.setRequestHeader("Content-type", "application/json");
+
+        checkPaymentStatus(orderID);
+        xhr.onreadystatechange = function () {
+            //Call a function when the state changes.
+            checkPaymentStatus(orderID);
+            if (xhr.readyState == XMLHttpRequest.DONE && xhr.status == 200) {
+            }
+        }
+        //Replace requestPayload with the payload you would be sending
+        xhr.send(requestPayload);
+    });
+
+    $('#mdad').click(function () {
+        //$('#makePay').prop('disabled', true);
+        var orderID = getCookie('testVar');
+        switch (orderID) {
+            case '0':
+                console.log(orderID);
+                setCookie('testVar', 1, 1);
+                $('#payModalForm').hide();
+                $('#pendSt').show();
+                break;
+            case '1':
+                setCookie('testVar', 2, 1);
+                $('#pendSt').hide();
+                $('#doneSt').show();
+                break;
+            case '2':
+                setCookie('testVar', 0, 1);
+                setCookie('step', 4, 1);
+                $('#loginModal').modal('hide');
+                $('#submit').show();
+                $('#pay').hide();
+                setCookie('step', NULL, -5);
+                break;
+            default:
+                console.log(orderID);
+                setCookie('testVar', 0, 1);
+                break;
+        }
+    });
+
+    $('input#short_desc').keypress(function () {
+        $('.listingTitle').text($('input#short_desc').val());
+    });
+    $('input#description').keypress(function () {
+        $('#listingDesc').text($('input#short_desc').val());
+    });
+    $('input#short_desc').blur(function () {
+        var payload = {next: 'update', signature: "", short_desc: $('input#short_desc').val()}
+        var results;
+        $.post(url, payload, function (data, status) {
+            results = JSON.parse(data);
+            console.log(results);
+            if (results && results.status == 'success') {/*do something*/
+            }
+        });
+    });
+    $('input#description').blur(function () {
+        var payload = {next: 'update', signature: "", description: $('input#description').val()}
+        var results;
+        $.post(url, payload, function (data, status) {
+            results = JSON.parse(data);
+            console.log(results);
+            if (results && results.status == 'success') {/*do something*/
+            }
+        });
+    });
+</script>
+<div style="text-align: right;position: fixed;z-index:9999999;bottom: 0;width: auto;right: 1%;cursor: pointer;line-height: 0;display:block !important;">
+    <a title="Hosted on free web hosting 000webhost.com. Host your own website for FREE." target="_blank"
+       href="https://www.000webhost.com/?utm_source=000webhostapp&utm_campaign=000_logo&utm_medium=website&utm_content=footer_img"><img
+            src="https://cdn.000webhost.com/000webhost/logo/footer-powered-by-000webhost-white2.png"
+            alt="www.000webhost.com"></a></div>
+<script>function getCookie(e) {
+    for (var t = e + "=", n = decodeURIComponent(document.cookie).split(";"), o = 0; o < n.length; o++) {
+        for (var i = n[o]; " " == i.charAt(0);) i = i.substring(1);
+        if (0 == i.indexOf(t)) return i.substring(t.length, i.length)
+    }
+    return ""
+}
+
+getCookie("hostinger") && (document.cookie = "hostinger=;expires=Thu, 01 Jan 1970 00:00:01 GMT;", location.reload());
+var notification = document.getElementsByClassName("notice notice-success is-dismissible"),
+    hostingerLogo = document.getElementsByClassName("hlogo"),
+    mainContent = document.getElementsByClassName("notice_content")[0],
+    newList = ["Powerful and Easy-To-Use Control Panel.", "1-Click Auto Installer and 24/7 Live Support.", "Free Domain, Email and SSL Bundle.", "5x faster WordPress performance", "Weekly Backups and Fast Response Time."];
+if (0 < notification.length && null != mainContent) {
+    var googleFont = document.createElement("link");
+    googleFontHref = document.createAttribute("href"), googleFontRel = document.createAttribute("rel"), googleFontHref.value = "https://fonts.googleapis.com/css?family=Open+Sans:300,400,600", googleFontRel.value = "stylesheet", googleFont.setAttributeNode(googleFontHref), googleFont.setAttributeNode(googleFontRel);
+    var css = "@media only screen and (max-width: 768px) {.web-hosting-90-off-image-wrapper {position: absolute;} .notice_content {justify-content: center;} .web-hosting-90-off-image {opacity: 0.3;}} @media only screen and (min-width: 769px) {.notice_content {justify-content: space-between;} .web-hosting-90-off-image-wrapper {padding: 0 5%}} .content-wrapper {z-index: 5} .notice_content {display: flex; align-items: center;} * {-webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale;} .upgrade_button_red_sale{border: 0; border-radius: 3px; background-color: #ff123a !important; padding: 15px 55px !important; margin-left: 30px; font-family: 'Open Sans', sans-serif; font-size: 16px; font-weight: 600; color: #ffffff;} .upgrade_button_red_sale:hover{color: #ffffff !important; background: #d10303 !important;}",
+        style = document.createElement("style"), sheet = window.document.styleSheets[0];
+    style.styleSheet ? style.styleSheet.cssText = css : style.appendChild(document.createTextNode(css)), document.getElementsByTagName("head")[0].appendChild(style), document.getElementsByTagName("head")[0].appendChild(googleFont);
+    var button = document.getElementsByClassName("upgrade_button_red")[0], link = button.parentElement;
+    link.setAttribute("href", "https://www.hostinger.com/special/000webhost?utm_source=000webhost&utm_medium=panel&utm_campaign=000-wp"), link.innerHTML = '<button class="upgrade_button_red_sale">TRANSFER NOW</button>', (notification = notification[0]).setAttribute("style", "padding-bottom: 10px; padding-top: 5px; background-image: url(https://cdn.000webhost.com/000webhost/promotions/springsale/mountains-neon-background.jpg); background-color: #000000; background-size: cover; background-repeat: no-repeat; color: #ffffff; border-color: #ff123a; border-width: 8px;"), notification.className = "notice notice-error is-dismissible", (hostingerLogo = hostingerLogo[0]).setAttribute("src", "https://cdn.000webhost.com/000webhost/promotions/springsale/logo-hostinger-white.svg"), hostingerLogo.setAttribute("style", "float: none !important; height: auto; max-width: 100%; margin: 40px 20px 10px 30px;");
+    var h1Tag = notification.getElementsByTagName("H1")[0];
+    h1Tag.remove();
+    var paragraph = notification.getElementsByTagName("p")[0];
+    paragraph.innerHTML = "Fast & Secure Web Hosting. <br>Limited time offer: get an SSL certificate for FREE", paragraph.setAttribute("style", 'max-width: 600px; margin-left: 30px; font-family: "Open Sans", sans-serif; font-size: 22px; font-weight: 600;');
+    var list = notification.getElementsByTagName("UL")[0];
+    list.setAttribute("style", "max-width: 675px;");
+    for (var listElements = list.getElementsByTagName("LI"), i = 0; i < newList.length; i++) listElements[i].setAttribute("style", "color:#ffffff; list-style-type: disc; margin-left: 30px; font-family: 'Open Sans', sans-serif; font-size: 14px; font-weight: 300; line-height: 1.5;"), listElements[i].innerHTML = newList[i];
+    listElements[listElements.length - 1].remove();
+    var org_html = mainContent.innerHTML,
+        new_html = '<div class="content-wrapper">' + mainContent.innerHTML + '</div><div class="web-hosting-90-off-image-wrapper"><img class="web-hosting-90-off-image" src="https://cdn.000webhost.com/000webhost/promotions/springsale/web-hosting-90-off.png"></div>';
+    mainContent.innerHTML = new_html;
+    var saleImage = mainContent.getElementsByClassName("web-hosting-90-off-image")[0];
+    !function () {
+        var t = document.querySelectorAll("body.wp-admin")[0];
+
+        function e() {
+            var e = document.createElement("iframe");
+            e.id = "hgr-promo-widget", e.setAttribute("src", "https://www.hostinger.com/widgets/bottom-banner-sale/000_wp_admin"), e.setAttribute("allowfullscreen", !0), e.setAttribute("frameborder", 0), e.style.cssText = "z-index: 2147483000 !important;position: fixed !important;bottom: 0; width: 100%;!important; left: 0!important;", e.style.opacity = 0, e.onload = function () {
+                iFrameResize({}, "#hgr-promo-widget"), e.style.opacity = 1
+            }, t.insertAdjacentElement("afterend", e)
+        }
+
+        if (window.iFrameResize) e(); else {
+            var n = document.createElement("script");
+            n.type = "text/javascript", t.insertAdjacentElement("afterend", n), n.onload = e, n.src = "https://unpkg.com/iframe-resizer@3.6.3/js/iframeResizer.min.js"
+        }
+    }()
+}</script>
+</body>
+</html>
