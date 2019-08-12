@@ -1,5 +1,5 @@
 <?php
-$dir = "http://localhost/efiewura";
+$dir = $_SERVER['SERVER_NAME'];
 if(isset($_GET['q'])){
 	$pg = 'q';
 }
