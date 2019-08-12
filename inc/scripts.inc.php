@@ -18,8 +18,8 @@
   <?php
 } ?>
 <script src="<?php echo $dir ?>/assets/js/main/main.js"></script>
-<?php if ($pg=='host'||$pg=='done') {
- ?>
+<?php if ($pg=='host'||$pg=='done'){
+?>
 <script src="https://widget.cloudinary.com/v2.0/global/all.js" type="text/javascript"></script>
  <script src="https://maps.googleapis.com/maps/api/js?callback=createMap&center=5.3018,-1.9930&libraries=places&key=AIzaSyASg-tMY2JWW0ErNFD6qH3BTpLFjq8S-Ss"
     async defer></script>
@@ -27,7 +27,8 @@
 <script type="text/javascript"> 
   var regionsJSON = JSON.parse('{"AS":{"Name":"Ashanti","districts":["Adansi North","Adansi South","Afigya-Kwabre","Ahafo Ano North","Ahafo Ano South","Amansie Central","Amansie West","Asante Akim Central","Asante Akim North","Asante Akim South","Asokore Mampong","Atwima Kwanwoma","Atwima Mponua","Atwima Nwabiagya","Bekwai","Bosome Freho","Botsomtwe","Ejisu-Juaben","Ejura - Sekyedumase","Kumasi","Kwabre East","Mampong","Obuasi","Offinso North","Offinso South","Sekyere Afram Plains","Sekyere Central","Sekyere East","Sekyere Kumawu","Sekyere South"]},"BA":{"Name":"Brong-Ahafo","districts":["Asunafo North","Asunafo South","Asutifi North","Asutifi South","Atebubu-Amantin","Banda","Berekum East","Berekum","Dormaa East","Dormaa","Dormaa West","Jaman North","Jaman South","Kintampo North","Kintampo South","Nkoranza North","Nkoranza South","Pru","Sene East","Sene West","Sunyani","Sunyani West","Tain","Tano North","Tano South","Techiman","Techiman North","Wenchi"]},"CE":{"Name":"Central","districts":["Abura\/Asebu\/Kwamankese","Agona East","Agona West Municipal","Ajumako\/Enyan\/Essiam","Asikuma\/Odoben\/Brakwa","Assin North Municipal","Assin South","Awutu Senya East Municipal","Awutu Senya West","Cape Coast Metropolitan","Effutu Municipal","Ekumfi","Gomoa East","Gomoa West","Komenda\/Edina\/Eguafo\/Abirem Municipal","Mfantsiman Municipal","Twifo-Ati Morkwa","Twifo\/Heman\/Lower Denkyira","Upper Denkyira East Municipal","Upper Denkyira West"]},"EA":{"Name":"Eastern","districts":["Akuapim South","Akuapim North","Akyemansa","Asuogyaman","Ayensuano","Atiwa East","Atiwa West","Birim Central Municipal","Birim North","Birim South","Denkyembour","East Akim Municipal","Fanteakwa","Kwaebibirem","Kwahu Afram Plains North","Kwahu Afram Plains South","Kwahu East","Kwahu South","Kwahu West Municipal","Lower Manya Krobo","New-Juaben Municipal","Nsawam Adoagyire Municipal","Suhum","Upper Manya Krobo","Upper West Akim","West Akim Municipal","Yilo Krobo"]},"GA":{"Name":"Greater Accra","districts":["Ablekuma North Municipal","Ablekuma West Municipal","Accra Metropolitan","Ada East","Ada West","Adenta Municipal","Ashaiman Municipal","Ayawaso East Municipal","Ayawaso North Municipal","Ayawaso West Municipal","Ga Central","Ga East Municipal","Ga North Municipal","Ga South Municipal","Ga West Municipal","Kpone Katamanso Municipal","Krowor Municipal","La Dade Kotopon Municipal","La Nkwantanang Madina Municipal","Ledzokuku Municipal","Ningo Prampram","Okaikwei Municipal","Shai Osudoku","Tema Metropolitan","Tema West Municipal","Weija Municipal"]},"NO":{"Name":"Northern","districts":["Bole","Bunkpurugu-Nyankpanduri","Central Gonja","Chereponi","East Gonja Municipal","East Mamprusi Municipal","Gushegu Municipal","Karaga","Kpandai","Kumbungu","Mamprugo Moaduri","Mion","Nanton","Nanumba North Municipal","Nanumba South","North Gonja","Saboba","Sagnarigu Municipal","Savelugu Municipal","Sawla-Tuna-Kalba","Tamale Metropolitan","Tatale Sangule","Tolon","West Gonja","West Mamprusi Municipal","Yendi Municipal","Yunyoo-Nasuan","Zabzugu"]},"UE":{"Name":"Upper East","districts":["Bawku Municipal","Bawku West","Binduri","Bolgatanga Municipal","Bongo","Builsa","Builsa South","Garu-Tempane","Kassena Nankana East","Kassena Nankana West","Nabdam","Pusiga","Talensi"]},"UW":{"Name":"Upper West","districts":["Daffiama Bussie Issa","Jirapa","Lambussie Karni","Lawra","Nadowli","Nandom","Sissala East","Sissala West","Wa East","Wa Municipal","Wa West"]},"VO":{"Name":"Volta","districts":["Adaklu","Afadjato South","Agotime Ziope","Akatsi North","Akatsi South","Biakoye","Central Tongu","Ho Municipal","Ho West","Hohoe Municipal","Jasikan","Kadjebi","Keta Municipal","Ketu North","Ketu South Municipal","Kpando Municipal","Krachi East","Krachi Nchumuru","Krachi West","Nkwanta North","Nkwanta South","North Dayi","North Tongu","South Dayi","South Tongu"]},"WE":{"Name":"Western","districts":["Ahanta West","Aowin\/Suaman","Bia West","Bia East","Bibiani\/Anhwiaso\/Bekwai","Bodi","Ellembele","Jomoro","Juaboso","Mpohor","Mpohor\/Wassa East","Nzema East Municipal","Prestea-Huni Valley","Sefwi Akontombra","Sefwi Wiawso Municipal","Sekondi Takoradi Metropolitan","Shama","Suaman","Tarkwa-Nsuaem Municipal","Wasa Amenfi East","Wasa Amenfi West","Wassa Amenfi Central"]},"status":"Success"}');
 
-var url = window.location.origin+"/?pg=action"
+var url = window.location.origin;
+var done = false;
 function setRegion(arg) {
   var name = arg
      if(/([\w\s]*)*(R|r)egion/.test(arg)){
@@ -205,19 +206,21 @@ function validate(val){
     done=false;
       checkbox.attr('data-toggle', 'popover');
   }
-  if($('img#profile').length==0){
-    $('#profileAlert').show();
-    checkbox.prop("checked", false);
-    $('button#pay').hide();
-    done=false;
+
+/* if($('img#profile').length==0){
+      $('#profileAlert').show();
+      checkbox.prop("checked", false);
+      $('button#pay').hide();
+      done=false;
       checkbox.attr('data-toggle', 'popover');
-  }
+    } */
+
   if($("input[name='image[]']").length==0){
     $('#multAlert').show();
     checkbox.prop("checked", false);
     $('button#pay').hide();
     done=false;
-      checkbox.attr('data-toggle', 'popover');
+    checkbox.attr('data-toggle', 'popover');
   }
   //$(window).scrollTop('500px');
   if(done){
@@ -235,6 +238,7 @@ $('.popover-dismiss').popover({
 </script>
 <script>  
   var submitted = false;
+  var done = false;
   function setCookie(cname, cvalue, exdays) {
   var d = new Date();
   d.setTime(d.getTime() + (exdays*24*60*60*1000));
@@ -383,8 +387,8 @@ function sleep(ms) {
       });
 
         $('#multUpBtn').on('focus', function () {
-    $('#multAlert').hide();
-          if(validateRegion($('#region').val())==222&&validateCity($('#town').val())==222){
+            $('#multAlert').hide();
+          if(validateRegion($('#region').val())==222&&validateCity($('#town').val())==222&&validateName($('#host-name').val())==222&&validateNumber($('#host-contact').val())==222){
             setCookie('num',((getCookie('num')!="")? getCookie('num'):0),1);
             var num = 0;
             var slide = 'First';
@@ -448,7 +452,7 @@ function sleep(ms) {
             if (result && result.event === "success") {
               num = getCookie('num');
               slide = getSlide(num);
-              $('div.carousel-inner').append('<div class="carousel-item '+((num==0)?'active':'')+'"><img class="d-block w-100" src="'+"https://res.cloudinary.com/dmvymb8nn/image/upload/c_scale,w_600,h_500,f_webp/"+result.info.path+'" alt="'+slide+' slide"></div>');
+               $('div.carousel-inner').append('<div class="carousel-item '+((num==0)?'active':'')+'"><img class="d-block w-100" src="'+"https://res.cloudinary.com/dmvymb8nn/image/upload/c_scale,w_600,h_500,f_webp/"+result.info.path+'" alt="'+slide+' slide"></div>');
               $('ol.carousel-indicators').append('<li data-target="#carouselExampleIndicators" data-slide-to="'+num+'" '+((num==0)?'class="active"':'')+'></li>');
               setCookie('num', ++num,1);
               }
@@ -460,40 +464,76 @@ function sleep(ms) {
             $(this).parent().siblings().trigger('focusout');
         });
     });
-function finish() {
+function pay_finish() {
         $('#loginModal').modal('hide');
-        $('#submit').show();
-        $('#pay').hide();
+        $('#payModalForm').show();
+        $('#pendSt').hide();
+        $('.circle-loader').removeClass('load-complete load-success load-failure');
+        $('.checkmark').hide();
 }
+
+function pay_pending() {
+  $('#payModalForm').hide();
+  $('#pendSt').show();
+  $('#makePay').text('Pending');
+}
+
+function pay_done(status) {
+    console.log('DONE');
+    $('#pendSt').show();
+    $('#payModalForm').hide();
+  if(status){
+    $('.circle-loader').addClass('load-complete load-success');
+    $('.checkmark').show();
+    $('#submit').show();
+    $('#pay').hide();
+  
+}else{
+    $('.circle-loader').addClass('load-complete load-failure');
+    $('.checkmark').hide();
+}
+    done = true;
+  $('#makePay').hide();
+}
+
+$('#loginModal').click(function() {
+  if(done){
+        window.setTimeout(pay_finish(), 500);
+        done = false;
+  }
+});
   function checkPaymentStatus(orderID) {
     var i = 0;
     var jsondata = JSON.parse('{"payment":{"status":0}}');
-    console.log(window.location.origin+"/test.php?id="+orderID);
-  $.get(window.location.origin+"/test.php?id="+orderID, function(data, status){
+    console.log(url+"/test.php?id="+orderID);
+  $.get(url+"/test.php?id="+orderID, function(data, status){
    if (status=='success') {
     jsondata = JSON.parse(data);
     if(jsondata.order.status==0){
       console.log('Invalid orderID');
+      pay_done(false);
       return;
     }
-    if(jsondata.payment.status!='Successful'){
-        $('#payModalForm').hide();
-        $('#pendSt').show();
+    if(jsondata.payment.status=='Pending'){
+        pay_pending();
       if(i==50)
         return;
       ++i;
-      window.setTimeout(checkPaymentStatus(orderID), 2000);
-    }else{
-    $('#payModalForm').hide();
-    $('#pendSt').hide();
-    $('#doneSt').show(); 
-    window.setTimeout(finish, 3000) 
+      window.setTimeout(checkPaymentStatus(orderID), 5000);
+    }else if(jsondata.payment.status=='Successful'){ 
+        pay_done(true);
+       // window.setTimeout(pay_finish(), 3000);
+        return;
+    }else{ 
+        pay_done(false);
+        return;
     } 
   }
   });
   return jsondata.payment.status
 }
   document.getElementById('makePay').addEventListener('click',function(e) {
+    $(this).addClass('disabled');
     var number = document.getElementById('payNum').value;
   var d = new Date();
   var orderID = number+("0"+d.getSeconds()).slice(-2)+("0"+d.getMinutes()).slice(-2)+("0"+d.getHours()).slice(-2)+("0"+d.getDate()).slice(-2)+("0"+d.getMonth()).slice(-2)+(""+d.getFullYear()).slice(-2);
