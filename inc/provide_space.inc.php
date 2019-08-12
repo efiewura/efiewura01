@@ -58,10 +58,6 @@
                             </div>  
                         </div>
                     </div>
-                <div id="profileAlert" class="alert alert-warning" style="display: none">
-                    <button type="button" class="close" data-dismiss="alert">&times;</button>
-                    <strong>Required!</strong> Profile required to move on
-                </div>
                 </div>
 
                 <h5 class="custom-form-subhead">2. Please provide the details of your listing</h5>
