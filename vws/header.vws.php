@@ -3,8 +3,7 @@
 <div id="hero-message" class="animated fadeIn" style="height: 30vh;">
         <h1 style="font-size: 38px;">Welcome To EFIEWURA</h1>
         <p style="font-size: 17px; margin-top: 45px;">
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsum, saepe dolorem voluptatum corpori
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsum, saepe dolorem voluptatum corpori
+            Akwaaba! Kindly sign up and add to our amazing catalogue of ads homes and accommodation space
         </p>
     </div>
     <div id="hero-social-container">
@@ -25,7 +24,7 @@
     <div id="hero-message" class="animated fadeIn" style="height: 30vh;">
         <h1 style="font-size: 38px;text-align: center">COMING SOON</h1>
         <p style="font-size: 17px; margin-top: 45px;text-align: center">
-            An avenue for accomodation for service personel. Sign Up to put up a space for free.
+            Akwaaba! Kindly sign up and add to our amazing catalogue of ads homes and accommodation space
         </p>
 
     <h3 class="text-large text-center">5 days left</h3>

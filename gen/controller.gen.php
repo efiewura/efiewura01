@@ -1,5 +1,5 @@
 <?php
-$dir = $_SERVER['SERVER_NAME'];
+$dir = "http://localhost/efiewura";
 if(isset($_GET['q'])){
 	$pg = 'q';
 }
@@ -94,7 +94,7 @@ header('location: ./?pg=host');
 	$pg='home';
 $temp = './inc/page.inc.php';
 $page = './inc/index.inc.php';
-$title = ' ';
+$title = 'Home';
 $noHeader = true;
 		break;
 }
