@@ -301,22 +301,23 @@ a:hover, a:focus, a:visited {
   display: none;
 }
 .checkmark.draw:after {
-    animation-duration: 1.2s;
-    animation-timing-function: ease;
-    animation-name: checkmark;
-    transform: scaleX(-1) rotate(135deg);
+  animation-duration: 1.2s;
+  animation-timing-function: ease;
+  animation-name: checkmark;
+  transform: scaleX(-1) rotate(135deg);
 }
+
 .checkmark:after {
-    opacity: 1;
-    height: var(--check-height);
-    width: var(--check-width);
-    transform-origin: left top;
-    border-right: var(--check-thickness) solid var(--check-color);
-    border-top: var(--check-thickness) solid var(--check-color);
-    content: '';
-    left: var(--check-left);
-    top: var(--check-height);
-    position: absolute;
+  opacity: 1;
+  height: 4em;
+  width: 2em;
+  transform-origin: left top;
+  border-right: 2px solid #396f3a;
+  border-top: 2px solid #396f3a;
+  content: "";
+  left: 2em;
+  top: 4em;
+  position: absolute;
 }
 
 .load-failure:before, .load-failure:after {
