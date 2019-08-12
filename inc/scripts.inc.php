@@ -479,6 +479,7 @@ function pay_pending() {
 }
 
 function pay_done(status) {
+    console.log('DONE');
     $('#pendSt').show();
     $('#payModalForm').hide();
   if(status){
@@ -492,11 +493,13 @@ function pay_done(status) {
     $('.checkmark').hide();
 }
     done = true;
+  $('#makePay').hide();
 }
 
 $('#loginModal').click(function() {
   if(done){
-   pay_finish();
+        window.setTimeout(pay_finish(), 500);
+        done = false;
   }
 });
   function checkPaymentStatus(orderID) {
@@ -508,6 +511,7 @@ $('#loginModal').click(function() {
     jsondata = JSON.parse(data);
     if(jsondata.order.status==0){
       console.log('Invalid orderID');
+      pay_done(false);
       return;
     }
     if(jsondata.payment.status=='Pending'){
@@ -518,7 +522,7 @@ $('#loginModal').click(function() {
       window.setTimeout(checkPaymentStatus(orderID), 5000);
     }else if(jsondata.payment.status=='Successful'){ 
         pay_done(true);
-        window.setTimeout(pay_finish(), 3000)
+       // window.setTimeout(pay_finish(), 3000);
         return;
     }else{ 
         pay_done(false);
