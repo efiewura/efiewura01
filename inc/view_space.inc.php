@@ -48,7 +48,7 @@
 
 <!--MODALS END-->
 <?php $efiewura = efiewura::getEfiewuraSpace($space_id);
-$url = (image::getUserImage($efiewura->getID()));
+$url = (!is_int($efiewura))? image::getUserImage($efiewura->getID()):0;
 $url = (is_object($url))? $url->getlocation():'...';?>
 <section class="container" id="owners-details">
     <div class="row">

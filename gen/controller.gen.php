@@ -1,5 +1,5 @@
 <?php
-$dir = "https://wwwefiewura.000webhostapp.com";
+$dir = "http://localhost/efiewura";
 if(isset($_GET['q'])){
 	$pg = 'q';
 }
