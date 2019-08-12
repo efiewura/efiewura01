@@ -7,11 +7,7 @@
                 <div class="item-content">
                     <div class="item-location"><?php echo $val->getdistrict().','.$val->getcity().' &#9679 '.$val->getregion(); ?></div>
                     <div class="item-name"><?php echo $val->getshort_desc(); ?></div>
-                    <div class="item-price">Ghc <?php echo $val->getprice(); ?>  <?php if ($val->getavailability()==2) {
-                       ?>
-                      &#9679 <span class="negotiation-status">Non-Negotiable</span>
-                       <?php
-                    } ?></div>
+                    <div class="item-price">Ghc <?php echo $val->getprice(); ?>  &#9679 <span class="negotiation-status"><?php echo $val->getnegotiable(); ?></span></div>
                     <a class="workspace-link" href="<?php echo $dir ?>/space/<?php echo $val->getID(); ?>">View Efie</a>
 
                 </div>

@@ -35,8 +35,9 @@ class space extends Model2 {
 
 	public function __construct($id,$load){
 		Model2::__construct($id,$load);
-		$this->load = (is_array($load))? $this->setter($load):$this->load;
-			if(is_array($load)&&$load!=0){
+		//var_dump($this->getload());
+		$this->load = (is_array($load))? $this->setter($load):$this->getload();
+		{
 				$this->region();
 				$this->district();
 				$this->lng();
@@ -381,6 +382,7 @@ public function getspacesbySearchArr($arr)
 					WHERE MATCH(name,address) AGAINST ('$str' IN NATURAL LANGUAGE MODE)
 					AND `space`.`holder` = `efiewura`.`id`
 					AND `space`.`availability` = 1";
+					echo $sql;
 				$result = $con->query($sql);
 			while($row = $result->fetch_assoc()){
 			$space = new space(-1,$row);

@@ -1,7 +1,7 @@
-<form method="GET" action="<?php echo $dir ?>/find">
+<form method="GET" action="<?php echo $dir ?>">
 <div class="row" style="">
-<div class="col-md-2 form-group">
-  <select id="region"  class="custom-select rounded-0 input-md" style="width: 100%;padding-bottom: 0px;margin-top: 5px;height: 60px;" name="rg">
+<div class="col-md-3 form-group">
+  <select id="region"  class="custom-select rounded-0" style="width: 100%;padding-bottom: 0px;margin-top: 5px;height: 60px;" name="rg">
     <option  disabled selected>REGIONS</option>
     <option value="AS" <?php if ((isset($_GET['rg']))&&$_GET['rg']=='AS'): ?>
       selected
@@ -36,19 +36,28 @@
     <option style="display: none" disabled="">N/A</option>
   </select>
 </div>
-<!--<div class="col-2 form-group" style="">
-  <input type="text" id="district" name="" class="custom-select rounded-0 align-middle" placeholder="DISTRICT" style="padding-top:25px;margin-top: 5px;height: 60px;vertical-align: middle;">
-                          <div class="district list-group" style="width:80%; height: 100px;margin:0 10% 0 10%; border-width:1px !important; font-size: 2em;display: none">
-                          </div> 
-</div>-->
-<div class="col-md-8 form-group" style="">
+<div class="col-md-3 form-group">
+                    <input list="district" class="custom-select" style="width: 100%;padding-top: 23px;padding-bottom: 18px;margin-top: 5px;height: 60px;text-align: center;" id="district-input" name="ds" autocomplete="off" placeholder="District">
+                    <datalist id="district">
+                        <option value="Adansi North District">
+                        <option value="Bekwai Municipal District">
+                        <option value="Tema Metropolitan District">
+                        <option value="Shai Osudoku">
+                        <option value="La Nkwantanang Madina Municipal District">
+                        <option value="Ga West Municipal District">
+                        <option value="Tolon District">
+                    </datalist>
+</div>
+<div class="col-md-6 form-group" style="">
   <input id="q" type="tesxt" name="q" class="form-control input-md" placeholder="Search Town: Eg, Accra, Cape" name="q">
 </div>
                 </div>
 
 <div class="row" style="">
-  <div class="form-group col-md-4 offset-md-4">
-    <button id="next" class="btn btn-primary" value="find" style="width:100%; height: 100%;border-radius:0px;font-size: 2em;border-radius:60px 2px;background: #777">Find</button>
-</div>
+ <div style="display: flex; flex-direction: row;justify-content: center;" class="form-group col-12">
+                <button id="next" type="submit" class="btn btn-primary" style="padding: 10px 30px;font-size: 1.3em;">
+                    Search
+                </button>
+            </div>
 </div>
             </form>
