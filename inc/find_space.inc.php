@@ -54,10 +54,9 @@
                     </label>
                 </div>
 
-
-                <h4 style="font-weight: bold;">Region</h4>
-            <select id="regions" style=";"
-           class="custom-select rounded-0" name="rg">
+<div class="form-group" style="margin-top: 30px;">
+    <h4 style="font-weight: bold;">Region</h4>
+    <select id="regions" class="custom-select rounded-0" name="rg">
     <option></option>
     <option value="AS">Ashanti</option>
     <option value="BA">Brong-Ahafo</option>
@@ -71,6 +70,20 @@
     <option value="WE">Western</option>
     <option style="display: none" disabled="">N/A</option>
   </select>
+  </div>
+  <div class="form-group" style="margin-top: 30px;">
+                    <h4 style="font-weight: bold;">District</h4>
+                    <input list="district" class="form-control" id="district-input" name="ds" autocomplete="off">
+                    <datalist id="district">
+                        <option value="Adansi North District">
+                        <option value="Bekwai Municipal District">
+                        <option value="Tema Metropolitan District">
+                        <option value="Shai Osudoku">
+                        <option value="La Nkwantanang Madina Municipal District">
+                        <option value="Ga West Municipal District">
+                        <option value="Tolon District">
+                    </datalist>
+                </div>
                 <div id="custom-form-buttons">
                     <button type="submit" class="btn btn-primary">Search</button>
                     <button type="reset" class="btn btn-primary">Reset</button>

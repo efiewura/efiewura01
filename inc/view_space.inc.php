@@ -1,14 +1,15 @@
 <?php $images = image::getImagesbySpace($space->getID()); ?>
 <section class="container" id="view-listing-head">
     <div class="main-pic animated fadeIn delay-1s">
-        <img class="img-raised rounded img-fluid" src="<?php echo $images[0]->getlocation(); ?>" alt="">
+        <img id="mainPrev" class="img-raised rounded img-fluid" src="<?php echo $images[0]->getlocation(); ?>" alt="">
     </div>
-    <div class="animated fadeIn" id="listing-details">
+    <div class="animated fadeIn" id="listing-details" style="width: 100%;height: 100%;">
         <h2><?php echo $space->getshort_desc(); ?></h2>
-        <p><span style="font-weight: 400;">Region :</span> <?php echo $space->getregion(); ?> Region</p>
-        <p><span style="font-weight: 400;">District :</span> <?php echo $space->getdistrict(); ?> </p>
-        <p><span style="font-weight: 400;">Price :</span> Ghc <?php echo $space->getprice(); ?> &#9679 <?php echo $space->getnegotiable(); ?></p>
-        <p><?php echo $space->getdescription(); ?>
+        <p style="font-size: 1.1em;"><span style="font-weight: 400;">Region :</span> <?php echo $space->getregion(); ?> Region</p>
+        <p style="font-size: 1.1em;"><span style="font-weight: 400;">District :</span> <?php echo $space->getdistrict(); ?> </p>
+        <p style="font-size: 1.1em;"><span style="font-weight: 400;">Price :</span> Ghc <?php echo $space->getprice(); ?> &#9679 <?php echo $space->getnegotiable(); ?></p>
+        <h3>Description</h3>
+        <p style="font-size: 1.1em;"><?php echo $space->getdescription(); ?>
         </p>
     </div>
 </section>
@@ -63,6 +64,7 @@ $url = (is_object($url))? $url->getlocation():'...';?>
                         <p><?php echo $efiewura->getname(); ?></p>
                         <p><?php echo $efiewura->getemail(); ?></p>
                         <p><?php echo $efiewura->getnumber(); ?></p>
+                        <p><?php echo $efiewura->getaddress(); ?></p>
                     </div>
                 </div>
             <?php }else{
