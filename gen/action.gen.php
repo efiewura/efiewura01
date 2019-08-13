@@ -14,7 +14,6 @@ if ($_POST["next"]=='complete'){
 	$price = $_POST["price"];
 	$neg = $_POST["negotiation"] ;
 	$agree = $_POST["agree"];
-	$userImg = $_POST["userImg"] ;
 	$images = $_POST["image"];
 	$imgMainLoc = 'https://res.cloudinary.com/dmvymb8nn/image/upload/c_scale,w_600,h_500,f_webp/';
 	$efiewura = new efiewura(0);
@@ -23,6 +22,8 @@ if ($_POST["next"]=='complete'){
 	$efiewura->setemail($email);
 	$efiewura->setaddress($address);
 	$efiewura->avail();
+	if(isset($_POST["userImg"])){
+	$userImg = $_POST["userImg"] ;
 	$userImg = explode('#', $userImg);
 
 	$image = new image(0,0);
@@ -30,7 +31,7 @@ if ($_POST["next"]=='complete'){
 	$image->setetag($userImg[1]);
 	$image->setuser_id($efiewura->getID());
 		$image->avail();
-
+}
 	$space = new space(0,0);
 	$space->setregion($region);
 	$space->setdistrict($district);
