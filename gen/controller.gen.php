@@ -1,5 +1,5 @@
 <?php
-$dir = "http://localhost/efiewura";
+$dir = url();
 if(isset($_GET['q'])){
 	$pg = 'q';
 }
@@ -23,6 +23,7 @@ $noHeader = true;
 		break;
 	case 'find':
 	case 'q':
+	$reg = true;
 	$title = '';
 $temp = './inc/page.inc.php';
 if (isset($_GET['q'])) {
@@ -34,6 +35,7 @@ $title = 'Find a Space';
 $noHeader = false;
 		break;
 	case 'host':
+	$reg = true;
 $temp = './inc/page.inc.php';
 $page = './inc/provide_space.inc.php';
 $title = 'Provide Space';

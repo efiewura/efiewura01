@@ -3,7 +3,6 @@ $host = "localhost";
 $pword = "";
 $dbname = "efiewura";
 $uname = "root";
-
 // Create connection
 $con = new mysqli( $host , $uname , $pword , $dbname );
 

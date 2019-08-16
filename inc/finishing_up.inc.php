@@ -5,7 +5,8 @@
             <div style="border-top: solid var(--teal) 3px;" class="card">
                 <h3 id="owner-head"><span class="text-uppercase">FInishing Up</span></h3>
                 <div id="owners-details-card" class="card-body">
-                    <?php $url = (image::getUserImage($efiewura->getID()))->getlocation() ?>
+                    <?php $url = image::getUserImage($efiewura->getID());
+                          $url = is_object($url)? $url->getlocation():'...'; ?>
                     <img style="width: 120px; height: 120px;" src="<?php echo $url ?>" alt=""
                          class="img-raised rounded-circle img-fluid">
                     <div id="owners-details-card-text">
