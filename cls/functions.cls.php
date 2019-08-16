@@ -3,7 +3,6 @@
 /*
  *FUNCTIONS
  */
-
 $GLOBALS['RegionDetailsArray']  = array('AS' => array('Name' => 'Ashanti',
                                   'districts' => array('Adansi North','Adansi South','Afigya-Kwabre','Ahafo Ano North','Ahafo Ano South','Amansie Central','Amansie West','Asante Akim Central','Asante Akim North','Asante Akim South','Asokore Mampong','Atwima Kwanwoma','Atwima Mponua','Atwima Nwabiagya','Bekwai','Bosome Freho','Botsomtwe','Ejisu-Juaben','Ejura - Sekyedumase','Kumasi','Kwabre East','Mampong','Obuasi','Offinso North','Offinso South','Sekyere Afram Plains','Sekyere Central','Sekyere East','Sekyere Kumawu','Sekyere South')), 
                     'BA' => array('Name' => 'Brong-Ahafo',
@@ -25,6 +24,16 @@ $GLOBALS['RegionDetailsArray']  = array('AS' => array('Name' => 'Ashanti',
                     'WE' => array('Name' => 'Western',
                                   'districts' => array('Ahanta West','Aowin/Suaman','Bia West','Bia East','Bibiani/Anhwiaso/Bekwai','Bodi','Ellembele','Jomoro','Juaboso','Mpohor','Mpohor/Wassa East','Nzema East Municipal','Prestea-Huni Valley','Sefwi Akontombra','Sefwi Wiawso Municipal','Sekondi Takoradi Metropolitan','Shama','Suaman','Tarkwa-Nsuaem Municipal','Wasa Amenfi East','Wasa Amenfi West','Wassa Amenfi Central')),
                     'status' => 'Success');
+function url(){
+//$ef = true;//remove when in server add when local
+  return sprintf(
+    "%s://%s%s",
+    isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] != 'off' ? 'https' : 'http',
+    $_SERVER['SERVER_NAME'],
+    isset($ef)? "/efiewura":""
+  );
+}
+
 function getAmenity($value)
 {
     switch ($value) {

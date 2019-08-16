@@ -3,13 +3,13 @@ if (isset($_POST["next"])){
 if ($_POST["next"]=='complete'){
 //	if(!isset($_COOKIE['userSpace'])){
 	$name = $_POST["name"]; 
-	$email = $_POST["email"];
+	$email = isset($_POST["email"])?$_POST['email']:"";;
 	$number = $_POST["number"];
-	$address = $_POST["Address"];
-	$short_desc = $_POST["short_desc"] ;
-	$description = $_POST["description"];
+	$address = isset($_POST["Address"])?$_POST['Address']:"";;
+	$short_desc = isset($_POST["short_desc"])?$_POST['short_desc']:""; ;
+	$description = isset($_POST["description"])?$_POST['description']:"";;
 	$region = $_POST["region"];
-	$district = $_POST["district"];
+	$district = isset($_POST["district"])? $_POST["district"]:"";
 	$city = $_POST["city"] ;
 	$price = $_POST["price"];
 	$neg = $_POST["negotiation"] ;
