@@ -35,8 +35,7 @@ class space extends Model2 {
 
 	public function __construct($id,$load){
 		Model2::__construct($id,$load);
-		//var_dump($this->getload());
-		$this->load = (is_array($load))? $this->setter($load):$this->getload();
+		$this->load = (is_array($load))? $this->setter($load):(($id==0)?$this->load:$this->getload());
 		{
 				$this->region();
 				$this->district();
