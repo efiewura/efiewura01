@@ -3,18 +3,17 @@ if (isset($_POST["next"])){
 if ($_POST["next"]=='complete'){
 //	if(!isset($_COOKIE['userSpace'])){
 	$name = $_POST["name"]; 
-	$email = $_POST["email"];
+	$email = isset($_POST["email"])?$_POST['email']:"";;
 	$number = $_POST["number"];
-	$address = $_POST["Address"];
-	$short_desc = $_POST["short_desc"] ;
-	$description = $_POST["description"];
+	$address = isset($_POST["Address"])?$_POST['Address']:"";;
+	$short_desc = isset($_POST["short_desc"])?$_POST['short_desc']:""; ;
+	$description = isset($_POST["description"])?$_POST['description']:"";;
 	$region = $_POST["region"];
-	$district = $_POST["district"];
+	$district = isset($_POST["district"])? $_POST["district"]:"";
 	$city = $_POST["city"] ;
 	$price = $_POST["price"];
 	$neg = $_POST["negotiation"] ;
 	$agree = $_POST["agree"];
-	$userImg = $_POST["userImg"] ;
 	$images = $_POST["image"];
 	$imgMainLoc = 'https://res.cloudinary.com/dmvymb8nn/image/upload/c_scale,w_600,h_500,f_webp/';
 	$efiewura = new efiewura(0);
@@ -23,6 +22,8 @@ if ($_POST["next"]=='complete'){
 	$efiewura->setemail($email);
 	$efiewura->setaddress($address);
 	$efiewura->avail();
+	if(isset($_POST["userImg"])){
+	$userImg = $_POST["userImg"] ;
 	$userImg = explode('#', $userImg);
 
 	$image = new image(0,0);
@@ -30,7 +31,7 @@ if ($_POST["next"]=='complete'){
 	$image->setetag($userImg[1]);
 	$image->setuser_id($efiewura->getID());
 		$image->avail();
-
+}
 	$space = new space(0,0);
 	$space->setregion($region);
 	$space->setdistrict($district);

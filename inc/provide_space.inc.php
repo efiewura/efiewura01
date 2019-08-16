@@ -74,7 +74,7 @@
                 <div class="form-group">
                     <label style="color: rgba(0,0,0,0.5);" for="region">Region</label>
                     <select class="form-control" data-style="btn btn-link" id="region" name="region" required >
-                        <option value disabled>Select an option</option>
+                            <option value disabled>Select an option</option>
                             <option value="AS">Ashanti</option>
                             <option value="BA">Brong-Ahafo</option>
                             <option value="CE">Central</option>
@@ -94,9 +94,10 @@
 
                 <div class="form-group">
                     <label style="color: rgba(0,0,0,0.5);" for="region">District</label>
-                    <select class="form-control" data-style="btn btn-link" id="district" name="district">
+                    <input list="district" class="form-control" id="district-input" name="district" autocomplete="off">
+                    <datalist id="district">
                         <option>Select an option</option>
-                    </select>
+                    </datalist>
                 </div>
 
                 <div class="form-group bmd-form-group">
