@@ -3,11 +3,11 @@ if ($pg=='api'){
 if ($op=='complete'){
 //	if(!isset($_COOKIE['userSpace'])){
 	$name = $_POST["name"]; 
-	$email = isset($_POST["email"])?$_POST['email']:"";;
+	$email = isset($_POST["email"])?$_POST['email']:"";
 	$number = $_POST["number"];
-	$address = isset($_POST["address"])?$_POST['address']:"";;
-	$short_desc = isset($_POST["short_desc"])?$_POST['short_desc']:""; ;
-	$description = isset($_POST["description"])?$_POST['description']:"";;
+	$address = isset($_POST["address"])?$_POST['address']:"";
+	$short_desc = isset($_POST["short_desc"])?$_POST['short_desc']:"";
+	$description = isset($_POST["description"])?$_POST['description']:"";
 	$region = $_POST["region"];
 	$district = isset($_POST["district"])? $_POST["district"]:"";
 	$city = $_POST["city"] ;
