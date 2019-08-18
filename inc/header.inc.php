@@ -31,7 +31,7 @@
 </header>
 <?php   break;
 	case 'contact': ?>
-<header id="about-header">
+<header class="contact-header">
     <h1 class="animated fadeIn delay-1s">Contact EFIEWURA</h1>
 </header>
 <?php   break;
@@ -40,8 +40,4 @@
     <h1 class="animated fadeIn delay-1s">Terms & Conditions</h1>
 </header>
 <?php   break;
-    
-    default:
-        # code...
-        break;
 } ?>

@@ -2,7 +2,7 @@
 <div class="row" style="">
 <div class="col-md-3 form-group">
   <select id="region"  class="custom-select rounded-0" style="width: 100%;padding-bottom: 0px;margin-top: 5px;height: 60px;" name="rg">
-    <option value="0"  disabled selected>REGIONS</option>
+    <option disabled selected>REGIONS</option>
     <option value="AS" <?php if ((isset($_GET['rg']))&&$_GET['rg']=='AS'): ?>
       selected
     <?php endif ?>>Ashanti</option>
