@@ -1,49 +1,37 @@
+<script src="<?php echo $dir ?>/assets/js/bootstrap/core/jquery.min.js"></script>
+<script src="<?php echo $dir ?>/assets/js/bootstrap/core/popper.min.js"></script>
+<script src="<?php echo $dir ?>/assets/js/bootstrap/core/bootstrap-material-design.min.js"></script>
+<script src="<?php echo $dir ?>/assets/js/bootstrap/plugins/moment.min.js"></script>
+<script src="<?php echo $dir ?>/assets/js/bootstrap/plugins/bootstrap-datetimepicker.js"></script>
+<script src="<?php echo $dir ?>/assets/js/bootstrap/plugins/nouislider.min.js"></script>
+<script src="<?php echo $dir ?>/assets/js/bootstrap/material-kit.min.js"></script>
+<script src="<?php echo $dir ?>/assets/js/main/owl.carousel.min.js"></script>
+<script src="<?php echo $dir ?>/assets/js/main/main.js"></script>
 <?php switch ($pg) {
-  case 'home':?>
-<script src="<?php echo $dir ?>/assets/js/bootstrap/core/jquery.min.js"></script>
-<script src="<?php echo $dir ?>/assets/js/bootstrap/core/popper.min.js"></script>
-<script src="<?php echo $dir ?>/assets/js/bootstrap/core/bootstrap-material-design.min.js"></script>
-<script src="<?php echo $dir ?>/assets/js/bootstrap/plugins/moment.min.js"></script>
-<script src="<?php echo $dir ?>/assets/js/bootstrap/plugins/bootstrap-datetimepicker.js"></script>
-<script src="<?php echo $dir ?>/assets/js/bootstrap/plugins/nouislider.min.js"></script>
-<script src="<?php echo $dir ?>/assets/js/bootstrap/material-kit.min.js"></script>
-<script src="<?php echo $dir ?>/assets/js/main/owl.carousel.min.js"></script>
-<script src="<?php echo $dir ?>/assets/js/main/main.js"></script>
-<?php   break;
-    case 'about': 
-    case 'contact':
-    case 'terms':?>
-<script src="<?php echo $dir ?>/assets/js/bootstrap/core/jquery.min.js"></script>
-<script src="<?php echo $dir ?>/assets/js/bootstrap/core/popper.min.js"></script>
-<script src="<?php echo $dir ?>/assets/js/bootstrap/core/bootstrap-material-design.min.js"></script>
-<script src="<?php echo $dir ?>/assets/js/bootstrap/plugins/moment.min.js"></script>
-<script src="<?php echo $dir ?>/assets/js/bootstrap/plugins/bootstrap-datetimepicker.js"></script>
-<script src="<?php echo $dir ?>/assets/js/bootstrap/plugins/nouislider.min.js"></script>
-<script src="<?php echo $dir ?>/assets/js/bootstrap/material-kit.min.js"></script>
-<script src="<?php echo $dir ?>/assets/js/main/owl.carousel.min.js"></script>
-<script src="<?php echo $dir ?>/assets/js/main/main.js"></script>
-<?php   break;
-      case 'host': ?>
-<script src="<?php echo $dir ?>/assets/js/bootstrap/core/jquery.min.js"></script>
-<script src="<?php echo $dir ?>/assets/js/bootstrap/core/popper.min.js"></script>
-<script src="<?php echo $dir ?>/assets/js/bootstrap/core/bootstrap-material-design.min.js"></script>
-<script src="<?php echo $dir ?>/assets/js/bootstrap/plugins/moment.min.js"></script>
-<script src="<?php echo $dir ?>/assets/js/bootstrap/plugins/bootstrap-datetimepicker.js"></script>
-<script src="<?php echo $dir ?>/assets/js/bootstrap/plugins/nouislider.min.js"></script>
-<script src="<?php echo $dir ?>/assets/js/bootstrap/material-kit.min.js"></script>
-<script src="<?php echo $dir ?>/assets/js/main/owl.carousel.min.js"></script>
+    case 'done': 
+    case 'find':
+    case 'host':
+    case 'q':
+    case 'space':
+    case 'view':?>
 <script src="//cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.6.3/js/bootstrap-select.min.js"></script>
-<script src="assets/js/main/main.js"></script>
-
-<script src="https://widget.cloudinary.com/v2.0/global/all.js" type="text/javascript"></script>
-<script src="https://maps.googleapis.com/maps/api/js?callback=createMap&center=5.3018,-1.9930&libraries=places&key=AIzaSyASg-tMY2JWW0ErNFD6qH3BTpLFjq8S-Ss"
-        async defer>
-</script>
-<script type="text/javascript">   
-  $(document).ready(function () {
+<?php break;
+} ?>
+<?php switch ($pg) {
+    case 'find':
+    case 'host':
+    case 'q':  ?>
+<script type="text/javascript">
     var regionsJSON = JSON.parse('{"AS":{"Name":"Ashanti","districts":["Adansi North","Adansi South","Afigya-Kwabre","Ahafo Ano North","Ahafo Ano South","Amansie Central","Amansie West","Asante Akim Central","Asante Akim North","Asante Akim South","Asokore Mampong","Atwima Kwanwoma","Atwima Mponua","Atwima Nwabiagya","Bekwai","Bosome Freho","Botsomtwe","Ejisu-Juaben","Ejura - Sekyedumase","Kumasi","Kwabre East","Mampong","Obuasi","Offinso North","Offinso South","Sekyere Afram Plains","Sekyere Central","Sekyere East","Sekyere Kumawu","Sekyere South"]},"BA":{"Name":"Brong-Ahafo","districts":["Asunafo North","Asunafo South","Asutifi North","Asutifi South","Atebubu-Amantin","Banda","Berekum East","Berekum","Dormaa East","Dormaa","Dormaa West","Jaman North","Jaman South","Kintampo North","Kintampo South","Nkoranza North","Nkoranza South","Pru","Sene East","Sene West","Sunyani","Sunyani West","Tain","Tano North","Tano South","Techiman","Techiman North","Wenchi"]},"CE":{"Name":"Central","districts":["Abura\/Asebu\/Kwamankese","Agona East","Agona West Municipal","Ajumako\/Enyan\/Essiam","Asikuma\/Odoben\/Brakwa","Assin North Municipal","Assin South","Awutu Senya East Municipal","Awutu Senya West","Cape Coast Metropolitan","Effutu Municipal","Ekumfi","Gomoa East","Gomoa West","Komenda\/Edina\/Eguafo\/Abirem Municipal","Mfantsiman Municipal","Twifo-Ati Morkwa","Twifo\/Heman\/Lower Denkyira","Upper Denkyira East Municipal","Upper Denkyira West"]},"EA":{"Name":"Eastern","districts":["Akuapim South","Akuapim North","Akyemansa","Asuogyaman","Ayensuano","Atiwa East","Atiwa West","Birim Central Municipal","Birim North","Birim South","Denkyembour","East Akim Municipal","Fanteakwa","Kwaebibirem","Kwahu Afram Plains North","Kwahu Afram Plains South","Kwahu East","Kwahu South","Kwahu West Municipal","Lower Manya Krobo","New-Juaben Municipal","Nsawam Adoagyire Municipal","Suhum","Upper Manya Krobo","Upper West Akim","West Akim Municipal","Yilo Krobo"]},"GA":{"Name":"Greater Accra","districts":["Ablekuma North Municipal","Ablekuma West Municipal","Accra Metropolitan","Ada East","Ada West","Adenta Municipal","Ashaiman Municipal","Ayawaso East Municipal","Ayawaso North Municipal","Ayawaso West Municipal","Ga Central","Ga East Municipal","Ga North Municipal","Ga South Municipal","Ga West Municipal","Kpone Katamanso Municipal","Krowor Municipal","La Dade Kotopon Municipal","La Nkwantanang Madina Municipal","Ledzokuku Municipal","Ningo Prampram","Okaikwei Municipal","Shai Osudoku","Tema Metropolitan","Tema West Municipal","Weija Municipal"]},"NO":{"Name":"Northern","districts":["Bole","Bunkpurugu-Nyankpanduri","Central Gonja","Chereponi","East Gonja Municipal","East Mamprusi Municipal","Gushegu Municipal","Karaga","Kpandai","Kumbungu","Mamprugo Moaduri","Mion","Nanton","Nanumba North Municipal","Nanumba South","North Gonja","Saboba","Sagnarigu Municipal","Savelugu Municipal","Sawla-Tuna-Kalba","Tamale Metropolitan","Tatale Sangule","Tolon","West Gonja","West Mamprusi Municipal","Yendi Municipal","Yunyoo-Nasuan","Zabzugu"]},"UE":{"Name":"Upper East","districts":["Bawku Municipal","Bawku West","Binduri","Bolgatanga Municipal","Bongo","Builsa","Builsa South","Garu-Tempane","Kassena Nankana East","Kassena Nankana West","Nabdam","Pusiga","Talensi"]},"UW":{"Name":"Upper West","districts":["Daffiama Bussie Issa","Jirapa","Lambussie Karni","Lawra","Nadowli","Nandom","Sissala East","Sissala West","Wa East","Wa Municipal","Wa West"]},"VO":{"Name":"Volta","districts":["Adaklu","Afadjato South","Agotime Ziope","Akatsi North","Akatsi South","Biakoye","Central Tongu","Ho Municipal","Ho West","Hohoe Municipal","Jasikan","Kadjebi","Keta Municipal","Ketu North","Ketu South Municipal","Kpando Municipal","Krachi East","Krachi Nchumuru","Krachi West","Nkwanta North","Nkwanta South","North Dayi","North Tongu","South Dayi","South Tongu"]},"WE":{"Name":"Western","districts":["Ahanta West","Aowin\/Suaman","Bia West","Bia East","Bibiani\/Anhwiaso\/Bekwai","Bodi","Ellembele","Jomoro","Juaboso","Mpohor","Mpohor\/Wassa East","Nzema East Municipal","Prestea-Huni Valley","Sefwi Akontombra","Sefwi Wiawso Municipal","Sekondi Takoradi Metropolitan","Shama","Suaman","Tarkwa-Nsuaem Municipal","Wasa Amenfi East","Wasa Amenfi West","Wassa Amenfi Central"]},"status":"Success"}');
-    console.log(($('select#region option:selected')));
-    console.log('Ni');
+</script>
+<?php break;
+} ?>
+<?php switch ($pg) {
+    case 'host': ?>
+<script src="https://widget.cloudinary.com/v2.0/global/all.js" type="text/javascript"></script>
+<script type="text/javascript">   
+    var url = window.location.origin + "/?pg=action";
+  $(document).ready(function () {
     var dis = regionsJSON[$('select#region option:selected').val()].districts;
     $("datalist#district").empty();
     for(var i = dis.length - 1; i >= 0; i--) {
@@ -60,11 +48,6 @@
     });
     <?php } ?>
   });
-</script>
-<script type="text/javascript">
-    var regionsJSON = JSON.parse('{"AS":{"Name":"Ashanti","districts":["Adansi North","Adansi South","Afigya-Kwabre","Ahafo Ano North","Ahafo Ano South","Amansie Central","Amansie West","Asante Akim Central","Asante Akim North","Asante Akim South","Asokore Mampong","Atwima Kwanwoma","Atwima Mponua","Atwima Nwabiagya","Bekwai","Bosome Freho","Botsomtwe","Ejisu-Juaben","Ejura - Sekyedumase","Kumasi","Kwabre East","Mampong","Obuasi","Offinso North","Offinso South","Sekyere Afram Plains","Sekyere Central","Sekyere East","Sekyere Kumawu","Sekyere South"]},"BA":{"Name":"Brong-Ahafo","districts":["Asunafo North","Asunafo South","Asutifi North","Asutifi South","Atebubu-Amantin","Banda","Berekum East","Berekum","Dormaa East","Dormaa","Dormaa West","Jaman North","Jaman South","Kintampo North","Kintampo South","Nkoranza North","Nkoranza South","Pru","Sene East","Sene West","Sunyani","Sunyani West","Tain","Tano North","Tano South","Techiman","Techiman North","Wenchi"]},"CE":{"Name":"Central","districts":["Abura\/Asebu\/Kwamankese","Agona East","Agona West Municipal","Ajumako\/Enyan\/Essiam","Asikuma\/Odoben\/Brakwa","Assin North Municipal","Assin South","Awutu Senya East Municipal","Awutu Senya West","Cape Coast Metropolitan","Effutu Municipal","Ekumfi","Gomoa East","Gomoa West","Komenda\/Edina\/Eguafo\/Abirem Municipal","Mfantsiman Municipal","Twifo-Ati Morkwa","Twifo\/Heman\/Lower Denkyira","Upper Denkyira East Municipal","Upper Denkyira West"]},"EA":{"Name":"Eastern","districts":["Akuapim South","Akuapim North","Akyemansa","Asuogyaman","Ayensuano","Atiwa East","Atiwa West","Birim Central Municipal","Birim North","Birim South","Denkyembour","East Akim Municipal","Fanteakwa","Kwaebibirem","Kwahu Afram Plains North","Kwahu Afram Plains South","Kwahu East","Kwahu South","Kwahu West Municipal","Lower Manya Krobo","New-Juaben Municipal","Nsawam Adoagyire Municipal","Suhum","Upper Manya Krobo","Upper West Akim","West Akim Municipal","Yilo Krobo"]},"GA":{"Name":"Greater Accra","districts":["Ablekuma North Municipal","Ablekuma West Municipal","Accra Metropolitan","Ada East","Ada West","Adenta Municipal","Ashaiman Municipal","Ayawaso East Municipal","Ayawaso North Municipal","Ayawaso West Municipal","Ga Central","Ga East Municipal","Ga North Municipal","Ga South Municipal","Ga West Municipal","Kpone Katamanso Municipal","Krowor Municipal","La Dade Kotopon Municipal","La Nkwantanang Madina Municipal","Ledzokuku Municipal","Ningo Prampram","Okaikwei Municipal","Shai Osudoku","Tema Metropolitan","Tema West Municipal","Weija Municipal"]},"NO":{"Name":"Northern","districts":["Bole","Bunkpurugu-Nyankpanduri","Central Gonja","Chereponi","East Gonja Municipal","East Mamprusi Municipal","Gushegu Municipal","Karaga","Kpandai","Kumbungu","Mamprugo Moaduri","Mion","Nanton","Nanumba North Municipal","Nanumba South","North Gonja","Saboba","Sagnarigu Municipal","Savelugu Municipal","Sawla-Tuna-Kalba","Tamale Metropolitan","Tatale Sangule","Tolon","West Gonja","West Mamprusi Municipal","Yendi Municipal","Yunyoo-Nasuan","Zabzugu"]},"UE":{"Name":"Upper East","districts":["Bawku Municipal","Bawku West","Binduri","Bolgatanga Municipal","Bongo","Builsa","Builsa South","Garu-Tempane","Kassena Nankana East","Kassena Nankana West","Nabdam","Pusiga","Talensi"]},"UW":{"Name":"Upper West","districts":["Daffiama Bussie Issa","Jirapa","Lambussie Karni","Lawra","Nadowli","Nandom","Sissala East","Sissala West","Wa East","Wa Municipal","Wa West"]},"VO":{"Name":"Volta","districts":["Adaklu","Afadjato South","Agotime Ziope","Akatsi North","Akatsi South","Biakoye","Central Tongu","Ho Municipal","Ho West","Hohoe Municipal","Jasikan","Kadjebi","Keta Municipal","Ketu North","Ketu South Municipal","Kpando Municipal","Krachi East","Krachi Nchumuru","Krachi West","Nkwanta North","Nkwanta South","North Dayi","North Tongu","South Dayi","South Tongu"]},"WE":{"Name":"Western","districts":["Ahanta West","Aowin\/Suaman","Bia West","Bia East","Bibiani\/Anhwiaso\/Bekwai","Bodi","Ellembele","Jomoro","Juaboso","Mpohor","Mpohor\/Wassa East","Nzema East Municipal","Prestea-Huni Valley","Sefwi Akontombra","Sefwi Wiawso Municipal","Sekondi Takoradi Metropolitan","Shama","Suaman","Tarkwa-Nsuaem Municipal","Wasa Amenfi East","Wasa Amenfi West","Wassa Amenfi Central"]},"status":"Success"}');
-
-    var url = window.location.origin + "/?pg=action"
 
     function setRegion(arg) {
         var name = arg
@@ -269,6 +252,7 @@
   }
   //$(window).scrollTop('500px');
   if(done){
+    checkbox.prop("checked", true);
       checkbox.removeAttr('data-toggle');
       //console.log('done:',checkbox.attr('data-toggle', false));
   }else{
@@ -277,11 +261,22 @@
   }
 }
 
+$('button#test').click(function() {
+    var checkbox = $('input#formCheckbox');
+  if(checkbox.prop("checked")==false){
+    checkbox.prop("checked", true);
+      checkbox.removeAttr('data-toggle');
+      console.log('done:',checkbox.attr('data-toggle', false));
+  }else{
+    checkbox.prop("checked", false);
+      checkbox.attr('data-toggle', 'popover');
+      console.log('not done:',checkbox.attr('data-toggle', 'popover'));
+  }
+});
     $('.popover-dismiss').popover({
         trigger: 'focus'
     })
-</script>
-<script>
+
     var submitted = false;
 
     function setCookie(cname, cvalue, exdays) {
@@ -311,13 +306,13 @@
         submitted = true;
     });
 
-    if ('host' != "done") {
-        document.cookie = "userSpace=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+    if ('<?php echo $pg ?>' != "done") {
+        document.cookie = "loaded=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
         $(window).on('unload', function (e) {
-            document.cookie = "userSpace=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+            document.cookie = "loaded=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
         });
     }
-    if ('host' == "host" && !submitted) {
+    if ('<?php echo $pg ?>' == "host" && !submitted) {
         $(window).bind('beforeunload', function () {
             return 'Are you sure you want to leave? Stored Data will be deleted.';
         });
@@ -678,30 +673,17 @@ $('#loginModal').click(function() {
     });
 </script>
 <?php   break;
-      case 'find': ?>
-<script src="<?php echo $dir ?>/assets/js/bootstrap/core/jquery.min.js"></script>
-<script src="<?php echo $dir ?>/assets/js/bootstrap/core/popper.min.js"></script>
-<script src="<?php echo $dir ?>/assets/js/bootstrap/core/bootstrap-material-design.min.js"></script>
-<script src="<?php echo $dir ?>/assets/js/bootstrap/plugins/moment.min.js"></script>
-<script src="<?php echo $dir ?>/assets/js/bootstrap/plugins/bootstrap-datetimepicker.js"></script>
-<script src="<?php echo $dir ?>/assets/js/bootstrap/plugins/nouislider.min.js"></script>
-<script src="<?php echo $dir ?>/assets/js/bootstrap/material-kit.min.js"></script>
-<script src="<?php echo $dir ?>/assets/js/main/owl.carousel.min.js"></script>
-<script src="//cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.6.3/js/bootstrap-select.min.js"></script>
-<script src="<?php echo $dir ?>/assets/js/main/main.js"></script>
+      case 'find':
+      case 'q': ?>
 <script type="text/javascript">   
   $(document).ready(function () {
-    var regionsJSON = JSON.parse('{"AS":{"Name":"Ashanti","districts":["Adansi North","Adansi South","Afigya-Kwabre","Ahafo Ano North","Ahafo Ano South","Amansie Central","Amansie West","Asante Akim Central","Asante Akim North","Asante Akim South","Asokore Mampong","Atwima Kwanwoma","Atwima Mponua","Atwima Nwabiagya","Bekwai","Bosome Freho","Botsomtwe","Ejisu-Juaben","Ejura - Sekyedumase","Kumasi","Kwabre East","Mampong","Obuasi","Offinso North","Offinso South","Sekyere Afram Plains","Sekyere Central","Sekyere East","Sekyere Kumawu","Sekyere South"]},"BA":{"Name":"Brong-Ahafo","districts":["Asunafo North","Asunafo South","Asutifi North","Asutifi South","Atebubu-Amantin","Banda","Berekum East","Berekum","Dormaa East","Dormaa","Dormaa West","Jaman North","Jaman South","Kintampo North","Kintampo South","Nkoranza North","Nkoranza South","Pru","Sene East","Sene West","Sunyani","Sunyani West","Tain","Tano North","Tano South","Techiman","Techiman North","Wenchi"]},"CE":{"Name":"Central","districts":["Abura\/Asebu\/Kwamankese","Agona East","Agona West Municipal","Ajumako\/Enyan\/Essiam","Asikuma\/Odoben\/Brakwa","Assin North Municipal","Assin South","Awutu Senya East Municipal","Awutu Senya West","Cape Coast Metropolitan","Effutu Municipal","Ekumfi","Gomoa East","Gomoa West","Komenda\/Edina\/Eguafo\/Abirem Municipal","Mfantsiman Municipal","Twifo-Ati Morkwa","Twifo\/Heman\/Lower Denkyira","Upper Denkyira East Municipal","Upper Denkyira West"]},"EA":{"Name":"Eastern","districts":["Akuapim South","Akuapim North","Akyemansa","Asuogyaman","Ayensuano","Atiwa East","Atiwa West","Birim Central Municipal","Birim North","Birim South","Denkyembour","East Akim Municipal","Fanteakwa","Kwaebibirem","Kwahu Afram Plains North","Kwahu Afram Plains South","Kwahu East","Kwahu South","Kwahu West Municipal","Lower Manya Krobo","New-Juaben Municipal","Nsawam Adoagyire Municipal","Suhum","Upper Manya Krobo","Upper West Akim","West Akim Municipal","Yilo Krobo"]},"GA":{"Name":"Greater Accra","districts":["Ablekuma North Municipal","Ablekuma West Municipal","Accra Metropolitan","Ada East","Ada West","Adenta Municipal","Ashaiman Municipal","Ayawaso East Municipal","Ayawaso North Municipal","Ayawaso West Municipal","Ga Central","Ga East Municipal","Ga North Municipal","Ga South Municipal","Ga West Municipal","Kpone Katamanso Municipal","Krowor Municipal","La Dade Kotopon Municipal","La Nkwantanang Madina Municipal","Ledzokuku Municipal","Ningo Prampram","Okaikwei Municipal","Shai Osudoku","Tema Metropolitan","Tema West Municipal","Weija Municipal"]},"NO":{"Name":"Northern","districts":["Bole","Bunkpurugu-Nyankpanduri","Central Gonja","Chereponi","East Gonja Municipal","East Mamprusi Municipal","Gushegu Municipal","Karaga","Kpandai","Kumbungu","Mamprugo Moaduri","Mion","Nanton","Nanumba North Municipal","Nanumba South","North Gonja","Saboba","Sagnarigu Municipal","Savelugu Municipal","Sawla-Tuna-Kalba","Tamale Metropolitan","Tatale Sangule","Tolon","West Gonja","West Mamprusi Municipal","Yendi Municipal","Yunyoo-Nasuan","Zabzugu"]},"UE":{"Name":"Upper East","districts":["Bawku Municipal","Bawku West","Binduri","Bolgatanga Municipal","Bongo","Builsa","Builsa South","Garu-Tempane","Kassena Nankana East","Kassena Nankana West","Nabdam","Pusiga","Talensi"]},"UW":{"Name":"Upper West","districts":["Daffiama Bussie Issa","Jirapa","Lambussie Karni","Lawra","Nadowli","Nandom","Sissala East","Sissala West","Wa East","Wa Municipal","Wa West"]},"VO":{"Name":"Volta","districts":["Adaklu","Afadjato South","Agotime Ziope","Akatsi North","Akatsi South","Biakoye","Central Tongu","Ho Municipal","Ho West","Hohoe Municipal","Jasikan","Kadjebi","Keta Municipal","Ketu North","Ketu South Municipal","Kpando Municipal","Krachi East","Krachi Nchumuru","Krachi West","Nkwanta North","Nkwanta South","North Dayi","North Tongu","South Dayi","South Tongu"]},"WE":{"Name":"Western","districts":["Ahanta West","Aowin\/Suaman","Bia West","Bia East","Bibiani\/Anhwiaso\/Bekwai","Bodi","Ellembele","Jomoro","Juaboso","Mpohor","Mpohor\/Wassa East","Nzema East Municipal","Prestea-Huni Valley","Sefwi Akontombra","Sefwi Wiawso Municipal","Sekondi Takoradi Metropolitan","Shama","Suaman","Tarkwa-Nsuaem Municipal","Wasa Amenfi East","Wasa Amenfi West","Wassa Amenfi Central"]},"status":"Success"}');
-    console.log(($('select#region option:selected')));
-    console.log('Ni');
-    var dis = regionsJSON[$('select#region option:selected').val()].districts;
+    var dis = regionsJSON[($('select#region option:selected').val()=='REGIONS')?'GA':$('select#region option:selected').val()].districts;
     $("datalist#district").empty();
     for(var i = dis.length - 1; i >= 0; i--) {
       $('datalist#district').append('<option value="'+dis[i]+'">'+dis[i]+'</option>');
     }
     <?php if (isset($reg)||$reg) { ?>
     $('select#region').change(function() {
-    console.log($('select#region option:selected').val());
       var dis = regionsJSON[$('select#region option:selected').val()].districts;
       $("datalist#district").empty();
       for(var i = dis.length - 1; i >= 0; i--) {
@@ -711,31 +693,8 @@ $('#loginModal').click(function() {
     <?php } ?>
   });
 </script>
-<?php break;
-        case 'view':
-        case 'space': ?>
-<script src="<?php echo $dir ?>/assets/js/bootstrap/core/jquery.min.js"></script>
-<script src="<?php echo $dir ?>/assets/js/bootstrap/core/popper.min.js"></script>
-<script src="<?php echo $dir ?>/assets/js/bootstrap/core/bootstrap-material-design.min.js"></script>
-<script src="<?php echo $dir ?>/assets/js/bootstrap/plugins/moment.min.js"></script>
-<script src="<?php echo $dir ?>/assets/js/bootstrap/plugins/bootstrap-datetimepicker.js"></script>
-<script src="<?php echo $dir ?>/assets/js/bootstrap/plugins/nouislider.min.js"></script>
-<script src="<?php echo $dir ?>/assets/js/bootstrap/material-kit.min.js"></script>
-<script src="<?php echo $dir ?>/assets/js/main/owl.carousel.min.js"></script>
-<script src="//cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.6.3/js/bootstrap-select.min.js"></script>
-<script src="<?php echo $dir ?>/assets/js/main/main.js"></script>
-<?php break;
+<?php   break;
     case 'done': ?>
-<script src="<?php echo $dir ?>/assets/js/bootstrap/core/jquery.min.js"></script>
-<script src="<?php echo $dir ?>/assets/js/bootstrap/core/popper.min.js"></script>
-<script src="<?php echo $dir ?>/assets/js/bootstrap/core/bootstrap-material-design.min.js"></script>
-<script src="<?php echo $dir ?>/assets/js/bootstrap/plugins/moment.min.js"></script>
-<script src="<?php echo $dir ?>/assets/js/bootstrap/plugins/bootstrap-datetimepicker.js"></script>
-<script src="<?php echo $dir ?>/assets/js/bootstrap/plugins/nouislider.min.js"></script>
-<script src="<?php echo $dir ?>/assets/js/bootstrap/material-kit.min.js"></script>
-<script src="<?php echo $dir ?>/assets/js/main/owl.carousel.min.js"></script>
-<script src="//cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.6.3/js/bootstrap-select.min.js"></script>
-<script src="<?php echo $dir ?>/assets/js/main/main.js"></script>
 <script type="text/javascript">
     function setCookie(cname, cvalue, exdays) {
         var d = new Date();
@@ -762,7 +721,7 @@ $('#loginModal').click(function() {
     $(document).ready(function() {
         var payload={};
         var success = true;
-       // if(getCookie('loaded')!=1)
+        if(getCookie('loaded')!=1)
         $.post("<?php echo $dir ?>/api/efiewura/create",<?php echo json_encode($efiewura);  ?>,function(data, status) {
                 data = JSON.parse(data);
                 if (data && data.status == 'success') {
@@ -824,42 +783,5 @@ $('#loginModal').click(function() {
             });
     });
 </script>
-<?php  
-        break;
-    case 'q': ?>
-<script src="<?php echo $dir ?>/assets/js/bootstrap/core/jquery.min.js"></script>
-<script src="<?php echo $dir ?>/assets/js/bootstrap/core/popper.min.js"></script>
-<script src="<?php echo $dir ?>/assets/js/bootstrap/core/bootstrap-material-design.min.js"></script>
-<script src="<?php echo $dir ?>/assets/js/bootstrap/plugins/moment.min.js"></script>
-<script src="<?php echo $dir ?>/assets/js/bootstrap/plugins/bootstrap-datetimepicker.js"></script>
-<script src="<?php echo $dir ?>/assets/js/bootstrap/plugins/nouislider.min.js"></script>
-<script src="<?php echo $dir ?>/assets/js/bootstrap/material-kit.min.js"></script>
-<script src="<?php echo $dir ?>/assets/js/main/owl.carousel.min.js"></script>
-<script src="//cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.6.3/js/bootstrap-select.min.js"></script>
-<script src="<?php echo $dir ?>/assets/js/main/main.js"></script><script type="text/javascript">   
-  $(document).ready(function () {
-    var regionsJSON = JSON.parse('{"AS":{"Name":"Ashanti","districts":["Adansi North","Adansi South","Afigya-Kwabre","Ahafo Ano North","Ahafo Ano South","Amansie Central","Amansie West","Asante Akim Central","Asante Akim North","Asante Akim South","Asokore Mampong","Atwima Kwanwoma","Atwima Mponua","Atwima Nwabiagya","Bekwai","Bosome Freho","Botsomtwe","Ejisu-Juaben","Ejura - Sekyedumase","Kumasi","Kwabre East","Mampong","Obuasi","Offinso North","Offinso South","Sekyere Afram Plains","Sekyere Central","Sekyere East","Sekyere Kumawu","Sekyere South"]},"BA":{"Name":"Brong-Ahafo","districts":["Asunafo North","Asunafo South","Asutifi North","Asutifi South","Atebubu-Amantin","Banda","Berekum East","Berekum","Dormaa East","Dormaa","Dormaa West","Jaman North","Jaman South","Kintampo North","Kintampo South","Nkoranza North","Nkoranza South","Pru","Sene East","Sene West","Sunyani","Sunyani West","Tain","Tano North","Tano South","Techiman","Techiman North","Wenchi"]},"CE":{"Name":"Central","districts":["Abura\/Asebu\/Kwamankese","Agona East","Agona West Municipal","Ajumako\/Enyan\/Essiam","Asikuma\/Odoben\/Brakwa","Assin North Municipal","Assin South","Awutu Senya East Municipal","Awutu Senya West","Cape Coast Metropolitan","Effutu Municipal","Ekumfi","Gomoa East","Gomoa West","Komenda\/Edina\/Eguafo\/Abirem Municipal","Mfantsiman Municipal","Twifo-Ati Morkwa","Twifo\/Heman\/Lower Denkyira","Upper Denkyira East Municipal","Upper Denkyira West"]},"EA":{"Name":"Eastern","districts":["Akuapim South","Akuapim North","Akyemansa","Asuogyaman","Ayensuano","Atiwa East","Atiwa West","Birim Central Municipal","Birim North","Birim South","Denkyembour","East Akim Municipal","Fanteakwa","Kwaebibirem","Kwahu Afram Plains North","Kwahu Afram Plains South","Kwahu East","Kwahu South","Kwahu West Municipal","Lower Manya Krobo","New-Juaben Municipal","Nsawam Adoagyire Municipal","Suhum","Upper Manya Krobo","Upper West Akim","West Akim Municipal","Yilo Krobo"]},"GA":{"Name":"Greater Accra","districts":["Ablekuma North Municipal","Ablekuma West Municipal","Accra Metropolitan","Ada East","Ada West","Adenta Municipal","Ashaiman Municipal","Ayawaso East Municipal","Ayawaso North Municipal","Ayawaso West Municipal","Ga Central","Ga East Municipal","Ga North Municipal","Ga South Municipal","Ga West Municipal","Kpone Katamanso Municipal","Krowor Municipal","La Dade Kotopon Municipal","La Nkwantanang Madina Municipal","Ledzokuku Municipal","Ningo Prampram","Okaikwei Municipal","Shai Osudoku","Tema Metropolitan","Tema West Municipal","Weija Municipal"]},"NO":{"Name":"Northern","districts":["Bole","Bunkpurugu-Nyankpanduri","Central Gonja","Chereponi","East Gonja Municipal","East Mamprusi Municipal","Gushegu Municipal","Karaga","Kpandai","Kumbungu","Mamprugo Moaduri","Mion","Nanton","Nanumba North Municipal","Nanumba South","North Gonja","Saboba","Sagnarigu Municipal","Savelugu Municipal","Sawla-Tuna-Kalba","Tamale Metropolitan","Tatale Sangule","Tolon","West Gonja","West Mamprusi Municipal","Yendi Municipal","Yunyoo-Nasuan","Zabzugu"]},"UE":{"Name":"Upper East","districts":["Bawku Municipal","Bawku West","Binduri","Bolgatanga Municipal","Bongo","Builsa","Builsa South","Garu-Tempane","Kassena Nankana East","Kassena Nankana West","Nabdam","Pusiga","Talensi"]},"UW":{"Name":"Upper West","districts":["Daffiama Bussie Issa","Jirapa","Lambussie Karni","Lawra","Nadowli","Nandom","Sissala East","Sissala West","Wa East","Wa Municipal","Wa West"]},"VO":{"Name":"Volta","districts":["Adaklu","Afadjato South","Agotime Ziope","Akatsi North","Akatsi South","Biakoye","Central Tongu","Ho Municipal","Ho West","Hohoe Municipal","Jasikan","Kadjebi","Keta Municipal","Ketu North","Ketu South Municipal","Kpando Municipal","Krachi East","Krachi Nchumuru","Krachi West","Nkwanta North","Nkwanta South","North Dayi","North Tongu","South Dayi","South Tongu"]},"WE":{"Name":"Western","districts":["Ahanta West","Aowin\/Suaman","Bia West","Bia East","Bibiani\/Anhwiaso\/Bekwai","Bodi","Ellembele","Jomoro","Juaboso","Mpohor","Mpohor\/Wassa East","Nzema East Municipal","Prestea-Huni Valley","Sefwi Akontombra","Sefwi Wiawso Municipal","Sekondi Takoradi Metropolitan","Shama","Suaman","Tarkwa-Nsuaem Municipal","Wasa Amenfi East","Wasa Amenfi West","Wassa Amenfi Central"]},"status":"Success"}');
-    console.log(($('select#region option:selected')));
-    console.log('Ni');
-    var dis = regionsJSON[$('select#region option:selected').val()].districts;
-    $("datalist#district").empty();
-    for(var i = dis.length - 1; i >= 0; i--) {
-      $('datalist#district').append('<option value="'+dis[i]+'">'+dis[i]+'</option>');
-    }
-    <?php if (isset($reg)||$reg) { ?>
-    $('select#region').change(function() {
-    console.log($('select#region option:selected').val());
-      var dis = regionsJSON[$('select#region option:selected').val()].districts;
-      $("datalist#district").empty();
-      for(var i = dis.length - 1; i >= 0; i--) {
-        $('datalist#district').append('<option value="'+dis[i]+'">'+dis[i]+'</option>');
-      }
-    });
-    <?php } ?>
-  });
-</script>
-<?php break;
-    default:
-        # code...
-        break;
+<?php   break;
 } ?>
