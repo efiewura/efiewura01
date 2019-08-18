@@ -44,6 +44,23 @@
         </div>
     </div>
 </div>
+
+<div class="modal fade other-pic-1" tabindex="-1" role="dialog" aria-labelledby="other-pic-1" style="display: none;"
+     aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 class="modal-title" id="other-pic-1">4 bedroom house</h3>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">×</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <img class="img-fluid" src="assets/img/6.jpg" alt="" style="width:100%">
+            </div>
+        </div>
+    </div>
+</div>
 <!--MODALS END-->
 
 <?php $efiewura = efiewura::getEfiewuraSpace($space_id);
