@@ -1,7 +1,7 @@
 <?php 
 
 
-class efiewura extends Model{
+class efiewura extends Model2{
 
 
 	private $name;
@@ -9,13 +9,21 @@ class efiewura extends Model{
 	private $email;
 	private $gender;
 	private $address;
+	private $load = array(	"id"=>"",
+							"name"=>"",
+							"number"=>"",
+							"email"=>"",
+							"gender"=>"",
+							"address"=>"",
+							);
 	//private $datetime;
 	public $table = "efiewura";
 
 
-	public function __construct($id){
-		Model::__construct($id);
-		if($id != 0){
+	public function __construct($id,$load){
+		Model2::__construct($id,$load);
+		$this->load = (is_array($load))? $this->setter($load):(($id==0)?$this->load:$this->getload());
+		{
 			$this->name();
 			$this->number();
 			$this->email();
@@ -26,13 +34,17 @@ class efiewura extends Model{
 	}
 
 	public function setname($name){
+			$this->load['name'] = $name;		
 			$this->update("`name` = '$name'");
 			$this->name();
 		}
 
 
 	private function name(){
-			$this->name = $this->read('name');
+			if(isset($this->load['name']))
+				$this->name = $this->load['name'];
+			else
+				$this->load['name']="";
 		}
 
 
@@ -41,13 +53,17 @@ class efiewura extends Model{
 		}
 
 	public function setnumber($number){
+			$this->load['number'] = $number;		
 			$this->update("`number` = '$number'");
 			$this->number();
 		}
 
 
 	private function number(){
-			$this->number = $this->read('number');
+			if(isset($this->load['number']))
+				$this->number = $this->load['number'];
+			else
+				$this->load['number']="";
 		}
 
 
@@ -56,13 +72,17 @@ class efiewura extends Model{
 		}
 
 	public function setemail($email){
+			$this->load['email'] = $email;		
 			$this->update("`email` = '$email'");
 			$this->email();
 		}
 
 
 	private function email(){
-			$this->email = $this->read('email');
+			if(isset($this->load['email']))
+				$this->email = $this->load['email'];
+			else
+				$this->load['email']="";
 		}
 
 
@@ -71,13 +91,17 @@ class efiewura extends Model{
 		}
 
 	public function setgender($gender){
+			$this->load['gender'] = $gender;		
 			$this->update("`gender` = '$gender'");
 			$this->gender();
 		}
 
 
 	private function gender(){
-			$this->gender = $this->read('gender');
+			if(isset($this->load['gender']))
+				$this->gender = $this->load['gender'];
+			else
+				$this->load['gender']="";
 		}
 
 
@@ -86,13 +110,17 @@ class efiewura extends Model{
 		}
 
 	public function setaddress($address){
+			$this->load['address'] = $address;		
 			$this->update("`address` = '$address'");
 			$this->address();
 		}
 
 
 	private function address(){
-			$this->address = $this->read('address');
+			if(isset($this->load['address']))
+				$this->address = $this->load['address'];
+			else
+				$this->load['address']="";
 		}
 
 
@@ -101,12 +129,16 @@ class efiewura extends Model{
 		}
 
 	public function setdatetime($datetime){
+			$this->load['datetime'] = $datetime;		
 			$this->update("`datetime` = '$datetime'");
 			$this->datetime();
 		}
 
 	private function datetime(){
-			$this->datetime = $this->read('datetime');
+			if(isset($this->load['datetime']))
+				$this->datetime = $this->load['datetime'];
+			else
+				$this->load['datetime']="";
 		}
 
 	public function getdatetime(){
@@ -123,7 +155,7 @@ class efiewura extends Model{
 		$result = $con->query($sql);
 		
 			while($row = $result->fetch_assoc()){
-			$efiewura = new comment($row['id']);
+			$efiewura = new efiewura(-1,$row);
 			array_push($efiewuraarr , $efiewura);
 		   }
 		   return $efiewuraarr;
@@ -132,14 +164,14 @@ class efiewura extends Model{
 	public function getEfiewuraSpace($space_id)
 	{
 		include("./gen/connector.gen.php");
-		$sql = "SELECT `efiewura`.`id` AS `id`
+		$sql = "SELECT `efiewura`.*
 				FROM `efiewura` , `space`
 				WHERE `efiewura`.`availability` = 1
 				AND `space`.`holder`= `efiewura`.`id`
 				AND `space`.`id` = '$space_id'";
 		$result = $con->query($sql);
 			if($row = $result->fetch_assoc()){
-			$efiewura = new efiewura($row['id']);
+			$efiewura = new efiewura(-1,$row);
 			return $efiewura;
 		   }
 		   return 111;
