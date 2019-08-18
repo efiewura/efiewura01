@@ -39,7 +39,10 @@ class image extends Model2{
 
 
 	private function user_id(){
+			if(isset($this->load['user_id']))
 			$this->user_id = $this->load['user_id'];
+			else
+				$this->load['user_id']="";
 		}
 
 
@@ -55,7 +58,10 @@ class image extends Model2{
 
 
 	private function space_id(){
+			if(isset($this->load['space_id']))
 			$this->space_id = $this->load['space_id'];
+			else
+				$this->load['space_id']="";
 		}
 
 
@@ -71,7 +77,10 @@ class image extends Model2{
 
 
 	private function location(){
+			if(isset($this->load['location']))
 			$this->location = $this->load['location'];
+			else
+				$this->load['location']="";
 		}
 
 
@@ -87,7 +96,10 @@ class image extends Model2{
 
 
 	private function name(){
-			$this->name = $this->load['name'];
+			if(isset($this->load['name']))
+				$this->name = $this->load['name'];
+			else
+				$this->load['name']="";
 		}
 
 
@@ -103,7 +115,10 @@ class image extends Model2{
 
 
 	private function etag(){
-			$this->etag = $this->load['etag'];
+			if(isset($this->load['etag']))
+				$this->etag = $this->load['etag'];
+			else
+				$this->load['etag']="";
 		}
 
 
@@ -118,7 +133,10 @@ class image extends Model2{
 		}
 
 	private function thumbnail(){
-			$this->thumbnail = $this->load['thumbnail'];
+			if(isset($this->load['thumbnail']))
+				$this->thumbnail = $this->load['thumbnail'];
+			else
+				$this->load['thumbnail']="";
 		}
 
 	public function getthumbnail(){
@@ -144,7 +162,7 @@ class image extends Model2{
 
 public function getImagebySpace($space_id)
 	{
-		$imagearr = array();
+		//$imagearr = array();
 		include("./gen/connector.gen.php");
 		$sql = "SELECT `image`.*
 				FROM `image` , `space`
@@ -154,7 +172,7 @@ public function getImagebySpace($space_id)
 		$result = $con->query($sql);
 			while($row = $result->fetch_assoc()){
 			$image = new image(-1,$row);
-			array_push($imagearr , $image);
+			//array_push($imagearr , $image);
 		   return $image;
 		   }
 		   return 0;
