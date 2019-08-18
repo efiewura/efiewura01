@@ -134,19 +134,19 @@
                     <div class="row">
                         <div class="col-md-12">
                             <div class="input-group">
-                                <input type="text" class="form-control inputFileVisible" placeholder="Profile Photo">
-                                <span class="input-group-btn">
+                                <div class="input-group file-attachment">
+                                    <label class="bmd-label-floating"> Upload Profile</label>
                                     <button id="profileUpBtn" type="button" class="btn btn-fab btn-round btn-primary"
                                             onclick="$('#profileAlert').hide();">
                                         <i class="material-icons">attach_file</i>
                                     </button>
-                                </span>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div id="profileAlert" class="alert alert-warning" style="display: none">
-                        <button type="button" class="close" data-dismiss="alert">&times;</button>
-                        <strong>Required!</strong> Profile required to move on
+                        <div id="profileAlert" class="alert alert-warning" style="display: none">
+                            <button type="button" class="close" data-dismiss="alert">&times;</button>
+                            <strong>Required!</strong> Profile required to move on
+                        </div>
                     </div>
                 </div>
 
@@ -262,17 +262,14 @@
                             <span class="sr-only">Next</span>
                         </a>
                     </div>
-                    <div class="input-group">
-                        <input type="text" class="form-control inputFileVisible" placeholder="Upload pictures (Maximum of 5)" multiple>
-                        <span class="input-group-btn">
-                            <button id="multUpBtn" type="button" class="btn btn-fab btn-round btn-primary">
-                                <i class="material-icons">layers</i>
-                            </button>
-                        </span>
-                    </div>
-                    <div id="multAlert" class="alert alert-warning" style="display: none">
-                        <button type="button" class="close" data-dismiss="alert">&times;</button>
-                        <strong>Required!</strong> Pictures required to move on
+                    <div class="input-group file-attachment">
+                        <label class="bmd-label-floating"> Upload picture of property (Maximum of 5 pictures)</label>
+
+                        <button id="multUpBtn" type="button" class="btn btn-fab btn-round btn-primary">
+                            <i class="material-icons">layers</i>
+                            <div class="ripple-container"></div>
+                        </button>
+
                     </div>
                 </div>
 
@@ -311,11 +308,13 @@
                 </div>
                 <div style="margin-top: 30px; margin-bottom: 30px;" class="form-check">
                     <label class="form-check-label">
-                        <input id='formCheckbox' class="form-check-input" type="checkbox" value="" name="agree" required
+                        <input id='formCheckbox' class="form-check-input" type="checkbox" value="" name="agree"
+                               required
                                onclick="validate()" checked='unchecked' role="button" data-toggle="popover"
                                data-placement="left" data-trigger="focus" title="Dismissible popover"
                                data-content="Please fill the form fields">
-                        By checking this, you hereby agree with all the terms and conditions associated with using the
+                        By checking this, you hereby agree with all the terms and conditions associated with
+                        using the
                         Efiewura Platform
                         <span class="form-check-sign">
                             <span class="check"></span>
@@ -323,13 +322,15 @@
                     </label>
                 </div>
                 <div id="custom-form-buttons">
-                    <button id="pay" type="button" class="btn btn-primary" data-toggle="modal" data-target="#loginModal"
+                    <button id="pay" type="button" class="btn btn-primary" data-toggle="modal"
+                            data-target="#loginModal"
                             style="display:none">Host
                     </button>
                     <button id="submit" type="submit" class="btn btn-primary">Done</button>
                     <button type="reset" class="btn btn-primary">Reset</button>
                     <input type="hidden" name="next" value="complete">
                 </div>
+
             </form>
         </div>
     </div>
@@ -422,13 +423,6 @@
                     <a href="#" rel="tooltip" data-placement="bottom" href="https://www.instagram.com/Efiewura"
                        target="_blank" data-original-title="Follow us on Instagram"><i class="fa fa-instagram"></i></a>
                 </div>
-            </div>
-        </div>
-        <hr style="margin-top: 40px; margin-bottom: 40px;">
-        <div class="row">
-            <div class="col-md-6 offset-md-3">
-                Accepted payment methods : <img id="momo" class="img-fluid" src="assets/img/mo.jpg"
-                                                alt="mtn-mobile-money">
             </div>
         </div>
     </div>

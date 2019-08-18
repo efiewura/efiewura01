@@ -11,21 +11,22 @@ class space extends Model2 {
 	private $imgNum;
 	private $price;
 	private $holder;
-	private $email;
 	private $city;
+	private $type;
 	private $short_desc;
 	private $description;
 	private $negotiable;
 	private $neg_flag;
-	private $load = 	array(	'region'=>'',
+	private $load = 	array(	"id"=>"",
+								'region'=>'',
 								'district'=>'',
 								'lng'=>'',
 								'lat'=>'',
 								'imgNum'=>'',
 								'price'=>'',
 								'holder'=>'',
-								'email'=>'',
 								'city'=>'',
+								'type'=>'',
 								'short_desc'=>'',
 								'description'=>'',
 								'neg_flag'=>''
@@ -35,8 +36,8 @@ class space extends Model2 {
 
 	public function __construct($id,$load){
 		Model2::__construct($id,$load);
-		$this->load = (is_array($load))? $this->setter($load):$this->load;
-			if(is_array($load)&&$load!=0){
+		$this->load = (is_array($load))? $this->setter($load):(($id==0)?$this->load:$this->getload());
+		{
 				$this->region();
 				$this->district();
 				$this->lng();
@@ -45,6 +46,7 @@ class space extends Model2 {
 				$this->price();
 				$this->holder();
 				$this->city();
+				$this->type();
 				$this->short_desc();
 				$this->description();
 				$this->neg_flag();
@@ -60,7 +62,10 @@ class space extends Model2 {
 
 
 	private function region(){
-			$this->region = $this->load['region'];
+			if(isset($this->load['region']))
+				$this->region = $this->load['region'];
+			else
+				$this->load['region']="";
 		}
 
 
@@ -75,7 +80,10 @@ class space extends Model2 {
 		}
 
 	private function description(){
-			$this->description = $this->load['description'];
+			if(isset($this->load['description']))
+				$this->description = $this->load['description'];
+			else
+				$this->load['description']="";
 		}
 
 
@@ -91,7 +99,10 @@ class space extends Model2 {
 
 
 	private function district(){
-			$this->district = $this->load['district'];
+			if(isset($this->load['district']))
+				$this->district = $this->load['district'];
+			else
+				$this->load['district']="";
 		}
 
 
@@ -107,7 +118,10 @@ class space extends Model2 {
 
 
 	private function lng(){
-			$this->lng = $this->load['lng'];
+			if(isset($this->load['lng']))
+				$this->lng = $this->load['lng'];
+			else
+				$this->load['lng']="";
 		}
 
 
@@ -123,7 +137,10 @@ class space extends Model2 {
 
 
 	private function lat(){
-			$this->lat = $this->load['lat'];
+			if(isset($this->load['lat']))
+				$this->lat = $this->load['lat'];
+			else
+				$this->load['lat']="";
 		}
 
 
@@ -139,7 +156,10 @@ class space extends Model2 {
 
 
 	private function imgNum(){
-			$this->imgNum = $this->load['imgNum'];
+			if(isset($this->load['imgNum']))
+				$this->imgNum = $this->load['imgNum'];
+			else
+				$this->load['imgNum']="";
 		}
 
 
@@ -155,7 +175,10 @@ class space extends Model2 {
 
 
 	private function price(){
-			$this->price = $this->load['price'];
+			if(isset($this->load['price']))
+				$this->price = $this->load['price'];
+			else
+				$this->load['price']="";
 		}
 
 
@@ -171,7 +194,10 @@ class space extends Model2 {
 
 
 	private function holder(){
-			$this->holder = $this->load['holder'];
+			if(isset($this->load['holder']))
+				$this->holder = $this->load['holder'];
+			else
+				$this->load['holder']="";
 		}
 
 
@@ -187,7 +213,10 @@ class space extends Model2 {
 
 
 	private function email(){
-			$this->email = $this->load['email'];
+			if(isset($this->load['email']))
+				$this->email = $this->load['email'];
+			else
+				$this->load['email']="";
 		}
 
 
@@ -202,11 +231,31 @@ class space extends Model2 {
 		}
 
 	private function city(){
-			$this->city = $this->load['city'];
+			if(isset($this->load['city']))
+				$this->city = $this->load['city'];
+			else
+				$this->load['city']="";
 		}
 
 	public function getcity(){
 			return $this->city;
+		}
+
+	public function settype($type){
+			$this->load['type'] = $type;
+			$this->update("`type` = '$type'");
+			$this->type();
+		}
+
+	private function type(){
+			if(isset($this->load['type']))
+				$this->type = $this->load['type'];
+			else
+				$this->load['type']="";
+		}
+
+	public function gettype(){
+			return $this->type;
 		}
 
 	public function setshort_desc($short_desc){
@@ -216,7 +265,10 @@ class space extends Model2 {
 		}
 
 	private function short_desc(){
-			$this->short_desc = $this->load['short_desc'];
+			if(isset($this->load['short_desc']))
+				$this->short_desc = $this->load['short_desc'];
+			else
+				$this->load['short_desc']="";
 		}
 
 	public function getshort_desc(){
@@ -241,7 +293,10 @@ class space extends Model2 {
 		}
 
 	private function neg_flag(){
-			$this->neg_flag = $this->load['neg_flag'];
+			if(isset($this->load['neg_flag']))
+				$this->neg_flag = $this->load['neg_flag'];
+			else
+				$this->load['neg_flag']="";
 		}
 
 	public function getneg_flag(){

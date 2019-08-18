@@ -6,9 +6,13 @@
             <p class="workspace-paragraph">Find yourself a home that suits your exact needs</p>
         </div>
         <div class="owl-carousel owl-theme">
-        	<?php foreach ($spaces as $val) {
+        	<?php $i = 10;
+            foreach ($spaces as $val) {
         		//put variables require for item values
+                if($i<=0)
+                    break;
         		include './vws/slideList.item.vws.php';
+                $i--;
         	} ?>
         </div>
     </div>
