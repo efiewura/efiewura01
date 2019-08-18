@@ -223,6 +223,8 @@
                 <div id="custom-form-buttons">
                     <button id="pay" type="button" class="btn btn-primary" data-toggle="modal" data-target="#loginModal" style="display:none">Host
                     </button>
+                    <button id="test" type="button" class="btn btn-primary" >TEST
+                    </button>
                     <button id="submit" type="submit" class="btn btn-primary" disabled="true">Done</button>
                     <button type="reset" class="btn btn-primary" >Reset</button>
                     <input type="hidden" name="next">

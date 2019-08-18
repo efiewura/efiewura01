@@ -1,4 +1,3 @@
-
 <div id="contactForm" class="card-block" style="">
 
                         <!-- Form Name -->
