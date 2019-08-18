@@ -12,7 +12,7 @@
     --loader-size: 8em;
     --check-height: var(--loader-size)/2;
     --check-width: var(--check-height)/2;
-    --check-left: (var(--loader-size)/6 + var(--loader-size)/12);
+    --check-left: var(--loader-size)/6 + var(--loader-size)/12;
     --check-thickness: 2px;
     --check-color: var(--brand-success);
 }
@@ -518,7 +518,7 @@ footer {
     justify-content: flex-start;
     padding-left: 50px;
     align-items: center;
-    background: url(../../img/telephone.jpg) no-repeat center center fixed;
+    background: url(../../img/20-cover.jpg) no-repeat center center fixed;
     background-size: cover;
 }
 

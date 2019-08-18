@@ -151,9 +151,46 @@
                 </div>
 
                 <h5 class="custom-form-subhead">2. Please provide the details of your listing</h5>
-                <div class="form-group bmd-form-group">
-                    <label class="bmd-label-floating" for="listing-type">Listing type. eg. 4 bed room house</label>
-                    <input type="text" class="form-control" id="listing-type" name="short_desc">
+                <h5 style="font-weight: bold;">Property type</h5>
+                <div class="form-check form-check-radio">
+                    <label for="house" class="form-check-label">
+                        <input class="form-check-input" type="radio" name="type" id="house"
+                               value="house">
+                        House
+                        <span class="circle">
+                            <span class="check"></span>
+                        </span>
+                    </label>
+                </div>
+                <div class="form-check form-check-radio">
+                    <label for="hotel" class="form-check-label">
+                        <input class="form-check-input" type="radio" name="type" id="hotel"
+                               value="hotel">
+                        Hotel
+                        <span class="circle">
+                            <span class="check"></span>
+                        </span>
+                    </label>
+                </div>
+                <div class="form-check form-check-radio">
+                    <label for="guest-house" class="form-check-label">
+                        <input class="form-check-input" type="radio" name="type" id="guest-house"
+                               value="guest-house">
+                        Guest House
+                        <span class="circle">
+                            <span class="check"></span>
+                        </span>
+                    </label>
+                </div>
+                <div class="form-check form-check-radio">
+                    <label for="hostel" class="form-check-label">
+                        <input class="form-check-input" type="radio" name="type" id="hostel"
+                               value="hostel">
+                        Hostel
+                        <span class="circle">
+                            <span class="check"></span>
+                        </span>
+                    </label>
                 </div>
 
                 <div class="form-group bmd-form-group">
@@ -226,7 +263,7 @@
                         </a>
                     </div>
                     <div class="input-group">
-                        <input type="text" class="form-control inputFileVisible" placeholder="Upload pictures" multiple>
+                        <input type="text" class="form-control inputFileVisible" placeholder="Upload pictures (Maximum of 5)" multiple>
                         <span class="input-group-btn">
                             <button id="multUpBtn" type="button" class="btn btn-fab btn-round btn-primary">
                                 <i class="material-icons">layers</i>
