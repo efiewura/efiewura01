@@ -14,6 +14,7 @@ class Model2 {
 	public function __construct($id,$load){
 		if($id==0){
 			$this->create($load);
+			$load['id'] = $this->getID();
 			$this->settime_created();
 			$this->exits = 1;
 		}elseif($id!=-1){

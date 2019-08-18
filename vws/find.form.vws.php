@@ -2,7 +2,7 @@
 <div class="row" style="">
 <div class="col-md-3 form-group">
   <select id="region"  class="custom-select rounded-0" style="width: 100%;padding-bottom: 0px;margin-top: 5px;height: 60px;" name="rg">
-    <option  disabled selected>REGIONS</option>
+    <option value="0"  disabled selected>REGIONS</option>
     <option value="AS" <?php if ((isset($_GET['rg']))&&$_GET['rg']=='AS'): ?>
       selected
     <?php endif ?>>Ashanti</option>
@@ -37,21 +37,15 @@
   </select>
 </div>
 <div class="col-md-3 form-group">
-                    <input list="district" class="custom-select" style="width: 100%;padding-top: 23px;padding-bottom: 18px;margin-top: 5px;height: 60px;text-align: center;" id="district-input" name="ds" autocomplete="off" placeholder="District">
+                    <input list="district" class="custom-select rounded-0" style="width: 100%;margin-top: 5px;height: 60px; padding: 20px 30px;font-size: 1.1em;" id="district-input" name="ds" autocomplete="off" placeholder="District">
                     <datalist id="district">
-                        <option value="Adansi North District">
-                        <option value="Bekwai Municipal District">
-                        <option value="Tema Metropolitan District">
-                        <option value="Shai Osudoku">
-                        <option value="La Nkwantanang Madina Municipal District">
-                        <option value="Ga West Municipal District">
-                        <option value="Tolon District">
+                        <option>Select an option</option>
                     </datalist>
 </div>
 <div class="col-md-6 form-group" style="">
-  <input id="q" type="tesxt" name="q" class="form-control input-md" placeholder="Search Town: Eg, Accra, Cape" name="q">
+  <input id="q" type="tesxt" name="q" class="form-control input-md" placeholder="Search Town: Eg, Accra, Cape" name="q" <?php echo isset($_GET['q'])? "value=\"".$_GET['q']."\"":"" ?> >
 </div>
-                </div>
+</div>
 
 <div class="row" style="">
  <div style="display: flex; flex-direction: row;justify-content: center;" class="form-group col-12">

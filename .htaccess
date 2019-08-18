@@ -7,11 +7,13 @@ ErrorDocument 403 /error.html
 ErrorDocument 505 /error.html
 Rewriteengine On
 
+RewriteRule ^api\/([a-zA-Z]*)\/*([a-zA-Z0-9]*) ./index.php?pg=api&product=$1&op=$2
+
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_FILENAME} !-f
 
-
 RewriteRule ^([a-zA-Z]+)(\/*)([0-9]*) ./index.php?pg=$1&space=$3
+
 # HTID:6563409: DO NOT REMOVE OR MODIFY THIS LINE AND THE LINES BELOW
 php_value display_errors 1
 # DO NOT REMOVE OR MODIFY THIS LINE AND THE LINES ABOVE HTID:6563409:

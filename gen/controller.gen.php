@@ -1,5 +1,5 @@
 <?php
-$dir = "https://wwwefiewura.000webhostapp.com";
+$dir = url();
 if(isset($_GET['q'])){
 	$pg = 'q';
 }
@@ -7,7 +7,6 @@ $soon = 'home';
 $pg = (isset($_GET['pg']))? $_GET['pg']:((isset($pg))? $pg:$soon); 
 $temp = './inc/page.inc.php';	
 $pg = ($pg==$soon)? ((isset($_GET['priv']))? 'home':$pg):$pg;
-
 switch ($pg) {
 	case 'soon':
 $temp = './inc/soon.inc.php';
@@ -23,6 +22,7 @@ $noHeader = true;
 		break;
 	case 'find':
 	case 'q':
+	$reg = true;
 	$title = '';
 $temp = './inc/page.inc.php';
 if (isset($_GET['q'])) {
@@ -34,6 +34,7 @@ $title = 'Find a Space';
 $noHeader = false;
 		break;
 	case 'host':
+	$reg = true;
 $temp = './inc/page.inc.php';
 $page = './inc/provide_space.inc.php';
 $title = 'Provide Space';
@@ -45,11 +46,10 @@ $page = './inc/contact.inc.php';
 $title = 'Contact Us';
 $noHeader = true;
 		break;
-	case 'action':
-$temp = '';
-$page = '';
-$title = 'invalid';
-$noHeader = false;
+	case 'api':
+$temp = './inc/api.inc.php';
+$prod = isset($_GET['product'])? $_GET['product']:"";
+$op = isset($_GET['op'])? $_GET['op']:"";
 		break;
 	case 'terms':
 $temp = './inc/page.inc.php';
@@ -60,7 +60,6 @@ break;
 	case 'view':
 	case 'space':
 $space_id = (isset($_GET['space']))? $_GET['space']:0;
-
 if(isset($_GET['space'])&&is_numeric($_GET['space'])&&$space_id!=0){
 $space = new space($space_id,0); 
 if($space->getexits()==1){
@@ -68,7 +67,6 @@ $temp = './inc/page.inc.php';
 $page = './inc/view_space.inc.php';
 $title = $space->getshort_desc();
 }else{
-    echo "Here";
 $temp = './inc/page.inc.php';
 $page = './inc/empty.inc.php';
 $title = "";
@@ -79,7 +77,6 @@ header("location: https://wwwefiewura.000webhostapp.com/?q");
 }
 		break;
 	case 'done':
-	//var_dump($_POST['next']);
 if(isset($_POST['next'])){
 $temp = './inc/page.inc.php';
 $page = './inc/finishing_up.inc.php';
