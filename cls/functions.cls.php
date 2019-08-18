@@ -25,7 +25,7 @@ $GLOBALS['RegionDetailsArray']  = array('AS' => array('Name' => 'Ashanti',
                                   'districts' => array('Ahanta West','Aowin/Suaman','Bia West','Bia East','Bibiani/Anhwiaso/Bekwai','Bodi','Ellembele','Jomoro','Juaboso','Mpohor','Mpohor/Wassa East','Nzema East Municipal','Prestea-Huni Valley','Sefwi Akontombra','Sefwi Wiawso Municipal','Sekondi Takoradi Metropolitan','Shama','Suaman','Tarkwa-Nsuaem Municipal','Wasa Amenfi East','Wasa Amenfi West','Wassa Amenfi Central')),
                     'status' => 'Success');
 function url(){
-//$ef = true;//remove when in server add when local
+$ef = true;//remove when in server add when local
   return sprintf(
     "%s://%s%s",
     isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] != 'off' ? 'https' : 'http',

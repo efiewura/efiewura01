@@ -40,7 +40,7 @@
 
                 <div class="form-group bmd-form-group">
                     <label class="bmd-label-floating" for="host-address">Address</label>
-                    <input type="text" class="form-control" id="host-address" name="Address">
+                    <input type="text" class="form-control" id="host-address" name="address">
                 </div>
 
                 <div class="form-group form-file-upload form-file-multiple">
@@ -61,9 +61,46 @@
                 </div>
 
                 <h5 class="custom-form-subhead">2. Please provide the details of your listing</h5>
-                <div class="form-group bmd-form-group">
-                    <label class="bmd-label-floating" for="listing-type">Listing type. eg. 4 bed room house</label>
-                    <input type="text" class="form-control" id="listing-type" name="short_desc">
+                <label class="bmd-label-floating" for="description">Property type</label>
+                <div class="form-check form-check-radio">
+                    <label for="house" class="form-check-label">
+                        <input class="form-check-input" type="radio" name="type" id="house"
+                               value="house">
+                        House
+                        <span class="circle">
+                            <span class="check"></span>
+                        </span>
+                    </label>
+                </div>
+                <div class="form-check form-check-radio">
+                    <label for="hotel" class="form-check-label">
+                        <input class="form-check-input" type="radio" name="type" id="hotel"
+                               value="hotel">
+                        Hotel
+                        <span class="circle">
+                            <span class="check"></span>
+                        </span>
+                    </label>
+                </div>
+                <div class="form-check form-check-radio">
+                    <label for="guest-house" class="form-check-label">
+                        <input class="form-check-input" type="radio" name="type" id="guest-house"
+                               value="guest-house">
+                        Guest House
+                        <span class="circle">
+                            <span class="check"></span>
+                        </span>
+                    </label>
+                </div>
+                <div class="form-check form-check-radio">
+                    <label for="hostel" class="form-check-label">
+                        <input class="form-check-input" type="radio" name="type" id="hostel"
+                               value="hostel">
+                        Hostel
+                        <span class="circle">
+                            <span class="check"></span>
+                        </span>
+                    </label>
                 </div>
 
                 <div class="form-group bmd-form-group">
@@ -175,7 +212,8 @@
                 <div style="margin-top: 30px; margin-bottom: 30px;" class="form-check">
                     <label class="form-check-label">
                         <input id='formCheckbox' class="form-check-input" type="checkbox" value="" name="agree" required onclick="validate()" checked='unchecked'  role="button" data-toggle="popover" data-placement="left" data-trigger="focus" title="Dismissible popover" data-content="Please fill the form fields">
-                        By checking this, you hereby agree with all the terms and conditions associated with using the
+                        By checking this, you hereby agree with all the <a href="<?php echo $dir ?>/terms" class="text-decoration-none">Terms &
+                    Conditions</a> associated with using the
                         Efiewura Platform
                         <span class="form-check-sign">
                             <span class="check"></span>
@@ -185,9 +223,11 @@
                 <div id="custom-form-buttons">
                     <button id="pay" type="button" class="btn btn-primary" data-toggle="modal" data-target="#loginModal" style="display:none">Host
                     </button>
-                    <button id="submit" type="submit" class="btn btn-primary" style="display:none">Done</button>
+                    <button id="test" type="button" class="btn btn-primary" >TEST
+                    </button>
+                    <button id="submit" type="submit" class="btn btn-primary" disabled="true">Done</button>
                     <button type="reset" class="btn btn-primary" >Reset</button>
-                    <input type="hidden" name="next" value="complete">
+                    <input type="hidden" name="next">
                 </div>
             </form>
         </div>
