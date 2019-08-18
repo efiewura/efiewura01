@@ -1,8 +1,8 @@
 <?php
 $host = "localhost";
-$pword = "";
-$dbname = "efiewura";
-$uname = "root";
+$pword = "June021996";
+$dbname = "id10219974_wwwefiewura";
+$uname = "id10219974_root";
 
 // Create connection
 $con = new mysqli( $host , $uname , $pword , $dbname );
