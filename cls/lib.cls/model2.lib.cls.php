@@ -14,16 +14,16 @@ class Model2 {
 	public function __construct($id,$load){
 		if($id==0){
 			$this->create($load);
+			$load['id'] = $this->getID();
 			$this->settime_created();
 			$this->exits = 1;
 		}elseif($id!=-1){
 			$this->setID($id);
 			$load = $this->get_turple();
-			
 		if(is_array($load)){
 			$this->exits = 1;
-			return $this->load;
-
+			$this->setter($load);
+			//return $load;
 		}
 		else{
 			$this->exits = 0;
@@ -68,6 +68,9 @@ class Model2 {
 		return $this->ID;
 	}
 
+	public function getload(){
+		return $this->load;
+	}
 	public function getexits(){
 		return $this->exits;
 	}

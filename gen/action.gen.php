@@ -1,20 +1,19 @@
 <?php
-if (isset($_POST["next"])){
-if ($_POST["next"]=='complete'){
+if ($pg=='api'){
+if ($op=='complete'){
 //	if(!isset($_COOKIE['userSpace'])){
 	$name = $_POST["name"]; 
-	$email = $_POST["email"];
+	$email = isset($_POST["email"])?$_POST['email']:"";
 	$number = $_POST["number"];
-	$address = $_POST["Address"];
-	$short_desc = $_POST["short_desc"] ;
-	$description = $_POST["description"];
+	$address = isset($_POST["address"])?$_POST['address']:"";
+	$short_desc = isset($_POST["short_desc"])?$_POST['short_desc']:"";
+	$description = isset($_POST["description"])?$_POST['description']:"";
 	$region = $_POST["region"];
-	$district = $_POST["district"];
+	$district = isset($_POST["district"])? $_POST["district"]:"";
 	$city = $_POST["city"] ;
 	$price = $_POST["price"];
 	$neg = $_POST["negotiation"] ;
 	$agree = $_POST["agree"];
-	$userImg = $_POST["userImg"] ;
 	$images = $_POST["image"];
 	$imgMainLoc = 'https://res.cloudinary.com/dmvymb8nn/image/upload/c_scale,w_600,h_500,f_webp/';
 	$efiewura = new efiewura(0);
@@ -23,6 +22,8 @@ if ($_POST["next"]=='complete'){
 	$efiewura->setemail($email);
 	$efiewura->setaddress($address);
 	$efiewura->avail();
+	if(isset($_POST["userImg"])){
+	$userImg = $_POST["userImg"] ;
 	$userImg = explode('#', $userImg);
 
 	$image = new image(0,0);
@@ -30,7 +31,7 @@ if ($_POST["next"]=='complete'){
 	$image->setetag($userImg[1]);
 	$image->setuser_id($efiewura->getID());
 		$image->avail();
-
+}
 	$space = new space(0,0);
 	$space->setregion($region);
 	$space->setdistrict($district);
@@ -50,88 +51,46 @@ if ($_POST["next"]=='complete'){
 		$image->setspace_id($space_id);
 		$image->avail();
 	}
-//	setcookie('userSpace', $efiewura->getID().'#'.$space->getID(), time() + (86400 * 30), "/");
-//}else{
-//	$efiewura = new efiewura(explode('#',$_COOKIE['userSpace'])[0]);
-//	$space = new space(explode('#',$_COOKIE['userSpace'])[1],0);
-//}
 }
-if($_POST["next"]=='efiewura'){
-
-$name = $_POST["name"];
-$number = $_POST["number"];
-$email = $_POST["email"];
-$gender = $_POST["gender"];
-
-$efiewura = new efiewura(0);
-$efiewura->setname($name);
-$efiewura->setnumber($number);
-$efiewura->setemail($email);
-$efiewura->setgender($gender);
-
-echo json_encode(array( 'id' => $efiewura->getID(),
-						'name' => $name,
- 						'number' => $number,
- 						'email' => $email,
- 						'gender' => $gender));
-}else if($_POST["next"]=='efie'){
-$region = $_POST["region"];
-$district = $_POST["district"];
-$city = $_POST["city"];
-$lat = $_POST["lat"];
-$lng = $_POST["lng"];
-$holder = $_POST["Uid"];
-
-$space = new space(0,0);
-$space->setregion($region);
-$space->setdistrict($district);
-$space->setcity($city);
-$space->setlat($lat);
-$space->setlng($lng);
-$space->setholder($holder);
-
-echo json_encode(array( 'id' => $space->getID(),
-						'region' => $region,
- 						'district' => $district,
- 						'city' => $city,
- 						'holder' => $holder));
-}else if($_POST["next"]=="find"){
-$query = array('region'=>$_POST["region"],'district'=>$_POST["district"],'city'=>$_POST["city"]);
-$spaceList = space::getspacesbyArr($query);
-}
-else if($_POST["next"]=="img"){
-	$imgMainLoc = 'https://res.cloudinary.com/dmvymb8nn/';
-	$name = $_POST["name"];
-	$path = $_POST['path'];
-	$etag = $_POST['signature'];
-	$thumbnail = $imgMainLoc.$_POST['thumbnail'];
-	$location = $imgMainLoc.$path;
-	$user_id = $_POST['Uid'];
-	$space_id = $_POST['Sid'];
-		$image = new image(0,0);
-		$image->setlocation($location);
-		$image->setetag($etag);
-		$image->setname($name);
-		$image->setuser_id($user_id);
-		$image->setspace_id($space_id);
-		$image->setthumbnail($thumbnail);
-		echo json_encode(array( 'id' => $image->getID(),
-						'location' => $location,
- 						'thumbnail' => $thumbnail,
- 						'space_id' => $space_id,
- 						'user_id' => $user_id));
-		$image->avail();
-}else if ($_POST["next"]=="done") {
-	$user_id = $_POST['Uid'];
-	$space_id = $_POST['Sid'];
-	$space = new space($space_id,0);
-	$space->avail();
-	$efiewura = new efiewura($user_id);
-	$efiewura->avail();
-	$pg = 'done';
-
-	# code...
-}else if ($_POST["next"]=="update") {
+if($prod=='efiewura'){
+	switch ($op) {
+		case 'create':
+			$efiewura = array( );
+			foreach ($_POST as $key => $value) {
+				if($key=='name'||$key=='number'||$key=='number'||$key=='number')
+					$efiewura[$key] = $value;
+			}
+			$efiewura = new efiewura(0,$efiewura);
+			$efiewura->avail();
+			break;
+		case 'read':
+			# code...
+			break;
+		case 'update':
+			# code...
+			break;
+		default:
+			break;
+	}
+}else if($prod=='space'){
+	switch ($op) {
+		case 'create':
+			$space = array();
+			foreach ($_POST as $key => $value) {
+				if($key=='region'||$key=='district'||$key=='city'||$key=='description'||$key=='short_desc'||$key=='lat'||$key=='lng'||$key=='Uid'||$key=='neg_flag'||$key=='price'){
+					if($key=='Uid')
+						$space['holder'] = $value;
+					else
+						$space[$key] = $value;
+				}
+			}
+			$space = new space(0,$space);
+			$space->avail();
+			break;
+		case 'read':
+			# code...
+			break;
+		case 'update':
 	$space_id = $_POST['signature'];
 	$space = new space($space_id);
 	$success = false;
@@ -185,12 +144,43 @@ else if($_POST["next"]=="img"){
 	$space->setimgNum($imgNum);
 	$success = true;
 	}
-	echo json_encode(array('status' => $success ));
-	# code...
+			break;
+		default:
+			break;
+	}
+
 }
+else if($prod=="image"){
+	switch ($op) {
+		case 'create':
+			$image = array();
+			foreach ($_POST as $key => $value) {
+				if($key=='user_id'||$key=='space_id'||$key=='location'||$key=='name'||$key=='etag'||$key=='thumbnail')
+					$image[$key] = $value;
+			}
+			$image = new image(0,$image);
+			$image->avail();
+			break;
+		case 'read':
+			# code...
+			break;
+		case 'update':
+			# code...
+			break;
+		default:
+			break;
+	}
+
 }
-//var_dump($_POST);
-//header('location: ./');*/
+}else{
+	if(!isset($space))
+		$space = 111;
+	if(!isset($efiewura))
+		$efiewura = 111;
+	if(!isset($image))
+		$image = 111;
+}
+
 if(isset($_GET['q'])){
 	if(isset($_GET['rg'])){
 	$searchArr = explode(" ", $_GET['q'].(($_GET['q']!=""&&isset($_GET['type']))?" ":"").(isset($_GET['type'])? $_GET['type']:""));
